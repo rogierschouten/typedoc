@@ -1,0 +1,1311 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BaseState | TypeDoc Doumentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="tsd-page-toolbar">
+        <div class="container">
+            <div id="tsd-filter">
+                <input type="checkbox" id="tsd-filter-inherited" checked />
+                <label for="tsd-filter-inherited">Inherited</label>
+
+                <input type="checkbox" id="tsd-filter-private" checked />
+                <label for="tsd-filter-private">Private</label>
+
+                <input type="checkbox" id="tsd-filter-only-exported" />
+                <label for="tsd-filter-only-exported">Only exported</label>
+            </div>
+
+            <a href="../index.html">TypeDoc Doumentation</a>
+        </div>
+    </div>
+    <div class="tsd-page-title">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+    
+    
+    
+    <li>
+        <a href="../modules/typedoc.html">TypeDoc</a>
+    </li>
+
+    <li>
+        <a href="../modules/typedoc.factories.html">Factories</a>
+    </li>
+
+    <li>
+        <a href="typedoc.factories.basestate.html">BaseState</a>
+    </li>
+
+            </ul>
+            <h1>Class BaseState</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container container-main">
+    <div class="row">
+        <div class="col-8">
+            
+    
+    <p>Base class of all states.</p>
+
+
+
+
+    <p>States store the current declaration and its matching reflection while
+being processed by the dispatcher. Factories can alter the state and
+stop it from being further processed.
+For each child declaration the dispatcher will create a child {DeclarationState}
+state. The root state is always an instance of {DocumentState}.</p>
+
+
+
+
+
+
+
+    <section class="tsd-hierarchy">
+        <h2>Hierarchy</h2>
+        <ul>
+            
+                <li >
+    
+        
+    
+        <a href="typedoc.event.html" class="tsd-signature-type">Event</a>
+    
+
+    
+
+    
+        <ul>
+            
+                <li class="target">
+    
+        BaseState
+    
+
+    
+        <ul>
+            
+                <li >
+    
+        
+    
+        <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a>
+    
+
+    
+
+    
+</li>
+            
+                <li >
+    
+        
+    
+        <a href="typedoc.factories.documentstate.html" class="tsd-signature-type">DocumentState</a>
+    
+
+    
+
+    
+</li>
+            
+        </ul>
+    
+</li>
+            
+        </ul>
+    
+</li>
+            
+        </ul>
+    </section>
+
+
+
+    <section class="tsd-member-index">
+    <h2>Index</h2>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Constructor methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Properties</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#declaration" class="tsd-kind-icon">declaration</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.basestate.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.basestate.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#originaldeclaration" class="tsd-kind-icon">originalDeclaration</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#parentstate" class="tsd-kind-icon">parentState</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#reflection" class="tsd-kind-icon">reflection</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#createchildstate" class="tsd-kind-icon">createChildState</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#getdocumentstate" class="tsd-kind-icon">getDocumentState</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#getname" class="tsd-kind-icon">getName</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#hasflag" class="tsd-kind-icon">hasFlag</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#kindof" class="tsd-kind-icon">kindOf</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.basestate.html#preventdefault" class="tsd-kind-icon">preventDefault</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.basestate.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a></li>
+                
+            </ul>
+        </section>
+    
+</section>
+    
+    
+        <section class="tsd-member-group ">
+    <h2>Constructor methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+    <a name="constructor"></a>
+    
+        
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>parentState<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a>, declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span>, reflection<span class="tsd-signature-symbols">?: </span><a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:38</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a new BaseState instance.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>parentState: <a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>declaration: <span class="tsd-signature-type">TypeScript.PullDecl</span></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>reflection?: <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Properties</h2>
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="declaration"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> declaration<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.PullDecl</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:21</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The TypeScript declaration that should be reflected by this state.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a name="isdefaultprevented"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isDefaultPrevented<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.event.html">Event</a>.<a href="typedoc.event.html#isdefaultprevented">isDefaultPrevented</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/utils/EventDispatcher.ts:18</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a name="ispropagationstopped"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isPropagationStopped<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.event.html">Event</a>.<a href="typedoc.event.html#ispropagationstopped">isPropagationStopped</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/utils/EventDispatcher.ts:16</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="originaldeclaration"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> originalDeclaration<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.PullDecl</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:26</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The TypeScript declaration that should be reflected by this state.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="parentstate"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> parentState<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:16</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The parent state of this state.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="reflection"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> reflection<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:31</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The reflection created for the declaration of this state.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="createchildstate"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createChildState<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:125</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a child state of this state with the given declaration.</p>
+
+
+
+
+    <p>This state must hold an reflection when creating a child state, an error will
+be thrown otherwise. If the reflection of this state contains a child with
+the name of the given declaration, the reflection of the child state will be
+populated with it.</p>
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>declaration: <span class="tsd-signature-type">TypeScript.PullDecl</span></h5>
+                
+    <p>The declaration that is encapsulated by the child state.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="getdocumentstate"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getDocumentState<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.documentstate.html" class="tsd-signature-type">DocumentState</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:95</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return the root state of this state.</p>
+
+
+
+
+    <p>The root state is always an instance of {DocumentState}.</p>
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.factories.documentstate.html" class="tsd-signature-type">DocumentState</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="getname"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getName<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:85</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="getsnapshot"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getSnapshot<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:110</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return the snapshot of the given filename.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>fileName: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The filename of the snapshot.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="hasflag"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasFlag<span class="tsd-signature-symbols">(</span>flag<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:53</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Check whether the given flag is set on the declaration of this state.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>flag: <span class="tsd-signature-type">number</span></h5>
+                
+    <p>The flag that should be looked for.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="kindof"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kindOf<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:61</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Test whether the declaration of this state is of the given kind.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+                
+    <p>The kind to test for.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kindOf<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/states/BaseState.ts:66</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Test whether the declaration of this state is of the given kind.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">[]</span></h5>
+                
+    <p>An array of kinds to test for.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+    <a name="preventdefault"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> preventDefault<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.event.html">Event</a>.<a href="typedoc.event.html#preventdefault">preventDefault</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/utils/EventDispatcher.ts:26</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+    <a name="stoppropagation"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> stopPropagation<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.event.html">Event</a>.<a href="typedoc.event.html#stoppropagation">stopPropagation</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/utils/EventDispatcher.ts:21</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+
+        </div>
+        <div class="offset-1 col-3">
+            <nav class="tsd-navigation primary">
+                <ul>
+                    
+                        <li class=" ">
+    <a href="../modules/_globals.html"><em>Globals</em></a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typedoc.html">TypeDoc</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
+    
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typescript.html">TypeScript</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    
+</li>
+                    
+                </ul>
+            </nav>
+
+            <nav class="tsd-navigation secondary">
+                
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScriptSnapshot</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basepath.html" class="tsd-kind-icon">BasePath</a>
+                    
+                </li>
+            
+        
+            
+                <li class="current tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basestate.html" class="tsd-kind-icon">BaseState</a>
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#declaration" class="tsd-kind-icon">declaration</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.basestate.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.basestate.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#originaldeclaration" class="tsd-kind-icon">originalDeclaration</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#parentstate" class="tsd-kind-icon">parentState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#reflection" class="tsd-kind-icon">reflection</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#createchildstate" class="tsd-kind-icon">createChildState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#getdocumentstate" class="tsd-kind-icon">getDocumentState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#getname" class="tsd-kind-icon">getName</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#hasflag" class="tsd-kind-icon">hasFlag</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.basestate.html#kindof" class="tsd-kind-icon">kindOf</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.basestate.html#preventdefault" class="tsd-kind-icon">preventDefault</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.basestate.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.commenthandler.html" class="tsd-kind-icon">CommentHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">DeclarationState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.documentstate.html" class="tsd-kind-icon">DocumentState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">DynamicModuleHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.grouphandler.html" class="tsd-kind-icon">GroupHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">InheritanceHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">NullHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.packagehandler.html" class="tsd-kind-icon">PackageHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.signaturehandler.html" class="tsd-kind-icon">SignatureHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.sourcehandler.html" class="tsd-kind-icon">SourceHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.typehandler.html" class="tsd-kind-icon">TypeHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-function tsd-parent-kind-container">
+                    <a href="../modules/typedoc.factories.html#createtype" class="tsd-kind-icon">createType</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

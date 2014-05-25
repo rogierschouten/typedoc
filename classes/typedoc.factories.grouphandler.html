@@ -1,0 +1,1029 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GroupHandler | TypeDoc Doumentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="tsd-page-toolbar">
+        <div class="container">
+            <div id="tsd-filter">
+                <input type="checkbox" id="tsd-filter-inherited" checked />
+                <label for="tsd-filter-inherited">Inherited</label>
+
+                <input type="checkbox" id="tsd-filter-private" checked />
+                <label for="tsd-filter-private">Private</label>
+
+                <input type="checkbox" id="tsd-filter-only-exported" />
+                <label for="tsd-filter-only-exported">Only exported</label>
+            </div>
+
+            <a href="../index.html">TypeDoc Doumentation</a>
+        </div>
+    </div>
+    <div class="tsd-page-title">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+    
+    
+    
+    <li>
+        <a href="../modules/typedoc.html">TypeDoc</a>
+    </li>
+
+    <li>
+        <a href="../modules/typedoc.factories.html">Factories</a>
+    </li>
+
+    <li>
+        <a href="typedoc.factories.grouphandler.html">GroupHandler</a>
+    </li>
+
+            </ul>
+            <h1>Class GroupHandler</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container container-main">
+    <div class="row">
+        <div class="col-8">
+            
+    
+    <p>A handler that sorts and groups the found reflections in the resolving phase.</p>
+
+
+
+
+    <p>The handler sets the ´groups´ property of all reflections.</p>
+
+
+
+
+
+
+
+
+
+    <section class="tsd-member-index">
+    <h2>Index</h2>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Constructor methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.factories.grouphandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Properties</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#plurals" class="tsd-kind-icon">PLURALS</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#singulars" class="tsd-kind-icon">SINGULARS</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#weights" class="tsd-kind-icon">WEIGHTS</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.grouphandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindplural" class="tsd-kind-icon">getKindPlural</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindsingular" class="tsd-kind-icon">getKindSingular</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindstring" class="tsd-kind-icon">getKindString</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.grouphandler.html#onleaveresolve" class="tsd-kind-icon">onLeaveResolve</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#sortcallback" class="tsd-kind-icon">sortCallback</a></li>
+                
+            </ul>
+        </section>
+    
+</section>
+    
+    
+        <section class="tsd-member-group ">
+    <h2>Constructor methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+    <a name="constructor"></a>
+    
+        
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.grouphandler.html" class="tsd-signature-type">GroupHandler</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:60</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a new GroupHandler instance.</p>
+
+
+
+
+    <p>Handlers are created automatically if they are registered in the static Dispatcher.FACTORIES array.</p>
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>dispatcher: <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h5>
+                
+    <p>The dispatcher this handler should be attached to.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.factories.grouphandler.html" class="tsd-signature-type">GroupHandler</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Properties</h2>
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="plurals"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> PLURALS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{}</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:41</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Define the plural name of individual reflection kinds.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="singulars"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> SINGULARS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{}</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:30</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Define the singular name of individual reflection kinds.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="weights"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> WEIGHTS<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">[]</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:12</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Define the sort order of reflections.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+    <a name="dispatcher"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:60</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="getkindplural"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getKindPlural<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:178</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return the plural name of a internal typescript kind identifier.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+                
+    <p>The original internal typescript kind identifier.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>The plural name of the given internal typescript kind identifier</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="getkindsingular"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getKindSingular<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:163</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return the singular name of a internal typescript kind identifier.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+                
+    <p>The original internal typescript kind identifier.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>The singular name of the given internal typescript kind identifier</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+    <a name="getkindstring"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> <span class="tsd-flag ts-flagstatic">static</span> getKindString<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:150</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Transform the internal typescript kind identifier into a human readable version.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+                
+    <p>The original typescript kind identifier.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>A human readable version of the given typescript kind identifier.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="getreflectiongroups"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getReflectionGroups<span class="tsd-signature-symbols">(</span>reflections<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:109</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a grouped representation of the given list of reflections.</p>
+
+
+
+
+    <p>Reflections are grouped by kind and sorted by weight and name.</p>
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>reflections: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h5>
+                
+    <p>The reflections that should be grouped.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span>
+    
+</p>
+    
+        <p>An array containing all children of the given reflection grouped by their kind.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="onleaveresolve"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onLeaveResolve<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:69</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered once after all documents have been read and the dispatcher
+leaves the resolving phase.</p>
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="sortcallback"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> sortCallback<span class="tsd-signature-symbols">(</span>a<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>, b<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/handlers/GroupHandler.ts:194</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Callback used to sort reflections by weight defined by ´GroupHandler.WEIGHTS´ and name.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>a: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
+                
+    <p>The left reflection to sort.</p>
+
+
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>b: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
+                
+    <p>The right reflection to sort.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">number</span>
+    
+</p>
+    
+        <p>The sorting weight.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+
+        </div>
+        <div class="offset-1 col-3">
+            <nav class="tsd-navigation primary">
+                <ul>
+                    
+                        <li class=" ">
+    <a href="../modules/_globals.html"><em>Globals</em></a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typedoc.html">TypeDoc</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
+    
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typescript.html">TypeScript</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    
+</li>
+                    
+                </ul>
+            </nav>
+
+            <nav class="tsd-navigation secondary">
+                
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScriptSnapshot</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basepath.html" class="tsd-kind-icon">BasePath</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basestate.html" class="tsd-kind-icon">BaseState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.commenthandler.html" class="tsd-kind-icon">CommentHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">DeclarationState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.documentstate.html" class="tsd-kind-icon">DocumentState</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">DynamicModuleHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class="current tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.grouphandler.html" class="tsd-kind-icon">GroupHandler</a>
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.grouphandler.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#plurals" class="tsd-kind-icon">PLURALS</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#singulars" class="tsd-kind-icon">SINGULARS</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#weights" class="tsd-kind-icon">WEIGHTS</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.factories.grouphandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#getkindplural" class="tsd-kind-icon">getKindPlural</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#getkindsingular" class="tsd-kind-icon">getKindSingular</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#getkindstring" class="tsd-kind-icon">getKindString</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.factories.grouphandler.html#onleaveresolve" class="tsd-kind-icon">onLeaveResolve</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.grouphandler.html#sortcallback" class="tsd-kind-icon">sortCallback</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">InheritanceHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">NullHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.packagehandler.html" class="tsd-kind-icon">PackageHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.signaturehandler.html" class="tsd-kind-icon">SignatureHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.sourcehandler.html" class="tsd-kind-icon">SourceHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.typehandler.html" class="tsd-kind-icon">TypeHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-function tsd-parent-kind-container">
+                    <a href="../modules/typedoc.factories.html#createtype" class="tsd-kind-icon">createType</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>
