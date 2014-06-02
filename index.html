@@ -51,16 +51,44 @@ in your project&#39;s directory as usual:</p>
 <pre><code class="lang-shell"><span class="hljs-comment">$</span> <span class="hljs-comment">npm</span> <span class="hljs-comment">install</span> <span class="hljs-comment">typedoc</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">save</span><span class="hljs-literal">-</span><span class="hljs-comment">dev</span>
 </code></pre>
 <p>Like the TypeScript compiler, TypeDoc comes with a binary that can be called from anywhere
-if you install TypeDoc as a global module. The name of the executable is <code>tsd</code>.</p>
+if you install TypeDoc as a global module. The name of the executable is <code>typedoc</code>.</p>
 <pre><code class="lang-shell"><span class="hljs-variable">$ </span>npm install typedoc --global
-<span class="hljs-variable">$ </span>tsd
+<span class="hljs-variable">$ </span>typedoc
 </code></pre>
+<h2 id="preview">Preview</h2>
+<p>If you want to know what a documentation created with TypeDoc looks like, head over
+to the GitHub page of the project. It contains an api documentation of TypeDoc generated with
+TypeDoc:</p>
+<p><a href="http://sebastian-lenz.github.io/typedoc">http://sebastian-lenz.github.io/typedoc</a></p>
 <h2 id="usage">Usage</h2>
+<h3 id="shell">Shell</h3>
 <p>TypeDoc accepts most of the command line arguments that the TypeScript compiler accepts. One major
 difference is the fact that one may pass an entire directory instead of individual files to the documentation
 generator. So in order to create a documentation for an entire project you simply type:</p>
-<pre><code class="lang-shell"><span class="hljs-formula">$ tsd --out path<span class="hljs-command">\to</span><span class="hljs-command">\documentation</span><span class="hljs-command">\ </span>path<span class="hljs-command">\to</span><span class="hljs-command">\typescript</span><span class="hljs-command">\project</span>\</span>
+<pre><code class="lang-shell">$ typedoc --<span class="hljs-keyword">out</span> path/<span class="hljs-keyword">to</span>/documentation/ path/<span class="hljs-keyword">to</span>/typescript/project/
 </code></pre>
+<h3 id="arguments">Arguments</h3>
+<h4 id="-out-path-to-documentation-"><code>--out &lt;path/to/documentation/&gt;</code></h4>
+<p>Specifies the location the documentation should be written to.</p>
+<h4 id="-title-documentation-title-"><code>--title &lt;Documentation title&gt;</code></h4>
+<p>Set the name of the project that will be used in the header of the template.</p>
+<h4 id="-module-commonjs-or-amd-"><code>--module &lt;commonjs or amd&gt;</code></h4>
+<p>Specify module code generation: &quot;commonjs&quot; or &quot;amd&quot;</p>
+<h4 id="-target-es3-or-es5-"><code>--target &lt;ES3 or ES5&gt;</code></h4>
+<p>Specify ECMAScript target version: &quot;ES3&quot; (default), or &quot;ES5&quot;</p>
+<h3 id="gulp">Gulp</h3>
+<p>There is a plugin available to run TypeDoc with Gulp created by Rogier Schouten. You can find it on NPM:
+<a href="https://www.npmjs.org/package/gulp-typedoc/">https://www.npmjs.org/package/gulp-typedoc/</a></p>
+<h2 id="document-your-code">Document your code</h2>
+<p>TypeDoc runs the TypeScript compiler and extracts type information from the generated compiler symbols.
+Therefore you don&#39;t have to include additional metadata within your comments, TypeScript specific elements
+like classes, enumerations or property types and access modifiers will be automatically detected.</p>
+<p>The documentation generator currently understands these javadoc tags:</p>
+<ul>
+<li><code>@param &lt;param name&gt;</code></li>
+<li><code>@retrun(s)</code></li>
+</ul>
+<p>All other tags will be rendered as definition lists, so they are not lost.</p>
 
         </div>
         <div class="offset-1 col-3">
@@ -68,7 +96,7 @@ generator. So in order to create a documentation for an entire project you simpl
                 <ul>
                     
                         <li class=" ">
-    <a href="modules/_globals.html"><em>Globals</em></a>
+    <a href="globals.html"><em>Globals</em></a>
     
 </li>
                     
