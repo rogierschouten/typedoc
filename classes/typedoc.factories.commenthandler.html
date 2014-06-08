@@ -58,6 +58,10 @@
         <div class="col-8">
             
     
+    <p>A handler that parses javadoc comments and attaches <a href="typedoc.models.comment.html">Models.Comment</a> instances to
+the generated reflections.</p>
+
+
 
 
 
@@ -83,8 +87,6 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#applycomments" class="tsd-kind-icon">applyComments</a></li>
-                
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#findcomments" class="tsd-kind-icon">findComments</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#isdoccomment" class="tsd-kind-icon">isDocComment</a></li>
@@ -95,9 +97,7 @@
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#parsedoccomment" class="tsd-kind-icon">parseDocComment</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#postprocesssignatures" class="tsd-kind-icon">postProcessSignatures</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#removecommenttags" class="tsd-kind-icon">removeCommentTags</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.commenthandler.html#removetags" class="tsd-kind-icon">removeTags</a></li>
                 
             </ul>
         </section>
@@ -121,11 +121,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:4</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:13</li>
             
         </ul>
     
 </aside>
+
+    <p>Create a new CommentHandler instance.</p>
+
 
 
 
@@ -139,6 +142,9 @@
             <li>
                 <h5>dispatcher: <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h5>
                 
+    <p>The dispatcher this handler should be attached to.</p>
+
+
 
 
 
@@ -174,55 +180,6 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="applycomments"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> applyComments<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:106</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
-                
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
     <a name="findcomments"></a>
     
         
@@ -234,12 +191,26 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:70</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:146</li>
             
         </ul>
     
 </aside>
 
+    <p>Find all doc comments associated with the declaration of the given state
+and return their plain text.</p>
+
+
+
+
+    <p>Variable declarations need a special treatment, their comments are stored with the
+surrounding VariableStatement ast element. Their ast hierarchy looks like this:</p>
+<blockquote>
+<p>VariableStatement &#8594; VariableDeclaration &#8594; SeparatedList &#8594; VariableDeclarator</p>
+</blockquote>
+<p>This reflect the possibility of JavaScript to define multiple variables with a single <code>var</code>
+statement. We therefore have to check whether the VariableStatement contains only one variable
+and then can assign the comment of the VariableStatement to the VariableDeclarator declaration.</p>
 
 
 
@@ -252,6 +223,9 @@
             <li>
                 <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
                 
+    <p>The state containing the declaration whose comments should be extracted.</p>
+
+
 
 
 
@@ -268,6 +242,9 @@
         <span class="tsd-signature-type">Array&lt;string&gt;</span>
     
 </p>
+    
+        <p>A list of all doc comments associated with the state.</p>
+
     
 
 
@@ -291,11 +268,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:113</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:100</li>
             
         </ul>
     
 </aside>
+
+    <p>Test whether the given TypeScript comment instance is a doc comment.</p>
+
 
 
 
@@ -309,6 +289,9 @@
             <li>
                 <h5>comment: <span class="tsd-signature-type">TypeScript.Comment</span></h5>
                 
+    <p>The TypeScript comment that should be tested.</p>
+
+
 
 
 
@@ -325,6 +308,9 @@
         <span class="tsd-signature-type">boolean</span>
     
 </p>
+    
+        <p>True when the comment is a doc comment, otherwise false.</p>
+
     
 
 
@@ -348,12 +334,18 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:10</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:26</li>
             
         </ul>
     
 </aside>
 
+    <p>Triggered when the dispatcher processes a declaration.</p>
+
+
+
+
+    <p>Invokes the comment parser.</p>
 
 
 
@@ -366,6 +358,9 @@
             <li>
                 <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
                 
+    <p>The state that describes the current declaration and reflection.</p>
+
+
 
 
 
@@ -389,7 +384,7 @@
     <a name="onresolvereflection"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onResolveReflection<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onResolveReflection<span class="tsd-signature-symbols">(</span>res<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -397,12 +392,21 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:22</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:51</li>
             
         </ul>
     
 </aside>
 
+    <p>Triggered when the dispatcher resolves a reflection.</p>
+
+
+
+
+    <p>Cleans up comment tags related to signatures like @param or @return
+and moves their data to the corresponding parameter reflections.</p>
+<p>This hook also copies over the comment of function implementations to their
+signatures.</p>
 
 
 
@@ -413,8 +417,10 @@
     <ul>
         
             <li>
-                <h5>reflection: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
+                <h5>res: <a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a></h5>
                 
+    
+
 
 
 
@@ -446,11 +452,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:138</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:188</li>
             
         </ul>
     
 </aside>
+
+    <p>Parse the given doc comment string.</p>
+
 
 
 
@@ -464,6 +473,9 @@
             <li>
                 <h5>text: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The doc comment string that should be parsed.</p>
+
+
 
 
 
@@ -473,6 +485,9 @@
             <li>
                 <h5>comment?: <a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>The <a href="typedoc.models.comment.html">Models.Comment</a> instance the parsed results should be stored into.</p>
+
+
 
 
 
@@ -490,6 +505,9 @@
     
 </p>
     
+        <p>A populated <a href="typedoc.models.comment.html">Models.Comment</a> instance.</p>
+
+    
 
 
         
@@ -501,10 +519,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="postprocesssignatures"></a>
+    <a name="removetags"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> postProcessSignatures<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> removeTags<span class="tsd-signature-symbols">(</span>comment<span class="tsd-signature-symbols">: </span><a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a>, tagName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -512,60 +530,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:32</li>
+                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:116</li>
             
         </ul>
     
 </aside>
 
+    <p>Remove all tags with the given name from the given comment instance.</p>
 
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>reflection: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
-                
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="removecommenttags"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> removeCommentTags<span class="tsd-signature-symbols">(</span>comment<span class="tsd-signature-symbols">: </span><a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a>, tagName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/handlers/CommentHandler.ts:123</li>
-            
-        </ul>
-    
-</aside>
 
 
 
@@ -579,6 +551,9 @@
             <li>
                 <h5>comment: <a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a></h5>
                 
+    <p>The comment that should be modified.</p>
+
+
 
 
 
@@ -588,6 +563,9 @@
             <li>
                 <h5>tagName: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The name of the that that should be removed.</p>
+
+
 
 
 
@@ -669,6 +647,12 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -680,7 +664,7 @@
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     
@@ -747,13 +731,6 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.commenthandler.html#applycomments" class="tsd-kind-icon">applyComments</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
                     <a href="typedoc.factories.commenthandler.html#findcomments" class="tsd-kind-icon">findComments</a>
                     
                 </li>
@@ -789,14 +766,7 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.commenthandler.html#postprocesssignatures" class="tsd-kind-icon">postProcessSignatures</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.commenthandler.html#removecommenttags" class="tsd-kind-icon">removeCommentTags</a>
+                    <a href="typedoc.factories.commenthandler.html#removetags" class="tsd-kind-icon">removeTags</a>
                     
                 </li>
             
@@ -804,6 +774,13 @@
     </ul>
 
 
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a>
+                    
                 </li>
             
         
@@ -865,7 +842,21 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
                     
                 </li>
             

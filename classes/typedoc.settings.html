@@ -1,0 +1,877 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Settings | TypeDoc Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="tsd-page-toolbar">
+        <div class="container">
+            <div id="tsd-filter">
+                <input type="checkbox" id="tsd-filter-inherited" checked />
+                <label for="tsd-filter-inherited">Inherited</label>
+
+                <input type="checkbox" id="tsd-filter-private" checked />
+                <label for="tsd-filter-private">Private</label>
+
+                <input type="checkbox" id="tsd-filter-only-exported" />
+                <label for="tsd-filter-only-exported">Only exported</label>
+            </div>
+
+            <a href="../index.html">TypeDoc Documentation</a>
+        </div>
+    </div>
+    <div class="tsd-page-title">
+        <div class="container">
+            <ul class="breadcrumb">
+                
+    
+    
+    <li>
+        <a href="../modules/typedoc.html">TypeDoc</a>
+    </li>
+
+    <li>
+        <a href="typedoc.settings.html">Settings</a>
+    </li>
+
+            </ul>
+            <h1>Class Settings</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container container-main">
+    <div class="row">
+        <div class="col-8">
+            
+    
+    <p>Holds all settings used by TypeDoc.</p>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="tsd-member-index">
+    <h2>Index</h2>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Constructor methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.settings.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Properties</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#compiler" class="tsd-kind-icon">compiler</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#excludepattern" class="tsd-kind-icon">excludePattern</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#includedeclarations" class="tsd-kind-icon">includeDeclarations</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#inputfiles" class="tsd-kind-icon">inputFiles</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#name" class="tsd-kind-icon">name</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#needshelp" class="tsd-kind-icon">needsHelp</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#outputdirectory" class="tsd-kind-icon">outputDirectory</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#shouldprintversiononly" class="tsd-kind-icon">shouldPrintVersionOnly</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#verbose" class="tsd-kind-icon">verbose</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.settings.html#createoptionsparser" class="tsd-kind-icon">createOptionsParser</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.settings.html#expandinputfiles" class="tsd-kind-icon">expandInputFiles</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.settings.html#readfromcommandline" class="tsd-kind-icon">readFromCommandline</a></li>
+                
+            </ul>
+        </section>
+    
+</section>
+    
+    
+        <section class="tsd-member-group ">
+    <h2>Constructor methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+    <a name="constructor"></a>
+    
+        
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.settings.html" class="tsd-signature-type">Settings</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:57</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a new Settings instance.</p>
+
+
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.settings.html" class="tsd-signature-type">Settings</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Properties</h2>
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="compiler"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compiler<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.CompilationSettings</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:10</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The settings used by the TypeScript compiler.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="excludepattern"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> excludePattern<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:30</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>A pattern for files that should be excluded when a path is specified as source.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="includedeclarations"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> includeDeclarations<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:35</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Should declaration files be documented?</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="inputfiles"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> inputFiles<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;string&gt;</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:15</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The list of source files that should be processed.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="name"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:25</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The human readable name of the project. Used within the templates to set the title of the document.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="needshelp"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> needsHelp<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:40</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Does the user want to display the help message?</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="outputdirectory"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> outputDirectory<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:20</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The path of the output directory.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="shouldprintversiononly"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> shouldPrintVersionOnly<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:45</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Does the user want to know the version number?</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="verbose"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> verbose<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:50</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Should verbose messages be printed?</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="createoptionsparser"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> createOptionsParser<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.optionsparser.html" class="tsd-signature-type">OptionsParser</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:138</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create and initialize an instance of OptionsParser to read command line arguments.</p>
+
+
+
+
+    <p>This function partially contains the options found in <a href="typescript.batchcompiler.html#parseoptions">TypeScript.BatchCompiler.parseOptions</a>.
+When updating the TypeScript compiler, new options should be copied over here.</p>
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typescript.optionsparser.html" class="tsd-signature-type">OptionsParser</a>
+    
+</p>
+    
+        <p>An initialized OptionsParser instance.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="expandinputfiles"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> expandInputFiles<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:96</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Expand the list of input files.</p>
+
+
+
+
+    <p>Searches for directories in the input files list and replaces them with a
+listing of all TypeScript files within them. One may use the exlclude option
+to filter out files aith a pattern.</p>
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="readfromcommandline"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> readFromCommandline<span class="tsd-signature-symbols">(</span>application<span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/Settings.ts:65</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Read the settings from command line arguments.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>application: <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
+
+        </div>
+        <div class="offset-1 col-3">
+            <nav class="tsd-navigation primary">
+                <ul>
+                    
+                        <li class=" ">
+    <a href="../globals.html"><em>Globals</em></a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container">
+    <a href="../modules/typedoc.html">TypeDoc</a>
+    
+        
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typescript.html">TypeScript</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    
+</li>
+                    
+                </ul>
+            </nav>
+
+            <nav class="tsd-navigation secondary">
+                
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-variable tsd-parent-kind-container">
+                    <a href="../modules/typedoc.html#version" class="tsd-kind-icon">VERSION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-enum tsd-parent-kind-container">
+                    <a href="../enums/typedoc.loglevel.html" class="tsd-kind-icon">LogLevel</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.iapplication.html" class="tsd-kind-icon">IApplication</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.ilistener.html" class="tsd-kind-icon">IListener</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.application.html" class="tsd-kind-icon">Application</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.event.html" class="tsd-kind-icon">Event</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.eventdispatcher.html" class="tsd-kind-icon">EventDispatcher</a>
+                    
+                </li>
+            
+        
+            
+                <li class="current tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.settings.html" class="tsd-kind-icon">Settings</a>
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#compiler" class="tsd-kind-icon">compiler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#excludepattern" class="tsd-kind-icon">excludePattern</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#includedeclarations" class="tsd-kind-icon">includeDeclarations</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#inputfiles" class="tsd-kind-icon">inputFiles</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#name" class="tsd-kind-icon">name</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#needshelp" class="tsd-kind-icon">needsHelp</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#outputdirectory" class="tsd-kind-icon">outputDirectory</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#shouldprintversiononly" class="tsd-kind-icon">shouldPrintVersionOnly</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#verbose" class="tsd-kind-icon">verbose</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.settings.html#createoptionsparser" class="tsd-kind-icon">createOptionsParser</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#expandinputfiles" class="tsd-kind-icon">expandInputFiles</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.settings.html#readfromcommandline" class="tsd-kind-icon">readFromCommandline</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-function tsd-parent-kind-container">
+                    <a href="../modules/typedoc.html#readfile" class="tsd-kind-icon">readFile</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
+                
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

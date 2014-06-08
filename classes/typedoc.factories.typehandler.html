@@ -82,15 +82,6 @@
             </ul>
         </section>
     
-        <section class="tsd-member-index-group tsd-is-private">
-            <h3>Properties</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.typehandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
-                
-            </ul>
-        </section>
-    
         <section class="tsd-member-index-group ">
             <h3>Methods</h3>
             <ul class="tsd-member-index">
@@ -173,41 +164,6 @@
     
 
     
-        <section class="tsd-member-group tsd-is-private">
-    <h2>Properties</h2>
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-    <a name="dispatcher"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:7</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-    
         <section class="tsd-member-group ">
     <h2>Methods</h2>
     
@@ -224,7 +180,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:72</li>
+                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:75</li>
             
         </ul>
     
@@ -290,7 +246,7 @@
     <a name="onresolvereflection"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> onResolveReflection<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> onResolveReflection<span class="tsd-signature-symbols">(</span>resolution<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -314,7 +270,7 @@
     <ul>
         
             <li>
-                <h5>reflection: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
+                <h5>resolution: <a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a></h5>
                 
 
 
@@ -339,7 +295,7 @@
     <a name="resolvetype"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveType<span class="tsd-signature-symbols">(</span>type<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveType<span class="tsd-signature-symbols">(</span>type<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a>, compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
 
 <aside class="tsd-sources">
     
@@ -347,7 +303,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:31</li>
+                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:34</li>
             
         </ul>
     
@@ -364,6 +320,15 @@
         
             <li>
                 <h5>type: <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>compiler: <a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a></h5>
                 
 
 
@@ -396,7 +361,7 @@
     <a name="resolvetypes"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveTypes<span class="tsd-signature-symbols">(</span>types<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveTypes<span class="tsd-signature-symbols">(</span>types<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span>, compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -404,7 +369,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:22</li>
+                <li>Defined in typedoc/factories/handlers/TypeHandler.ts:25</li>
             
         </ul>
     
@@ -421,6 +386,15 @@
         
             <li>
                 <h5>types: <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>compiler: <a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a></h5>
                 
 
 
@@ -511,6 +485,12 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -522,7 +502,7 @@
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     
@@ -576,6 +556,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.commenthandler.html" class="tsd-kind-icon">CommentHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a>
                     
                 </li>
             
@@ -638,7 +625,21 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
                     
                 </li>
             
@@ -674,13 +675,6 @@
             
                 <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
                     <a href="typedoc.factories.typehandler.html#constructor" class="tsd-kind-icon">constructor</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.factories.typehandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
                     
                 </li>
             

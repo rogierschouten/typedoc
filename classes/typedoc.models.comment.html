@@ -58,6 +58,13 @@
         <div class="col-8">
             
     
+    <p>A model that represents a javadoc comment.</p>
+
+
+
+
+    <p>Instances of this model are created by the <a href="typedoc.factories.commenthandler.html">CommentHandler</a>. You can retrieve comments
+through the <a href="typedoc.models.basereflection.html#comment">BaseReflection.comment</a> property.</p>
 
 
 
@@ -124,11 +131,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:13</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:36</li>
             
         </ul>
     
 </aside>
+
+    <p>Creates a new Comment instance.</p>
+
 
 
 
@@ -196,11 +206,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:8</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:24</li>
             
         </ul>
     
 </aside>
+
+    <p>The text of the <code>@returns</code> tag if present.</p>
+
 
 
 
@@ -224,11 +237,15 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:4</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:14</li>
             
         </ul>
     
 </aside>
+
+    <p>The abstract of the comment. TypeDoc interprets the first paragraph of a comment
+as the abstract.</p>
+
 
 
 
@@ -252,11 +269,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:10</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:29</li>
             
         </ul>
     
 </aside>
+
+    <p>All associated javadoc tags.</p>
+
 
 
 
@@ -280,11 +300,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:6</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:19</li>
             
         </ul>
     
 </aside>
+
+    <p>The full body text of the comment. Excludes the <a href="typedoc.models.comment.html#shorttext">shortText</a>.</p>
+
 
 
 
@@ -316,12 +339,18 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:30</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:68</li>
             
         </ul>
     
 </aside>
 
+    <p>Return the first tag with the given name.</p>
+
+
+
+
+    <p>You can optionally pass a parameter name that should be searched to.</p>
 
 
 
@@ -334,6 +363,9 @@
             <li>
                 <h5>tagName: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The name of the tag to look for.</p>
+
+
 
 
 
@@ -343,6 +375,9 @@
             <li>
                 <h5>paramName?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>An optional parameter name to look for.</p>
+
+
 
 
 
@@ -360,6 +395,9 @@
     
 </p>
     
+        <p>The found tag or NULL.</p>
+
+    
 
 
         
@@ -374,7 +412,7 @@
     <a name="hastag"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasTag<span class="tsd-signature-symbols">(</span>tag<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasTag<span class="tsd-signature-symbols">(</span>tagName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -382,11 +420,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/comments/Comment.ts:19</li>
+                <li>Defined in typedoc/models/comments/Comment.ts:48</li>
             
         </ul>
     
 </aside>
+
+    <p>Test whether this comment contains a tag with the given name.</p>
+
 
 
 
@@ -398,8 +439,11 @@
     <ul>
         
             <li>
-                <h5>tag: <span class="tsd-signature-type">string</span></h5>
+                <h5>tagName: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The name of the tag to look for.</p>
+
+
 
 
 
@@ -416,6 +460,9 @@
         <span class="tsd-signature-type">boolean</span>
     
 </p>
+    
+        <p>TRUE when this comment contains a tag with the given name, otherwise FALSE.</p>
+
     
 
 
@@ -504,7 +551,7 @@
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     

@@ -48,12 +48,12 @@
 <h2 id="installation">Installation</h2>
 <p>TypeDoc runs on Node.js and is available as an NPM package. You can install TypeDoc
 in your project&#39;s directory as usual:</p>
-<pre><code class="lang-shell"><span class="hljs-comment">$</span> <span class="hljs-comment">npm</span> <span class="hljs-comment">install</span> <span class="hljs-comment">typedoc</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">save</span><span class="hljs-literal">-</span><span class="hljs-comment">dev</span>
+<pre><code class="lang-bash">$ npm install typedoc --save-dev
 </code></pre>
 <p>Like the TypeScript compiler, TypeDoc comes with a binary that can be called from anywhere
 if you install TypeDoc as a global module. The name of the executable is <code>typedoc</code>.</p>
-<pre><code class="lang-shell"><span class="hljs-variable">$ </span>npm install typedoc --global
-<span class="hljs-variable">$ </span>typedoc
+<pre><code class="lang-bash">$ npm install typedoc --global
+$ typedoc
 </code></pre>
 <h2 id="preview">Preview</h2>
 <p>If you want to know what a documentation created with TypeDoc looks like, head over
@@ -65,17 +65,19 @@ TypeDoc:</p>
 <p>TypeDoc accepts most of the command line arguments that the TypeScript compiler accepts. One major
 difference is the fact that one may pass an entire directory instead of individual files to the documentation
 generator. So in order to create a documentation for an entire project you simply type:</p>
-<pre><code class="lang-shell">$ typedoc --<span class="hljs-keyword">out</span> path/<span class="hljs-keyword">to</span>/documentation/ path/<span class="hljs-keyword">to</span>/typescript/project/
+<pre><code class="lang-bash">$ typedoc --out path/to/documentation/ path/to/typescript/project/
 </code></pre>
 <h3 id="arguments">Arguments</h3>
-<h4 id="-out-path-to-documentation-"><code>--out &lt;path/to/documentation/&gt;</code></h4>
+<p><code>--out &lt;path/to/documentation/&gt;</code></p>
 <p>Specifies the location the documentation should be written to.</p>
-<h4 id="-title-documentation-title-"><code>--title &lt;Documentation title&gt;</code></h4>
+<p><code>--name &lt;Documentation title&gt;</code></p>
 <p>Set the name of the project that will be used in the header of the template.</p>
-<h4 id="-module-commonjs-or-amd-"><code>--module &lt;commonjs or amd&gt;</code></h4>
+<p><code>--module &lt;commonjs or amd&gt;</code></p>
 <p>Specify module code generation: &quot;commonjs&quot; or &quot;amd&quot;</p>
-<h4 id="-target-es3-or-es5-"><code>--target &lt;ES3 or ES5&gt;</code></h4>
+<p><code>--target &lt;ES3 or ES5&gt;</code></p>
 <p>Specify ECMAScript target version: &quot;ES3&quot; (default), or &quot;ES5&quot;</p>
+<p><code>--exclude &lt;pattern&gt;</code></p>
+<p>Exclude files by the given pattern, when a path is provided as source</p>
 <h3 id="gulp">Gulp</h3>
 <p>There is a plugin available to run TypeDoc with Gulp created by Rogier Schouten. You can find it on NPM:
 <a href="https://www.npmjs.org/package/gulp-typedoc/">https://www.npmjs.org/package/gulp-typedoc/</a></p>
@@ -86,12 +88,40 @@ generator. So in order to create a documentation for an entire project you simpl
 <p>TypeDoc runs the TypeScript compiler and extracts type information from the generated compiler symbols.
 Therefore you don&#39;t have to include additional metadata within your comments, TypeScript specific elements
 like classes, enumerations or property types and access modifiers will be automatically detected.</p>
+<p>All comments can contains markdown. TypeDoc uses the Marked (<a href="https://github.com/chjj/marked">https://github.com/chjj/marked</a>) markdown parser
+and HighlightJS (<a href="https://github.com/isagalaev/highlight.js">https://github.com/isagalaev/highlight.js</a>) to highlight code blocks within markdown sections.
+Additionally you can link to other classes, members or functions using double angle brackets.</p>
+<h3 id="javadoc-tags">JavaDoc tags</h3>
 <p>The documentation generator currently understands these javadoc tags:</p>
 <ul>
 <li><code>@param &lt;param name&gt;</code></li>
 <li><code>@retrun(s)</code></li>
 </ul>
 <p>All other tags will be rendered as definition lists, so they are not lost.</p>
+<h3 id="function-signatures">Function signatures</h3>
+<p>When writing documentation for function signatures, you don&#39;t have to repeat yourself. TypeDoc automatically
+copies comments and tags of the function implementation to its signatures for you. Of course you can still
+overwrite them if you wish to.</p>
+<pre><code class="lang-typescript"><span class="hljs-comment">/**
+ * @param text  Comment for parameter ´text´.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(target:any, text:string)</span><span class="hljs-type">:number</span>;</span>
+
+<span class="hljs-comment">/**
+ * @param value  Comment for parameter ´value´.
+ * @returns      Comment for special return value.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(target:any, value:number)</span><span class="hljs-type">:number</span>;</span>
+
+<span class="hljs-comment">/**
+ * Comment for method ´doSomething´.
+ * @param with  Comment for parameter ´with´.
+ * @returns     Comment for return value.
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(target:any, arg:any)</span><span class="hljs-type">:number</span> {</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
 
         </div>
         <div class="offset-1 col-3">
@@ -119,7 +149,7 @@ like classes, enumerations or property types and access modifiers will be automa
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     

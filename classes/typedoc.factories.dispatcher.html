@@ -141,13 +141,7 @@ being processed.</p>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#factories" class="tsd-kind-icon">FACTORIES</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#compiler" class="tsd-kind-icon">compiler</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#idmap" class="tsd-kind-icon">idMap</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#project" class="tsd-kind-icon">project</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#snapshots" class="tsd-kind-icon">snapshots</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a></li>
                 
             </ul>
         </section>
@@ -156,7 +150,7 @@ being processed.</p>
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#attachdocument" class="tsd-kind-icon">attachDocument</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
                 
@@ -166,15 +160,11 @@ being processed.</p>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#flagstostring" class="tsd-kind-icon">flagsToString</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a></li>
-                
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">processState</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a></li>
                 
             </ul>
         </section>
@@ -190,7 +180,7 @@ being processed.</p>
     <a name="constructor"></a>
     
         
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.application.html" class="tsd-signature-type">Application</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>application<span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
 
 <aside class="tsd-sources">
     
@@ -198,7 +188,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:80</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:67</li>
             
         </ul>
     
@@ -217,20 +207,11 @@ being processed.</p>
     <ul>
         
             <li>
-                <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
+                <h5>application: <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h5>
                 
     <p>The target project instance.</p>
 
 
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>compiler: <a href="typedoc.application.html" class="tsd-signature-type">Application</a></h5>
-                
 
 
 
@@ -276,7 +257,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:72</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:59</li>
             
         </ul>
     
@@ -297,9 +278,9 @@ being processed.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="compiler"></a>
+    <a name="application"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compiler<span class="tsd-signature-symbols">:</span> <a href="typedoc.application.html" class="tsd-signature-type">Application</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> application<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h3>
 
 <aside class="tsd-sources">
     
@@ -307,100 +288,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:63</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="idmap"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> idMap<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{ [id: number]: TypeDoc.Models.DeclarationReflection; }</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:65</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-        
-            
-                <section class="tsd-member tsd-kind-index-signature tsd-parent-kind-property">
-    <a name="idmap."></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:65</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-
-
-
-
-
-        
-    
-
-    
-</section>
-            
-        
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="project"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> project<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:61</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:54</li>
             
         </ul>
     
@@ -419,71 +307,6 @@ being processed.</p>
 </section>
         
     
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="snapshots"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> snapshots<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{ [fileName: string]: TypeDoc.Factories.IScriptSnapshot; }</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:67</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-        
-            
-                <section class="tsd-member tsd-kind-index-signature tsd-parent-kind-property">
-    <a name="snapshots."></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:67</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-
-
-
-
-
-        
-    
-
-    
-</section>
-            
-        
-    
-</section>
-        
-    
 </section>
     
 
@@ -493,10 +316,10 @@ being processed.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="attachdocument"></a>
+    <a name="compile"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> attachDocument<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.Document</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compile<span class="tsd-signature-symbols">(</span>inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
 
 <aside class="tsd-sources">
     
@@ -504,18 +327,15 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:186</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:83</li>
             
         </ul>
     
 </aside>
 
-    <p>Attach the given document to the project.</p>
+    <p>Compile the given list of source files and generate a reflection for them.</p>
 
 
-
-
-    <p>This method is called by the compiler for each compiled document.</p>
 
 
 
@@ -526,9 +346,9 @@ being processed.</p>
     <ul>
         
             <li>
-                <h5>document: <span class="tsd-signature-type">TypeScript.Document</span></h5>
+                <h5>inputFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
                 
-    <p>The TypeScript document that should be processed by the dispatcher.</p>
+    <p>A list of source files.</p>
 
 
 
@@ -540,6 +360,17 @@ being processed.</p>
     </ul>
 
 
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>
+    
+</p>
+    
+        <p>The generated root reflection.</p>
+
+    
 
 
         
@@ -626,7 +457,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:149</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:144</li>
             
         </ul>
     
@@ -697,7 +528,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:216</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:182</li>
             
         </ul>
     
@@ -764,7 +595,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:242</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:208</li>
             
         </ul>
     
@@ -807,69 +638,6 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <p>A string describing the given bit mask.</p>
 
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getsnapshot"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getSnapshot<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:96</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Return the snapshot of the given filename.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>fileName: <span class="tsd-signature-type">string</span></h5>
-                
-    <p>The filename of the snapshot.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns</h4>
-    <p>
-    
-        <a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>
-    
-</p>
     
 
 
@@ -1048,7 +816,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:123</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:118</li>
             
         </ul>
     
@@ -1079,41 +847,6 @@ will hold an array of created reflections for the final resolving phase.</p>
             </li>
         
     </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="resolve"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> resolve<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:199</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-
 
 
 
@@ -1188,6 +921,12 @@ will hold an array of created reflections for the final resolving phase.</p>
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -1199,7 +938,7 @@ will hold an array of created reflections for the final resolving phase.</p>
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     
@@ -1259,6 +998,13 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">DeclarationState</a>
                     
                 </li>
@@ -1287,35 +1033,14 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#compiler" class="tsd-kind-icon">compiler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#idmap" class="tsd-kind-icon">idMap</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#project" class="tsd-kind-icon">project</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#snapshots" class="tsd-kind-icon">snapshots</a>
+                    <a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#attachdocument" class="tsd-kind-icon">attachDocument</a>
+                    <a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a>
                     
                 </li>
             
@@ -1349,13 +1074,6 @@ will hold an array of created reflections for the final resolving phase.</p>
             
         
             
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a>
-                    
-                </li>
-            
-        
-            
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a>
                     
@@ -1372,13 +1090,6 @@ will hold an array of created reflections for the final resolving phase.</p>
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">processState</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a>
                     
                 </li>
             
@@ -1433,7 +1144,21 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
                     
                 </li>
             

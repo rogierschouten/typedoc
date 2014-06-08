@@ -109,6 +109,15 @@ and source files of the processed project through this reflection.</p>
     <h2>Index</h2>
     
         <section class="tsd-member-index-group ">
+            <h3>Constructor methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.models.projectreflection.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
@@ -143,6 +152,8 @@ and source files of the processed project through this reflection.</p>
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.models.projectreflection.html#findreflectionbyname" class="tsd-kind-icon">findReflectionByName</a></li>
+                
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.projectreflection.html#getalias" class="tsd-kind-icon">getAlias</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.projectreflection.html#getchildbyname" class="tsd-kind-icon">getChildByName</a></li>
@@ -162,6 +173,76 @@ and source files of the processed project through this reflection.</p>
     
 </section>
     
+    
+        <section class="tsd-member-group ">
+    <h2>Constructor methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+    <a name="constructor"></a>
+    
+        
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/ProjectReflection.ts:48</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create a new ProjectReflection instance.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>name: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The name of the project.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+</section>
+    
+
     
         <section class="tsd-member-group ">
     <h2>Properties</h2>
@@ -184,7 +265,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:19</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:23</li>
             
         </ul>
     
@@ -221,7 +302,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:34</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:38</li>
             
         </ul>
     
@@ -320,7 +401,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:24</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:28</li>
             
         </ul>
     
@@ -357,7 +438,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:46</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:50</li>
             
         </ul>
     
@@ -468,7 +549,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:14</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:18</li>
             
         </ul>
     
@@ -567,7 +648,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:39</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:43</li>
             
         </ul>
     
@@ -594,6 +675,139 @@ and source files of the processed project through this reflection.</p>
     <h2>Methods</h2>
     
         
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+    <a name="findreflectionbyname"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> findReflectionByName<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+        <p>Overwrites 
+    
+        TypeDoc.Models.BaseReflection.findReflectionByName
+    
+</p>
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/ProjectReflection.ts:74</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Try to find a reflection by its name.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>name: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The name to look for. Might contain a hierarchy.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>
+    
+</p>
+    
+        <p>The found reflection or null.</p>
+
+    
+
+
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> findReflectionByName<span class="tsd-signature-symbols">(</span>names<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+        <p>Overwrites 
+    
+        TypeDoc.Models.BaseReflection.findReflectionByName
+    
+</p>
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/ProjectReflection.ts:79</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Try to find a reflection by its name.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>names: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+                
+    <p>The name hierarchy to look for.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>
+    
+</p>
+    
+        <p>The found reflection or null.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
     <a name="getalias"></a>
     
@@ -612,7 +826,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:108</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:132</li>
             
         </ul>
     
@@ -664,7 +878,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:80</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:81</li>
             
         </ul>
     
@@ -685,7 +899,68 @@ and source files of the processed project through this reflection.</p>
             <li>
                 <h5>name: <span class="tsd-signature-type">string</span></h5>
                 
-    <p>The name of the child to look for.</p>
+    <p>The name of the child to look for. Might contain a hierarchy.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>
+    
+</p>
+    
+        <p>The found child or NULL.</p>
+
+    
+
+
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getChildByName<span class="tsd-signature-symbols">(</span>names<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.models.basereflection.html">BaseReflection</a>.<a href="typedoc.models.basereflection.html#getchildbyname">getChildByName</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:86</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return a child by its name.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>names: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+                
+    <p>The name hierarchy of the child to look for.</p>
 
 
 
@@ -736,7 +1011,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:94</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:118</li>
             
         </ul>
     
@@ -808,7 +1083,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:65</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:69</li>
             
         </ul>
     
@@ -877,7 +1152,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/ProjectReflection.ts:50</li>
+                <li>Defined in typedoc/models/reflections/ProjectReflection.ts:60</li>
             
         </ul>
     
@@ -949,7 +1224,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:132</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:182</li>
             
         </ul>
     
@@ -1018,7 +1293,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:122</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:172</li>
             
         </ul>
     
@@ -1129,7 +1404,7 @@ and source files of the processed project through this reflection.</p>
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.renderer.html">TypeDoc.Renderer</a>
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
 </li>
                     
@@ -1244,6 +1519,13 @@ and source files of the processed project through this reflection.</p>
     <ul>
         
             
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+                    <a href="typedoc.models.projectreflection.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.models.projectreflection.html#children" class="tsd-kind-icon">children</a>
                     
@@ -1323,6 +1605,13 @@ and source files of the processed project through this reflection.</p>
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.models.projectreflection.html#url" class="tsd-kind-icon">url</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+                    <a href="typedoc.models.projectreflection.html#findreflectionbyname" class="tsd-kind-icon">findReflectionByName</a>
                     
                 </li>
             

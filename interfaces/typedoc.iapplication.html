@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IFindFileResult | TypeDoc Documentation</title>
+    <title>IApplication | TypeDoc Documentation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,15 +35,15 @@
     
     
     <li>
-        <a href="../modules/typescript.html">TypeScript</a>
+        <a href="../modules/typedoc.html">TypeDoc</a>
     </li>
 
     <li>
-        <a href="typescript.ifindfileresult.html">IFindFileResult</a>
+        <a href="typedoc.iapplication.html">IApplication</a>
     </li>
 
             </ul>
-            <h1>Interface IFindFileResult</h1>
+            <h1>Interface IApplication</h1>
         </div>
     </div>
 </header>
@@ -53,6 +53,13 @@
         <div class="col-8">
             
     
+    <p>An interface of the application class.</p>
+
+
+
+
+    <p>All classes should expect this interface allowing other third parties
+to use their own implementation.</p>
 
 
 
@@ -69,9 +76,16 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typescript.ifindfileresult.html#fileinformation" class="tsd-kind-icon">fileInformation</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.iapplication.html#settings" class="tsd-kind-icon">settings</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typescript.ifindfileresult.html#path" class="tsd-kind-icon">path</a></li>
+            </ul>
+        </section>
+    
+        <section class="tsd-member-index-group ">
+            <h3>Methods</h3>
+            <ul class="tsd-member-index">
+                
+                    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="typedoc.iapplication.html#log" class="tsd-kind-icon">log</a></li>
                 
             </ul>
         </section>
@@ -84,9 +98,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="fileinformation"></a>
+    <a name="settings"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> fileInformation<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.FileInformation</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> settings<span class="tsd-signature-symbols">:</span> <a href="../classes/typedoc.settings.html" class="tsd-signature-type">Settings</a></h3>
 
 <aside class="tsd-sources">
     
@@ -94,11 +108,14 @@
     
         <ul>
             
-                <li>Defined in typescript/io.ts:18</li>
+                <li>Defined in typedoc/Application.ts:32</li>
             
         </ul>
     
 </aside>
+
+    <p>The settings used by the dispatcher and the renderer.</p>
+
 
 
 
@@ -110,11 +127,19 @@
 </section>
         
     
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="path"></a>
+</section>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> path<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+    
+        <section class="tsd-member-group ">
+    <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-interface">
+    <a name="log"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> log<span class="tsd-signature-symbols">(</span>message<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, level<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></h3>
 
 <aside class="tsd-sources">
     
@@ -122,16 +147,62 @@
     
         <ul>
             
-                <li>Defined in typescript/io.ts:19</li>
+                <li>Defined in typedoc/Application.ts:40</li>
             
         </ul>
     
 </aside>
 
+    <p>Print a log message.</p>
 
 
 
 
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>message: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The message itself.</p>
+
+
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>level?: <a href="../enums/typedoc.loglevel.html" class="tsd-signature-type">LogLevel</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+                
+    <p>The urgency of the log message.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">any</span>
+    
+</p>
+    
+
+
+        
     
 
     
@@ -152,28 +223,8 @@
     
 </li>
                     
-                        <li class=" tsd-kind-container">
-    <a href="../modules/typedoc.html">TypeDoc</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
-    
-</li>
-                    
                         <li class="current tsd-kind-container">
-    <a href="../modules/typescript.html">TypeScript</a>
+    <a href="../modules/typedoc.html">TypeDoc</a>
     
         
             <ul>
@@ -198,10 +249,28 @@
                 
                     
                 
-                    
-                
             </ul>
         
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container">
+    <a href="../modules/typescript.html">TypeScript</a>
     
 </li>
                     
@@ -221,42 +290,35 @@
         
             
                 <li class=" tsd-kind-variable tsd-parent-kind-container">
-                    <a href="../modules/typescript.html#io" class="tsd-kind-icon">IO</a>
+                    <a href="../modules/typedoc.html#version" class="tsd-kind-icon">VERSION</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-variable tsd-parent-kind-container">
-                    <a href="../modules/typescript.html#typescriptpath" class="tsd-kind-icon">typescriptPath</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typescript.ifilewatcher.html" class="tsd-kind-icon">IFileWatcher</a>
+                <li class=" tsd-kind-enum tsd-parent-kind-container">
+                    <a href="../enums/typedoc.loglevel.html" class="tsd-kind-icon">LogLevel</a>
                     
                 </li>
             
         
             
                 <li class="current tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typescript.ifindfileresult.html" class="tsd-kind-icon">IFindFileResult</a>
+                    <a href="typedoc.iapplication.html" class="tsd-kind-icon">IApplication</a>
                     
 
     <ul>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typescript.ifindfileresult.html#fileinformation" class="tsd-kind-icon">fileInformation</a>
+                    <a href="typedoc.iapplication.html#settings" class="tsd-kind-icon">settings</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typescript.ifindfileresult.html#path" class="tsd-kind-icon">path</a>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+                    <a href="typedoc.iapplication.html#log" class="tsd-kind-icon">log</a>
                     
                 </li>
             
@@ -269,49 +331,49 @@
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typescript.iio.html" class="tsd-kind-icon">IIO</a>
+                    <a href="typedoc.ilistener.html" class="tsd-kind-icon">IListener</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typescript.ioptions.html" class="tsd-kind-icon">IOptions</a>
+                    <a href="typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typescript.batchcompiler.html" class="tsd-kind-icon">BatchCompiler</a>
+                    <a href="../classes/typedoc.application.html" class="tsd-kind-icon">Application</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typescript.diagnosticslogger.html" class="tsd-kind-icon">DiagnosticsLogger</a>
+                    <a href="../classes/typedoc.event.html" class="tsd-kind-icon">Event</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typescript.filelogger.html" class="tsd-kind-icon">FileLogger</a>
+                    <a href="../classes/typedoc.eventdispatcher.html" class="tsd-kind-icon">EventDispatcher</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typescript.optionsparser.html" class="tsd-kind-icon">OptionsParser</a>
+                    <a href="../classes/typedoc.settings.html" class="tsd-kind-icon">Settings</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typescript.sourcefile.html" class="tsd-kind-icon">SourceFile</a>
+                <li class=" tsd-kind-function tsd-parent-kind-container">
+                    <a href="../modules/typedoc.html#readfile" class="tsd-kind-icon">readFile</a>
                     
                 </li>
             
