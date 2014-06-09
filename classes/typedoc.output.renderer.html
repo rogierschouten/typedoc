@@ -71,24 +71,24 @@ will be automatically initialized. Most of the core functionality is provided as
 a project is being processed. You can listen to these events to control the flow or manipulate
 the output.</p>
 <ul>
-<li><p><a href="typedoc.output.renderer.html#event_begin">Renderer.EVENT_BEGIN</a><br/>
+<li><p><a href="typedoc.output.renderer.html#event_begin">Renderer.EVENT_BEGIN</a><br>
 Triggered before the renderer starts rendering a project. The listener receives
 an instance of <a href="typedoc.output.outputevent.html">OutputEvent</a>. By calling <a href="typedoc.output.outputevent.html#preventdefault">OutputEvent.preventDefault</a> the entire
 render process can be canceled.</p>
 <ul>
-<li><p><a href="typedoc.output.renderer.html#event_begin_page">Renderer.EVENT_BEGIN_PAGE</a><br/>
+<li><p><a href="typedoc.output.renderer.html#event_begin_page">Renderer.EVENT_BEGIN_PAGE</a><br>
 Triggered before a document will be rendered. The listener receives an instance of
 <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a>. By calling <a href="typedoc.output.outputpageevent.html#preventdefault">OutputPageEvent.preventDefault</a> the generation of the
 document can be canceled.</p>
 </li>
-<li><p><a href="typedoc.output.renderer.html#event_end_page">Renderer.EVENT_END_PAGE</a><br/>
+<li><p><a href="typedoc.output.renderer.html#event_end_page">Renderer.EVENT_END_PAGE</a><br>
 Triggered after a document has been rendered, just before it is written to disc. The
 listener receives an instance of <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a>. When calling
 <a href="typedoc.output.outputpageevent.html#preventdefault">OutputPageEvent.preventDefault</a> the the document will not be saved to disc.</p>
 </li>
 </ul>
 </li>
-<li><p><a href="typedoc.output.renderer.html#event_end">Renderer.EVENT_END</a><br/>
+<li><p><a href="typedoc.output.renderer.html#event_end">Renderer.EVENT_END</a><br>
 Triggered after the renderer has written all documents. The listener receives
 an instance of <a href="typedoc.output.outputevent.html">OutputEvent</a>.</p>
 </li>
@@ -189,6 +189,8 @@ an instance of <a href="typedoc.output.outputevent.html">OutputEvent</a>.</p>
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#prepareoutputdirectory" class="tsd-kind-icon">prepareOutputDirectory</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#preparetheme" class="tsd-kind-icon">prepareTheme</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#readfile" class="tsd-kind-icon">readFile</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.renderer.html#render" class="tsd-kind-icon">render</a></li>
                 
@@ -1133,6 +1135,72 @@ been specified we load the default theme.</p>
         
     
         
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="readfile"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> readFile<span class="tsd-signature-symbols">(</span>file<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:306</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Load the given file and return its contents.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>file: <span class="tsd-signature-type">any</span></h5>
+                
+    <p>The path of the file to read.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>The files contents.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
     <a name="render"></a>
     
@@ -1565,6 +1633,13 @@ been specified we load the default theme.</p>
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
                     <a href="typedoc.output.renderer.html#preparetheme" class="tsd-kind-icon">prepareTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#readfile" class="tsd-kind-icon">readFile</a>
                     
                 </li>
             

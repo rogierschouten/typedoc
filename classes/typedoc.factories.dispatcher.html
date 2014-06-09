@@ -58,29 +58,73 @@
         <div class="col-8">
             
     
-    <p>The central dispatcher receives documents from the compiler and emits
+    <p>The dispatcher receives documents from the compiler and emits
 events for all discovered declarations.</p>
 
 
 
 
-    <p>Factories should listen to the events emitted by the dispatcher. Each event
-contains a state object describing the current state the dispatcher is in. Factories
-can alter the state or stop it from being further processed.</p>
-<p>While the compiler is active, it passes documents to the dispatcher. Each document
-will create an ´enterDocument´ event. By stopping the generated state, factories can
-prevent entire documents from being processed.</p>
-<p>The dispatcher will iterate over all declarations and its children in the document
-and yields a child state for them. For each of this states an ´enterDeclaration´ event
-will be emitted. By stopping the child state, factories can prevent declarations from
-being processed.</p>
+    <p><a href="typedoc.factories.basehandler.html">BaseHandler</a> instances are the actual workhorses behind the dispatcher. They listen
+to the events emitted by the dispatcher and populate the generated <a href="typedoc.models.basereflection.html">BaseReflection</a>
+instances. Each event contains a <a href="typedoc.factories.basestate.html">BaseState</a> instance describing the current state the
+dispatcher is in. Handlers can alter the state or stop it from being further processed.</p>
+<p>For each document (a single *.ts file) the dispatcher will generate the following event flow.
+Declarations are processed according to their hierarchy.</p>
 <ul>
-<li>enterDocument<ul>
-<li>enterDeclaration</li>
-<li>mergeReflection / createReflection</li>
-<li>process</li>
-<li><strong>Recursion</strong></li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_begin_document">Dispatcher.EVENT_BEGIN_DOCUMENT</a><br>
+Triggered when the dispatcher starts processing a TypeScript document. The listener receives
+an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>. By calling <a href="typedoc.factories.documentstate.html#preventdefault">DocumentState.preventDefault</a> the entire
+TypeScript file will be ignored.</p>
+<ul>
+<li><p><a href="typedoc.factories.dispatcher.html#event_begin_declaration">Dispatcher.EVENT_BEGIN_DECLARATION</a><br>
+Triggered when the dispatcher starts processing a declaration. The listener receives
+an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
+the state is undefined at this moment. By calling <a href="typedoc.factories.declarationstate.html#preventdefault">DeclarationState.preventDefault</a>
+the declaration will be skipped.</p>
+<ul>
+<li><p><a href="typedoc.factories.dispatcher.html#event_create_reflection">Dispatcher.EVENT_CREATE_REFLECTION</a><br>
+Triggered when the dispatcher creates a new reflection instance. The listener receives
+an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
+the state contains a newly created <a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
+</li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_merge_reflection">Dispatcher.EVENT_MERGE_REFLECTION</a><br>
+Triggered when the dispatcher merges an existing reflection with a new declaration.
+The listener receives an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The
+<a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of the state contains the persistent
+<a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
+</li>
 </ul>
+</li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_declaration">Dispatcher.EVENT_DECLARATION</a><br>
+Triggered when the dispatcher processes a declaration. The listener receives an instance
+of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
+</li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_end_declaration">Dispatcher.EVENT_END_DECLARATION</a><br>
+Triggered when the dispatcher has finished processing a declaration. The listener receives
+an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
+</li>
+</ul>
+</li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_end_document">Dispatcher.EVENT_END_DOCUMENT</a><br>
+Triggered when the dispatcher has finished processing a TypeScript document. The listener
+receives an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>.</p>
+</li>
+</ul>
+<p> After the dispatcher has processed all documents, it will enter the resolving phase and
+ trigger the following event flow.</p>
+<ul>
+<li><p><a href="typedoc.factories.dispatcher.html#event_begin_resolve">Dispatcher.EVENT_BEGIN_RESOLVE</a><br>
+Triggered when the dispatcher enters the resolving phase. The listener receives an instance
+of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.</p>
+<ul>
+<li><a href="typedoc.factories.dispatcher.html#event_resolve">Dispatcher.EVENT_RESOLVE</a><br>
+Triggered when the dispatcher resolves a reflection. The listener receives an instance
+of <a href="typedoc.factories.resolvereflectionevent.html">ResolveReflectionEvent</a>.</li>
+</ul>
+</li>
+<li><p><a href="typedoc.factories.dispatcher.html#event_end_resolve">Dispatcher.EVENT_END_RESOLVE</a><br>
+Triggered when the dispatcher leaves the resolving phase. The listener receives an instance
+of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.</p>
 </li>
 </ul>
 
@@ -139,6 +183,26 @@ being processed.</p>
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_begin_declaration" class="tsd-kind-icon">EVENT_BEGIN_DECLARATION</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_begin_document" class="tsd-kind-icon">EVENT_BEGIN_DOCUMENT</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_begin_resolve" class="tsd-kind-icon">EVENT_BEGIN_RESOLVE</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_create_reflection" class="tsd-kind-icon">EVENT_CREATE_REFLECTION</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_declaration" class="tsd-kind-icon">EVENT_DECLARATION</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_end_declaration" class="tsd-kind-icon">EVENT_END_DECLARATION</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_end_document" class="tsd-kind-icon">EVENT_END_DOCUMENT</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_end_resolve" class="tsd-kind-icon">EVENT_END_RESOLVE</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_merge_reflection" class="tsd-kind-icon">EVENT_MERGE_REFLECTION</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#event_resolve" class="tsd-kind-icon">EVENT_RESOLVE</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#handlers" class="tsd-kind-icon">HANDLERS</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a></li>
@@ -190,7 +254,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:72</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:172</li>
             
         </ul>
     
@@ -249,6 +313,386 @@ being processed.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_begin_declaration"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN_DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:128</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher starts processing a declaration.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_begin_document"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN_DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:104</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher starts processing a TypeScript document.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_begin_resolve"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN_RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:146</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher enters the resolving phase.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_create_reflection"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_CREATE_REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:116</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher creates a new reflection instance.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_declaration"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:134</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher processes a declaration.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_end_declaration"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_END_DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:140</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher has finished processing a declaration.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_end_document"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_END_DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:110</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher has finished processing a TypeScript document.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_end_resolve"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_END_RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:158</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher leaves the resolving phase.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_merge_reflection"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_MERGE_REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:122</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher merges an existing reflection with a new declaration.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_resolve"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:152</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered when the dispatcher resolves a reflection.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
     <a name="handlers"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> HANDLERS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></h3>
@@ -259,7 +703,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:64</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:164</li>
             
         </ul>
     
@@ -290,7 +734,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:54</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:93</li>
             
         </ul>
     
@@ -321,7 +765,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:59</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:98</li>
             
         </ul>
     
@@ -360,7 +804,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:89</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:189</li>
             
         </ul>
     
@@ -490,7 +934,7 @@ being processed.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:150</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:251</li>
             
         </ul>
     
@@ -561,7 +1005,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:188</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:289</li>
             
         </ul>
     
@@ -628,7 +1072,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:214</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:315</li>
             
         </ul>
     
@@ -849,7 +1293,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:124</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:225</li>
             
         </ul>
     
@@ -960,6 +1404,8 @@ will hold an array of created reflections for the final resolving phase.</p>
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -1010,6 +1456,13 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">BaseHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.basepath.html" class="tsd-kind-icon">BasePath</a>
                     
                 </li>
@@ -1053,6 +1506,76 @@ will hold an array of created reflections for the final resolving phase.</p>
             
                 <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
                     <a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_begin_declaration" class="tsd-kind-icon">EVENT_BEGIN_DECLARATION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_begin_document" class="tsd-kind-icon">EVENT_BEGIN_DOCUMENT</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_begin_resolve" class="tsd-kind-icon">EVENT_BEGIN_RESOLVE</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_create_reflection" class="tsd-kind-icon">EVENT_CREATE_REFLECTION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_declaration" class="tsd-kind-icon">EVENT_DECLARATION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_end_declaration" class="tsd-kind-icon">EVENT_END_DECLARATION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_end_document" class="tsd-kind-icon">EVENT_END_DOCUMENT</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_end_resolve" class="tsd-kind-icon">EVENT_END_RESOLVE</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_merge_reflection" class="tsd-kind-icon">EVENT_MERGE_REFLECTION</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#event_resolve" class="tsd-kind-icon">EVENT_RESOLVE</a>
                     
                 </li>
             
@@ -1184,13 +1707,6 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
                     
                 </li>
@@ -1198,14 +1714,21 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
+                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
+                    <a href="typedoc.factories.resolveprojectevent.html" class="tsd-kind-icon">ResolveProjectEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-kind-icon">ResolveReflectionEvent</a>
                     
                 </li>
             

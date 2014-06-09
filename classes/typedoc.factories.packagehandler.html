@@ -74,6 +74,37 @@ contents of the found files will be read and appended to the ProjectReflection.<
 
 
 
+    <section class="tsd-hierarchy">
+        <h2>Hierarchy</h2>
+        <ul>
+            
+                <li >
+    
+        
+    
+        <a href="typedoc.factories.basehandler.html" class="tsd-signature-type">BaseHandler</a>
+    
+
+    
+
+    
+        <ul>
+            
+                <li class="target">
+    
+        PackageHandler
+    
+
+    
+</li>
+            
+        </ul>
+    
+</li>
+            
+        </ul>
+    </section>
+
 
 
     <section class="tsd-member-index">
@@ -83,16 +114,16 @@ contents of the found files will be read and appended to the ProjectReflection.<
             <h3>Constructor methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.factories.packagehandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.factories.packagehandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
                 
             </ul>
         </section>
     
-        <section class="tsd-member-index-group tsd-is-private">
+        <section class="tsd-member-index-group ">
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.packagehandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.packagehandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.packagehandler.html#packagefile" class="tsd-kind-icon">packageFile</a></li>
                 
@@ -121,7 +152,7 @@ contents of the found files will be read and appended to the ProjectReflection.<
     <h2>Constructor methods</h2>
     
         
-            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
     <a name="constructor"></a>
     
         
@@ -129,6 +160,12 @@ contents of the found files will be read and appended to the ProjectReflection.<
 
 <aside class="tsd-sources">
     
+    
+        <p>Overwrites 
+    
+        <a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#constructor">constructor</a>
+    
+</p>
     
     
         <ul>
@@ -190,26 +227,35 @@ contents of the found files will be read and appended to the ProjectReflection.<
     
 
     
-        <section class="tsd-member-group tsd-is-private">
+        <section class="tsd-member-group ">
     <h2>Properties</h2>
     
         
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="dispatcher"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
 
 <aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#dispatcher">dispatcher</a>
+    
+</p>
     
     
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/PackageHandler.ts:35</li>
+                <li>Defined in typedoc/factories/BaseHandler.ts:10</li>
             
         </ul>
     
 </aside>
+
+    <p>The dispatcher this handler is attached to.</p>
+
 
 
 
@@ -334,7 +380,7 @@ contents of the found files will be read and appended to the ProjectReflection.<
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/PackageHandler.ts:46</li>
+                <li>Defined in typedoc/factories/handlers/PackageHandler.ts:48</li>
             
         </ul>
     
@@ -381,7 +427,7 @@ contents of the found files will be read and appended to the ProjectReflection.<
     <a name="onenterresolve"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> onEnterResolve<span class="tsd-signature-symbols">(</span>resolution<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.projectresolution.html" class="tsd-signature-type">ProjectResolution</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> onEnterResolve<span class="tsd-signature-symbols">(</span>resolution<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolveprojectevent.html" class="tsd-signature-type">ResolveProjectEvent</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -389,7 +435,7 @@ contents of the found files will be read and appended to the ProjectReflection.<
     
         <ul>
             
-                <li>Defined in typedoc/factories/handlers/PackageHandler.ts:80</li>
+                <li>Defined in typedoc/factories/handlers/PackageHandler.ts:82</li>
             
         </ul>
     
@@ -409,7 +455,7 @@ enters the resolving phase.</p>
     <ul>
         
             <li>
-                <h5>resolution: <a href="typedoc.factories.projectresolution.html" class="tsd-signature-type">ProjectResolution</a></h5>
+                <h5>resolution: <a href="typedoc.factories.resolveprojectevent.html" class="tsd-signature-type">ResolveProjectEvent</a></h5>
                 
 
 
@@ -453,6 +499,8 @@ enters the resolving phase.</p>
     
         
             <ul>
+                
+                    
                 
                     
                 
@@ -548,6 +596,13 @@ enters the resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">BaseHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.basepath.html" class="tsd-kind-icon">BasePath</a>
                     
                 </li>
@@ -631,14 +686,14 @@ enters the resolving phase.</p>
     <ul>
         
             
-                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
                     <a href="typedoc.factories.packagehandler.html#constructor" class="tsd-kind-icon">constructor</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.factories.packagehandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
                     
                 </li>
@@ -687,13 +742,6 @@ enters the resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
                     
                 </li>
@@ -701,14 +749,21 @@ enters the resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
+                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
+                    <a href="typedoc.factories.resolveprojectevent.html" class="tsd-kind-icon">ResolveProjectEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-kind-icon">ResolveReflectionEvent</a>
                     
                 </li>
             

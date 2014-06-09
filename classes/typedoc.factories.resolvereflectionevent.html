@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ReflectionResolution | TypeDoc Documentation</title>
+    <title>ResolveReflectionEvent | TypeDoc Documentation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,11 +44,11 @@
     </li>
 
     <li>
-        <a href="typedoc.factories.reflectionresolution.html">ReflectionResolution</a>
+        <a href="typedoc.factories.resolvereflectionevent.html">ResolveReflectionEvent</a>
     </li>
 
             </ul>
-            <h1>Class ReflectionResolution</h1>
+            <h1>Class ResolveReflectionEvent</h1>
         </div>
     </div>
 </header>
@@ -73,7 +73,7 @@
     
         
     
-        <a href="typedoc.factories.projectresolution.html" class="tsd-signature-type">ProjectResolution</a>
+        <a href="typedoc.factories.resolveprojectevent.html" class="tsd-signature-type">ResolveProjectEvent</a>
     
 
     
@@ -83,7 +83,7 @@
             
                 <li class="target">
     
-        ReflectionResolution
+        ResolveReflectionEvent
     
 
     
@@ -105,7 +105,7 @@
             <h3>Constructor methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.factories.reflectionresolution.html#constructor" class="tsd-kind-icon">constructor</a></li>
+                    <li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.factories.resolvereflectionevent.html#constructor" class="tsd-kind-icon">constructor</a></li>
                 
             </ul>
         </section>
@@ -114,15 +114,15 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#compiler" class="tsd-kind-icon">compiler</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#compiler" class="tsd-kind-icon">compiler</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#project" class="tsd-kind-icon">project</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#project" class="tsd-kind-icon">project</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.reflectionresolution.html#reflection" class="tsd-kind-icon">reflection</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.resolvereflectionevent.html#reflection" class="tsd-kind-icon">reflection</a></li>
                 
             </ul>
         </section>
@@ -131,9 +131,11 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#preventdefault" class="tsd-kind-icon">preventDefault</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#createreflectionevent" class="tsd-kind-icon">createReflectionEvent</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionresolution.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#preventdefault" class="tsd-kind-icon">preventDefault</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.resolvereflectionevent.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a></li>
                 
             </ul>
         </section>
@@ -149,21 +151,21 @@
     <a name="constructor"></a>
     
         
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a>, project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, reflection<span class="tsd-signature-symbols">?: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a></h3>
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a>, project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, reflection<span class="tsd-signature-symbols">?: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a></h3>
 
 <aside class="tsd-sources">
     
     
         <p>Overwrites 
     
-        <a href="typedoc.factories.projectresolution.html">ProjectResolution</a>.<a href="typedoc.factories.projectresolution.html#constructor">constructor</a>
+        <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.<a href="typedoc.factories.resolveprojectevent.html#constructor">constructor</a>
     
 </p>
     
     
         <ul>
             
-                <li>Defined in typedoc/factories/ResolveEvent.ts:22</li>
+                <li>Defined in typedoc/factories/events/ResolveReflectionEvent.ts:7</li>
             
         </ul>
     
@@ -212,7 +214,7 @@
     <h4>Returns</h4>
     <p>
     
-        <a href="typedoc.factories.reflectionresolution.html" class="tsd-signature-type">ReflectionResolution</a>
+        <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a>
     
 </p>
     
@@ -242,7 +244,7 @@
     
         <p>Inherited from 
     
-        <a href="typedoc.factories.projectresolution.html">ProjectResolution</a>.<a href="typedoc.factories.projectresolution.html#compiler">compiler</a>
+        <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.<a href="typedoc.factories.resolveprojectevent.html#compiler">compiler</a>
     
 </p>
     
@@ -250,7 +252,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/ResolveEvent.ts:4</li>
+                <li>Defined in typedoc/factories/events/ResolveProjectEvent.ts:4</li>
             
         </ul>
     
@@ -344,7 +346,7 @@
     
         <p>Inherited from 
     
-        <a href="typedoc.factories.projectresolution.html">ProjectResolution</a>.<a href="typedoc.factories.projectresolution.html#project">project</a>
+        <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.<a href="typedoc.factories.resolveprojectevent.html#project">project</a>
     
 </p>
     
@@ -352,7 +354,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/ResolveEvent.ts:6</li>
+                <li>Defined in typedoc/factories/events/ResolveProjectEvent.ts:6</li>
             
         </ul>
     
@@ -380,7 +382,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/ResolveEvent.ts:19</li>
+                <li>Defined in typedoc/factories/events/ResolveReflectionEvent.ts:4</li>
             
         </ul>
     
@@ -402,6 +404,69 @@
     
         <section class="tsd-member-group tsd-is-inherited">
     <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+    <a name="createreflectionevent"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createReflectionEvent<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.<a href="typedoc.factories.resolveprojectevent.html#createreflectionevent">createReflectionEvent</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/events/ResolveProjectEvent.ts:16</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>reflection: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -554,6 +619,8 @@
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -598,6 +665,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">AstHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">BaseHandler</a>
                     
                 </li>
             
@@ -688,84 +762,8 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.projectresolution.html" class="tsd-kind-icon">ProjectResolution</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
                     
-                </li>
-            
-        
-            
-                <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.reflectionresolution.html" class="tsd-kind-icon">ReflectionResolution</a>
-                    
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-                    <a href="typedoc.factories.reflectionresolution.html#constructor" class="tsd-kind-icon">constructor</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#compiler" class="tsd-kind-icon">compiler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#project" class="tsd-kind-icon">project</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.reflectionresolution.html#reflection" class="tsd-kind-icon">reflection</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#preventdefault" class="tsd-kind-icon">preventDefault</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.reflectionresolution.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
                 </li>
             
         
@@ -773,6 +771,89 @@
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
                     
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolveprojectevent.html" class="tsd-kind-icon">ResolveProjectEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class="current tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-kind-icon">ResolveReflectionEvent</a>
+                    
+
+    <ul>
+        
+            
+                <li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
+                    <a href="typedoc.factories.resolvereflectionevent.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#compiler" class="tsd-kind-icon">compiler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#project" class="tsd-kind-icon">project</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.factories.resolvereflectionevent.html#reflection" class="tsd-kind-icon">reflection</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#createreflectionevent" class="tsd-kind-icon">createReflectionEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#preventdefault" class="tsd-kind-icon">preventDefault</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.factories.resolvereflectionevent.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a>
+                    
+                </li>
+            
+        
+    </ul>
+
+
                 </li>
             
         
