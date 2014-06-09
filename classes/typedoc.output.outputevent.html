@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>RenderTarget | TypeDoc Documentation</title>
+    <title>OutputEvent | TypeDoc Documentation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,15 +40,15 @@
     </li>
 
     <li>
-        <a href="../modules/typedoc.models.html">Models</a>
+        <a href="../modules/typedoc.output.html">Output</a>
     </li>
 
     <li>
-        <a href="typedoc.models.rendertarget.html">RenderTarget</a>
+        <a href="typedoc.output.outputevent.html">OutputEvent</a>
     </li>
 
             </ul>
-            <h1>Class RenderTarget</h1>
+            <h1>Class OutputEvent</h1>
         </div>
     </div>
 </header>
@@ -58,9 +58,25 @@
         <div class="col-8">
             
     
+    <p>An event emitted by the <a href="typedoc.output.renderer.html">Renderer</a> class at the very beginning and
+ending of the entire rendering process.</p>
 
 
 
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>see</dt>
+            <dd><p><a href="typedoc.output.renderer.html#event_begin">Renderer.EVENT_BEGIN</a></p>
+</dd>
+        
+            <dt>see</dt>
+            <dd><p><a href="typedoc.output.renderer.html#event_end">Renderer.EVENT_END</a></p>
+</dd>
+        
+    </dl>
 
 
 
@@ -83,7 +99,7 @@
             
                 <li class="target">
     
-        RenderTarget
+        OutputEvent
     
 
     
@@ -105,26 +121,28 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.rendertarget.html#dirname" class="tsd-kind-icon">dirname</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.outputevent.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.rendertarget.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.outputevent.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.rendertarget.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.outputevent.html#outputdirectory" class="tsd-kind-icon">outputDirectory</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.rendertarget.html#project" class="tsd-kind-icon">project</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.outputevent.html#project" class="tsd-kind-icon">project</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.rendertarget.html#urls" class="tsd-kind-icon">urls</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.outputevent.html#urls" class="tsd-kind-icon">urls</a></li>
                 
             </ul>
         </section>
     
-        <section class="tsd-member-index-group tsd-is-inherited">
+        <section class="tsd-member-index-group ">
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.rendertarget.html#preventdefault" class="tsd-kind-icon">preventDefault</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.outputevent.html#createpageevent" class="tsd-kind-icon">createPageEvent</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.rendertarget.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.outputevent.html#preventdefault" class="tsd-kind-icon">preventDefault</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.outputevent.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a></li>
                 
             </ul>
         </section>
@@ -134,34 +152,6 @@
     
         <section class="tsd-member-group ">
     <h2>Properties</h2>
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="dirname"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dirname<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/models/renderer/RenderTarget.ts:6</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-</section>
-        
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
@@ -233,6 +223,37 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+    <a name="outputdirectory"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> outputDirectory<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/events/OutputEvent.ts:19</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The path of the directory the documentation should be written to.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
     <a name="project"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> project<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
@@ -243,11 +264,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/renderer/RenderTarget.ts:4</li>
+                <li>Defined in typedoc/output/events/OutputEvent.ts:14</li>
             
         </ul>
     
 </aside>
+
+    <p>The project the renderer is currently processing.</p>
+
 
 
 
@@ -271,12 +295,18 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/renderer/RenderTarget.ts:8</li>
+                <li>Defined in typedoc/output/events/OutputEvent.ts:26</li>
             
         </ul>
     
 </aside>
 
+    <p>A list of all pages that should be generated.</p>
+
+
+
+
+    <p>This list can be altered during the <a href="typedoc.output.renderer.html#event_begin">Renderer.EVENT_BEGIN</a> event.</p>
 
 
 
@@ -291,8 +321,81 @@
     
 
     
-        <section class="tsd-member-group tsd-is-inherited">
+        <section class="tsd-member-group ">
     <h2>Methods</h2>
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="createpageevent"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createPageEvent<span class="tsd-signature-symbols">(</span>mapping<span class="tsd-signature-symbols">: </span><a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/events/OutputEvent.ts:36</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Create an <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> event based on this event and the given url mapping.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>internal</dt>
+            <dd></dd>
+        
+    </dl>
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>mapping: <a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a></h5>
+                
+    <p>The mapping that defines the generated <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> state.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a>
+    
+</p>
+    
+        <p>A newly created <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -400,25 +503,16 @@
     
 </li>
                     
-                        <li class="current tsd-kind-container tsd-parent-kind-container">
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
     <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
         
             <ul>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
                 
                     
                 
@@ -453,11 +547,6 @@
     
 </li>
                     
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
-    
-</li>
-                    
                         <li class=" tsd-kind-container">
     <a href="../modules/typescript.html">TypeScript</a>
     
@@ -478,169 +567,127 @@
     <ul>
         
             
-                <li class=" tsd-kind-enum tsd-parent-kind-container">
-                    <a href="../enums/typedoc.models.flags.html" class="tsd-kind-icon">Flags</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-enum tsd-parent-kind-container">
-                    <a href="../enums/typedoc.models.kind.html" class="tsd-kind-icon">Kind</a>
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.output.ihandlebartemplate.html" class="tsd-kind-icon">IHandlebarTemplate</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.models.ideclarationhierarchy.html" class="tsd-kind-icon">IDeclarationHierarchy</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.models.ideclarationsource.html" class="tsd-kind-icon">IDeclarationSource</a>
+                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.basereflection.html" class="tsd-kind-icon">BaseReflection</a>
+                    <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.basetype.html" class="tsd-kind-icon">BaseType</a>
+                    <a href="typedoc.output.baseplugin.html" class="tsd-kind-icon">BasePlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.comment.html" class="tsd-kind-icon">Comment</a>
+                    <a href="typedoc.output.basetheme.html" class="tsd-kind-icon">BaseTheme</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.commenttag.html" class="tsd-kind-icon">CommentTag</a>
+                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.declarationreflection.html" class="tsd-kind-icon">DeclarationReflection</a>
+                    <a href="typedoc.output.layoutplugin.html" class="tsd-kind-icon">LayoutPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.lateresolvingtype.html" class="tsd-kind-icon">LateResolvingType</a>
+                    <a href="typedoc.output.markedplugin.html" class="tsd-kind-icon">MarkedPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.namedtype.html" class="tsd-kind-icon">NamedType</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.navigationitem.html" class="tsd-kind-icon">NavigationItem</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.projectreflection.html" class="tsd-kind-icon">ProjectReflection</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.reflectiongroup.html" class="tsd-kind-icon">ReflectionGroup</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.reflectiontype.html" class="tsd-kind-icon">ReflectionType</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.renderoutput.html" class="tsd-kind-icon">RenderOutput</a>
+                    <a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">NavigationPlugin</a>
                     
                 </li>
             
         
             
                 <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.rendertarget.html" class="tsd-kind-icon">RenderTarget</a>
+                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
                     
 
     <ul>
         
             
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.models.rendertarget.html#dirname" class="tsd-kind-icon">dirname</a>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.output.outputevent.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.models.rendertarget.html#isdefaultprevented" class="tsd-kind-icon">isDefaultPrevented</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.models.rendertarget.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a>
+                    <a href="typedoc.output.outputevent.html#ispropagationstopped" class="tsd-kind-icon">isPropagationStopped</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.models.rendertarget.html#project" class="tsd-kind-icon">project</a>
+                    <a href="typedoc.output.outputevent.html#outputdirectory" class="tsd-kind-icon">outputDirectory</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.models.rendertarget.html#urls" class="tsd-kind-icon">urls</a>
+                    <a href="typedoc.output.outputevent.html#project" class="tsd-kind-icon">project</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+                    <a href="typedoc.output.outputevent.html#urls" class="tsd-kind-icon">urls</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.output.outputevent.html#createpageevent" class="tsd-kind-icon">createPageEvent</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.models.rendertarget.html#preventdefault" class="tsd-kind-icon">preventDefault</a>
+                    <a href="typedoc.output.outputevent.html#preventdefault" class="tsd-kind-icon">preventDefault</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.models.rendertarget.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a>
+                    <a href="typedoc.output.outputevent.html#stoppropagation" class="tsd-kind-icon">stopPropagation</a>
                     
                 </li>
             
@@ -653,28 +700,28 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.sourcedirectory.html" class="tsd-kind-icon">SourceDirectory</a>
+                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.sourcefile.html" class="tsd-kind-icon">SourceFile</a>
+                    <a href="typedoc.output.partialsplugin.html" class="tsd-kind-icon">PartialsPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.stringconstanttype.html" class="tsd-kind-icon">StringConstantType</a>
+                    <a href="typedoc.output.renderer.html" class="tsd-kind-icon">Renderer</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.models.urlmapping.html" class="tsd-kind-icon">UrlMapping</a>
+                <li class=" tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
+                    <a href="../modules/typedoc.output.html#highlighttypescript" class="tsd-kind-icon">highlightTypeScript</a>
                     
                 </li>
             

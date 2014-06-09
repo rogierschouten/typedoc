@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IDeclarationHierarchy | TypeDoc Documentation</title>
+    <title>ITemplateMapping | TypeDoc Documentation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,15 +40,15 @@
     </li>
 
     <li>
-        <a href="../modules/typedoc.models.html">Models</a>
+        <a href="../modules/typedoc.output.html">Output</a>
     </li>
 
     <li>
-        <a href="typedoc.models.ideclarationhierarchy.html">IDeclarationHierarchy</a>
+        <a href="typedoc.output.itemplatemapping.html">ITemplateMapping</a>
     </li>
 
             </ul>
-            <h1>Interface IDeclarationHierarchy</h1>
+            <h1>Interface ITemplateMapping</h1>
         </div>
     </div>
 </header>
@@ -58,20 +58,9 @@
         <div class="col-8">
             
     
-    <p>Stores hierarchical type data.</p>
 
 
 
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>see</dt>
-            <dd><p><a href="../classes/typedoc.models.declarationreflection.html#typehierarchy">DeclarationReflection.typeHierarchy</a></p>
-</dd>
-        
-    </dl>
 
 
 
@@ -85,11 +74,13 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#children" class="tsd-kind-icon">children</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#isleaf" class="tsd-kind-icon">isLeaf</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#istarget" class="tsd-kind-icon">isTarget</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#kind" class="tsd-kind-icon">kind</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#type" class="tsd-kind-icon">type</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#prefix" class="tsd-kind-icon">prefix</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#template" class="tsd-kind-icon">template</a></li>
                 
             </ul>
         </section>
@@ -102,9 +93,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="children"></a>
+    <a name="isleaf"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> children<span class="tsd-signature-symbols">?:</span> <a href="typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a><span class="tsd-signature-symbols">[]</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isLeaf<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -112,14 +103,11 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/DeclarationReflection.ts:32</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:5</li>
             
         </ul>
     
 </aside>
-
-    <p>A list of a children of this node.</p>
-
 
 
 
@@ -133,9 +121,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="istarget"></a>
+    <a name="kind"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> isTarget<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kind<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
 
 <aside class="tsd-sources">
     
@@ -143,14 +131,11 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/DeclarationReflection.ts:37</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:4</li>
             
         </ul>
     
 </aside>
-
-    <p>Is this the entry within the type hierarchy of the target type?</p>
-
 
 
 
@@ -164,9 +149,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="type"></a>
+    <a name="prefix"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> type<span class="tsd-signature-symbols">:</span> <a href="../classes/typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> prefix<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
 <aside class="tsd-sources">
     
@@ -174,14 +159,39 @@
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/DeclarationReflection.ts:27</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:6</li>
             
         </ul>
     
 </aside>
 
-    <p>The type represented by this node in the hierarchy.</p>
 
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
+    <a name="template"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> template<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/DefaultTheme.ts:7</li>
+            
+        </ul>
+    
+</aside>
 
 
 
@@ -217,21 +227,16 @@
     
 </li>
                     
-                        <li class="current tsd-kind-container tsd-parent-kind-container">
+                        <li class=" tsd-kind-container tsd-parent-kind-container">
     <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    
+</li>
+                    
+                        <li class="current tsd-kind-container tsd-parent-kind-container">
+    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
     
         
             <ul>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
                 
                     
                 
@@ -266,11 +271,6 @@
     
 </li>
                     
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
-    
-</li>
-                    
                         <li class=" tsd-kind-container">
     <a href="../modules/typescript.html">TypeScript</a>
     
@@ -291,43 +291,43 @@
     <ul>
         
             
-                <li class=" tsd-kind-enum tsd-parent-kind-container">
-                    <a href="../enums/typedoc.models.flags.html" class="tsd-kind-icon">Flags</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-enum tsd-parent-kind-container">
-                    <a href="../enums/typedoc.models.kind.html" class="tsd-kind-icon">Kind</a>
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="typedoc.output.ihandlebartemplate.html" class="tsd-kind-icon">IHandlebarTemplate</a>
                     
                 </li>
             
         
             
                 <li class="current tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typedoc.models.ideclarationhierarchy.html" class="tsd-kind-icon">IDeclarationHierarchy</a>
+                    <a href="typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
                     
 
     <ul>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typedoc.models.ideclarationhierarchy.html#children" class="tsd-kind-icon">children</a>
+                    <a href="typedoc.output.itemplatemapping.html#isleaf" class="tsd-kind-icon">isLeaf</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typedoc.models.ideclarationhierarchy.html#istarget" class="tsd-kind-icon">isTarget</a>
+                    <a href="typedoc.output.itemplatemapping.html#kind" class="tsd-kind-icon">kind</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typedoc.models.ideclarationhierarchy.html#type" class="tsd-kind-icon">type</a>
+                    <a href="typedoc.output.itemplatemapping.html#prefix" class="tsd-kind-icon">prefix</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+                    <a href="typedoc.output.itemplatemapping.html#template" class="tsd-kind-icon">template</a>
                     
                 </li>
             
@@ -339,113 +339,85 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typedoc.models.ideclarationsource.html" class="tsd-kind-icon">IDeclarationSource</a>
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="../classes/typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.basereflection.html" class="tsd-kind-icon">BaseReflection</a>
+                    <a href="../classes/typedoc.output.baseplugin.html" class="tsd-kind-icon">BasePlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.basetype.html" class="tsd-kind-icon">BaseType</a>
+                    <a href="../classes/typedoc.output.basetheme.html" class="tsd-kind-icon">BaseTheme</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.comment.html" class="tsd-kind-icon">Comment</a>
+                    <a href="../classes/typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.commenttag.html" class="tsd-kind-icon">CommentTag</a>
+                    <a href="../classes/typedoc.output.layoutplugin.html" class="tsd-kind-icon">LayoutPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.declarationreflection.html" class="tsd-kind-icon">DeclarationReflection</a>
+                    <a href="../classes/typedoc.output.markedplugin.html" class="tsd-kind-icon">MarkedPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.lateresolvingtype.html" class="tsd-kind-icon">LateResolvingType</a>
+                    <a href="../classes/typedoc.output.navigationplugin.html" class="tsd-kind-icon">NavigationPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.namedtype.html" class="tsd-kind-icon">NamedType</a>
+                    <a href="../classes/typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.navigationitem.html" class="tsd-kind-icon">NavigationItem</a>
+                    <a href="../classes/typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.projectreflection.html" class="tsd-kind-icon">ProjectReflection</a>
+                    <a href="../classes/typedoc.output.partialsplugin.html" class="tsd-kind-icon">PartialsPlugin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.reflectiongroup.html" class="tsd-kind-icon">ReflectionGroup</a>
+                    <a href="../classes/typedoc.output.renderer.html" class="tsd-kind-icon">Renderer</a>
                     
                 </li>
             
         
             
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.reflectiontype.html" class="tsd-kind-icon">ReflectionType</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.sourcedirectory.html" class="tsd-kind-icon">SourceDirectory</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.sourcefile.html" class="tsd-kind-icon">SourceFile</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.stringconstanttype.html" class="tsd-kind-icon">StringConstantType</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="../classes/typedoc.models.urlmapping.html" class="tsd-kind-icon">UrlMapping</a>
+                <li class=" tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
+                    <a href="../modules/typedoc.output.html#highlighttypescript" class="tsd-kind-icon">highlightTypeScript</a>
                     
                 </li>
             

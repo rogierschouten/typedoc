@@ -58,6 +58,10 @@
         <div class="col-8">
             
     
+    <p>A plugin that copies the subdirectory ´assets´ from the current themes
+source folder to the output directory.</p>
+
+
 
 
 
@@ -123,7 +127,7 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.assetsplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.assetsplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a></li>
                 
             </ul>
         </section>
@@ -153,11 +157,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/AssetsPlugin.ts:4</li>
+                <li>Defined in typedoc/output/plugins/AssetsPlugin.ts:13</li>
             
         </ul>
     
 </aside>
+
+    <p>Create a new AssetsPlugin instance.</p>
+
 
 
 
@@ -171,6 +178,9 @@
             <li>
                 <h5>renderer: <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h5>
                 
+    <p>The renderer this plugin should be attached to.</p>
+
+
 
 
 
@@ -222,11 +232,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BasePlugin.ts:4</li>
+                <li>Defined in typedoc/output/BasePlugin.ts:10</li>
             
         </ul>
     
 </aside>
+
+    <p>The renderer this plugin is attached to.</p>
+
 
 
 
@@ -247,10 +260,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onrendererbegintarget"></a>
+    <a name="onrendererbegin"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBeginTarget<span class="tsd-signature-symbols">(</span>target<span class="tsd-signature-symbols">: </span><a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBegin<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.output.outputevent.html" class="tsd-signature-type">OutputEvent</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -258,11 +271,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/AssetsPlugin.ts:10</li>
+                <li>Defined in typedoc/output/plugins/AssetsPlugin.ts:24</li>
             
         </ul>
     
 </aside>
+
+    <p>Triggered before the renderer starts rendering a project.</p>
+
 
 
 
@@ -274,8 +290,11 @@
     <ul>
         
             <li>
-                <h5>target: <a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a></h5>
+                <h5>event: <a href="typedoc.output.outputevent.html" class="tsd-signature-type">OutputEvent</a></h5>
                 
+    <p>An event object describing the current render operation.</p>
+
+
 
 
 
@@ -349,6 +368,14 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -381,6 +408,13 @@
             
         
             
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
+                    
+                </li>
+            
+        
+            
                 <li class="current tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
@@ -403,7 +437,7 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.output.assetsplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a>
+                    <a href="typedoc.output.assetsplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a>
                     
                 </li>
             
@@ -430,6 +464,13 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.layoutplugin.html" class="tsd-kind-icon">LayoutPlugin</a>
                     
                 </li>
@@ -445,6 +486,20 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">NavigationPlugin</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
                     
                 </li>
             

@@ -58,6 +58,13 @@
         <div class="col-8">
             
     
+    <p>A plugin that loads all partials of the current theme.</p>
+
+
+
+
+    <p>Partials must be placed in the ´partials´ subdirectory of the theme. The plugin first
+loads the partials of the default theme and then the partials of the current theme.</p>
 
 
 
@@ -123,7 +130,9 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.partialsplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.partialsplugin.html#loadpartials" class="tsd-kind-icon">loadPartials</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.partialsplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a></li>
                 
             </ul>
         </section>
@@ -153,11 +162,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/PartialsPlugin.ts:4</li>
+                <li>Defined in typedoc/output/plugins/PartialsPlugin.ts:15</li>
             
         </ul>
     
 </aside>
+
+    <p>Create a new PartialsPlugin instance.</p>
+
 
 
 
@@ -171,6 +183,9 @@
             <li>
                 <h5>renderer: <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h5>
                 
+    <p>The renderer this plugin should be attached to.</p>
+
+
 
 
 
@@ -222,11 +237,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BasePlugin.ts:4</li>
+                <li>Defined in typedoc/output/BasePlugin.ts:10</li>
             
         </ul>
     
 </aside>
+
+    <p>The renderer this plugin is attached to.</p>
+
 
 
 
@@ -247,10 +265,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onrendererbegintarget"></a>
+    <a name="loadpartials"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBeginTarget<span class="tsd-signature-symbols">(</span>target<span class="tsd-signature-symbols">: </span><a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> loadPartials<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -258,11 +276,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/PartialsPlugin.ts:10</li>
+                <li>Defined in typedoc/output/plugins/PartialsPlugin.ts:26</li>
             
         </ul>
     
 </aside>
+
+    <p>Load all files in the given directory and registers them as partials.</p>
+
 
 
 
@@ -274,8 +295,66 @@
     <ul>
         
             <li>
-                <h5>target: <a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a></h5>
+                <h5>path: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The path of the directory that should be scanned.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="onrendererbegin"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBegin<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">DocumentEvent</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/plugins/PartialsPlugin.ts:40</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered before the renderer starts rendering a project.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>event: <span class="tsd-signature-type">DocumentEvent</span></h5>
+                
+    <p>An event object describing the current render operation.</p>
+
+
 
 
 
@@ -349,6 +428,14 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -381,6 +468,13 @@
             
         
             
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
@@ -403,6 +497,13 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.layoutplugin.html" class="tsd-kind-icon">LayoutPlugin</a>
                     
                 </li>
@@ -418,6 +519,20 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">NavigationPlugin</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
                     
                 </li>
             
@@ -445,7 +560,14 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.output.partialsplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a>
+                    <a href="typedoc.output.partialsplugin.html#loadpartials" class="tsd-kind-icon">loadPartials</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.output.partialsplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a>
                     
                 </li>
             

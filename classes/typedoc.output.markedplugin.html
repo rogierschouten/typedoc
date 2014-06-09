@@ -58,7 +58,7 @@
         <div class="col-8">
             
     
-    <p>A plugin that exposes the markdown and relativeURL helper to handlebars.</p>
+    <p>A plugin that exposes the markdown, compact and relativeURL helper to handlebars.</p>
 
 
 
@@ -70,6 +70,12 @@ code blocks within markdown sections. Additionally this plugin allows to link to
 using double angle brackets.</p>
 <p>You can use the markdown helper anywhere in the templates to convert content to html:</p>
 <pre><code class="lang-handlebars"><span class="xml"></span><span class="hljs-expression">{{<span class="hljs-begin-block">#markdown</span>}}</span><span class="xml"></span><span class="hljs-expression">{{{<span class="hljs-variable">comment.text</span>}}</span><span class="xml">}</span><span class="hljs-expression">{{<span class="hljs-end-block">/markdown</span>}}</span><span class="xml"></span>
+</code></pre>
+<p>The compact helper removes all newlines of its content:</p>
+<pre><code class="lang-handlebars"><span class="xml"></span><span class="hljs-expression">{{<span class="hljs-begin-block">#compact</span>}}</span><span class="xml">
+  Compact
+  this
+</span><span class="hljs-expression">{{<span class="hljs-end-block">/compact</span>}}</span><span class="xml"></span>
 </code></pre>
 <p>The relativeURL helper simply transforms an absolute url into a relative url:</p>
 <pre><code class="lang-handlebars"><span class="xml"></span><span class="hljs-expression">{{<span class="hljs-begin-block">#relativeURL url</span>}}</span><span class="xml"></span>
@@ -145,11 +151,15 @@ using double angle brackets.</p>
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.markedplugin.html#getcompact" class="tsd-kind-icon">getCompact</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.markedplugin.html#gethighlighted" class="tsd-kind-icon">getHighlighted</a></li>
+                
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.markedplugin.html#getrelativeurl" class="tsd-kind-icon">getRelativeUrl</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.markedplugin.html#onrendererbeginoutput" class="tsd-kind-icon">onRendererBeginOutput</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.markedplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.markedplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.markedplugin.html#onrendererbeginpage" class="tsd-kind-icon">onRendererBeginPage</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.markedplugin.html#parsemarkdown" class="tsd-kind-icon">parseMarkdown</a></li>
                 
@@ -183,7 +193,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:46</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:55</li>
             
         </ul>
     
@@ -252,13 +262,13 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:38</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:47</li>
             
         </ul>
     
 </aside>
 
-    <p>The current url that is currently generated.</p>
+    <p>The url of the documenat that is being currently generated.</p>
 
 
 
@@ -283,7 +293,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:28</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:37</li>
             
         </ul>
     
@@ -314,7 +324,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:33</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:42</li>
             
         </ul>
     
@@ -351,11 +361,14 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/BasePlugin.ts:4</li>
+                <li>Defined in typedoc/output/BasePlugin.ts:10</li>
             
         </ul>
     
 </aside>
+
+    <p>The renderer this plugin is attached to.</p>
+
 
 
 
@@ -376,6 +389,150 @@ using double angle brackets.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="getcompact"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getCompact<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:91</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Compress the given string by removing all newlines.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>text: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The string that should be compressed.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>The string with all newlsines stripped.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="gethighlighted"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getHighlighted<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, lang<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:107</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Highlight the synatx of the given text using HighlightJS.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>text: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The text taht should be highlightes.</p>
+
+
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>lang?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+                
+    <p>The language that should be used to highlight the string.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>A html string with syntax highlighting.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
     <a name="getrelativeurl"></a>
     
         
@@ -387,7 +544,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:80</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:79</li>
             
         </ul>
     
@@ -442,10 +599,10 @@ using double angle brackets.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onrendererbeginoutput"></a>
+    <a name="onrendererbegin"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBeginOutput<span class="tsd-signature-symbols">(</span>output<span class="tsd-signature-symbols">: </span><a href="typedoc.models.renderoutput.html" class="tsd-signature-type">RenderOutput</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBegin<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.output.outputevent.html" class="tsd-signature-type">OutputEvent</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -453,13 +610,13 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:145</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:170</li>
             
         </ul>
     
 </aside>
 
-    <p>Triggered when the renderer begins processing a single output file.</p>
+    <p>Triggered before the renderer starts rendering a project.</p>
 
 
 
@@ -472,9 +629,9 @@ using double angle brackets.</p>
     <ul>
         
             <li>
-                <h5>output: <a href="typedoc.models.renderoutput.html" class="tsd-signature-type">RenderOutput</a></h5>
+                <h5>event: <a href="typedoc.output.outputevent.html" class="tsd-signature-type">OutputEvent</a></h5>
                 
-    <p>Defines the current output context of the renderer.</p>
+    <p>An event object describing the current render operation.</p>
 
 
 
@@ -497,10 +654,10 @@ using double angle brackets.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onrendererbegintarget"></a>
+    <a name="onrendererbeginpage"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBeginTarget<span class="tsd-signature-symbols">(</span>target<span class="tsd-signature-symbols">: </span><a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onRendererBeginPage<span class="tsd-signature-symbols">(</span>page<span class="tsd-signature-symbols">: </span><a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -508,13 +665,13 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:135</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:180</li>
             
         </ul>
     
 </aside>
 
-    <p>Triggered when the renderer begins processing a project.</p>
+    <p>Triggered before a document will be rendered.</p>
 
 
 
@@ -527,9 +684,9 @@ using double angle brackets.</p>
     <ul>
         
             <li>
-                <h5>target: <a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a></h5>
+                <h5>page: <a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a></h5>
                 
-    <p>Defines the current target context of the renderer.</p>
+    <p>An event object describing the current render operation.</p>
 
 
 
@@ -563,7 +720,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:92</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:127</li>
             
         </ul>
     
@@ -629,7 +786,7 @@ using double angle brackets.</p>
     
         <ul>
             
-                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:112</li>
+                <li>Defined in typedoc/output/plugins/MarkedPlugin.ts:147</li>
             
         </ul>
     
@@ -745,6 +902,14 @@ for the given symbol.</p>
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -777,6 +942,13 @@ for the given symbol.</p>
             
         
             
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
@@ -793,6 +965,13 @@ for the given symbol.</p>
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.basetheme.html" class="tsd-kind-icon">BaseTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
                     
                 </li>
             
@@ -848,6 +1027,20 @@ for the given symbol.</p>
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.output.markedplugin.html#getcompact" class="tsd-kind-icon">getCompact</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.output.markedplugin.html#gethighlighted" class="tsd-kind-icon">getHighlighted</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.output.markedplugin.html#getrelativeurl" class="tsd-kind-icon">getRelativeUrl</a>
                     
                 </li>
@@ -855,14 +1048,14 @@ for the given symbol.</p>
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.output.markedplugin.html#onrendererbeginoutput" class="tsd-kind-icon">onRendererBeginOutput</a>
+                    <a href="typedoc.output.markedplugin.html#onrendererbegin" class="tsd-kind-icon">onRendererBegin</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.output.markedplugin.html#onrendererbegintarget" class="tsd-kind-icon">onRendererBeginTarget</a>
+                    <a href="typedoc.output.markedplugin.html#onrendererbeginpage" class="tsd-kind-icon">onRendererBeginPage</a>
                     
                 </li>
             
@@ -890,6 +1083,20 @@ for the given symbol.</p>
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">NavigationPlugin</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
                     
                 </li>
             

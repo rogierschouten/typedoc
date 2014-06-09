@@ -58,6 +58,41 @@
         <div class="col-8">
             
     
+    <p>The renderer processes a <a href="typedoc.models.projectreflection.html">ProjectReflection</a> using a <a href="typedoc.output.basetheme.html">BaseTheme</a> instance and writes
+the emitted html documents to a output directory. You can specify which theme should be used
+using the <code>--theme &lt;name&gt;</code> commandline argument.</p>
+
+
+
+
+    <p>Subclasses of <a href="typedoc.output.baseplugin.html">BasePlugin</a> that have registered themselves in the <a href="typedoc.output.renderer.html#plugin_classes">Renderer.PLUGIN_CLASSES</a>
+will be automatically initialized. Most of the core functionality is provided as separate plugins.</p>
+<p><a href="typedoc.output.renderer.html">Renderer</a> is a subclass of <a href="typedoc.eventdispatcher.html">EventDispatcher</a> and triggers a series of events while
+a project is being processed. You can listen to these events to control the flow or manipulate
+the output.</p>
+<ul>
+<li><p><a href="typedoc.output.renderer.html#event_begin">Renderer.EVENT_BEGIN</a><br/>
+Triggered before the renderer starts rendering a project. The listener receives
+an instance of <a href="typedoc.output.outputevent.html">OutputEvent</a>. By calling <a href="typedoc.output.outputevent.html#preventdefault">OutputEvent.preventDefault</a> the entire
+render process can be canceled.</p>
+<ul>
+<li><p><a href="typedoc.output.renderer.html#event_begin_page">Renderer.EVENT_BEGIN_PAGE</a><br/>
+Triggered before a document will be rendered. The listener receives an instance of
+<a href="typedoc.output.outputpageevent.html">OutputPageEvent</a>. By calling <a href="typedoc.output.outputpageevent.html#preventdefault">OutputPageEvent.preventDefault</a> the generation of the
+document can be canceled.</p>
+</li>
+<li><p><a href="typedoc.output.renderer.html#event_end_page">Renderer.EVENT_END_PAGE</a><br/>
+Triggered after a document has been rendered, just before it is written to disc. The
+listener receives an instance of <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a>. When calling
+<a href="typedoc.output.outputpageevent.html#preventdefault">OutputPageEvent.preventDefault</a> the the document will not be saved to disc.</p>
+</li>
+</ul>
+</li>
+<li><p><a href="typedoc.output.renderer.html#event_end">Renderer.EVENT_END</a><br/>
+Triggered after the renderer has written all documents. The listener receives
+an instance of <a href="typedoc.output.outputevent.html">OutputEvent</a>.</p>
+</li>
+</ul>
 
 
 
@@ -114,11 +149,17 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#event_begin" class="tsd-kind-icon">EVENT_BEGIN</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#event_begin_page" class="tsd-kind-icon">EVENT_BEGIN_PAGE</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#event_end" class="tsd-kind-icon">EVENT_END</a></li>
+                
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#event_end_page" class="tsd-kind-icon">EVENT_END_PAGE</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#plugin_classes" class="tsd-kind-icon">PLUGIN_CLASSES</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.renderer.html#application" class="tsd-kind-icon">application</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.renderer.html#iohost" class="tsd-kind-icon">ioHost</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.renderer.html#plugins" class="tsd-kind-icon">plugins</a></li>
                 
@@ -135,19 +176,23 @@
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.renderer.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.renderer.html#getdefaulttheme" class="tsd-kind-icon">getDefaultTheme</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#getdefaulttheme" class="tsd-kind-icon">getDefaultTheme</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.renderer.html#gettemplate" class="tsd-kind-icon">getTemplate</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.output.renderer.html#getthemedirectory" class="tsd-kind-icon">getThemeDirectory</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.renderer.html#off" class="tsd-kind-icon">off</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.output.renderer.html#on" class="tsd-kind-icon">on</a></li>
                 
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#prepareoutputdirectory" class="tsd-kind-icon">prepareOutputDirectory</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#preparetheme" class="tsd-kind-icon">prepareTheme</a></li>
+                
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.renderer.html#render" class="tsd-kind-icon">render</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#rendertarget" class="tsd-kind-icon">renderTarget</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.renderer.html#settheme" class="tsd-kind-icon">setTheme</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.output.renderer.html#renderdocument" class="tsd-kind-icon">renderDocument</a></li>
                 
             </ul>
         </section>
@@ -171,11 +216,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:22</li>
+                <li>Defined in typedoc/output/Renderer.ts:99</li>
             
         </ul>
     
 </aside>
+
+    <p>Create a new Renderer instance.</p>
+
 
 
 
@@ -189,6 +237,9 @@
             <li>
                 <h5>application: <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h5>
                 
+    <p>The application this dispatcher is attached to.</p>
+
+
 
 
 
@@ -224,6 +275,158 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_begin"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:67</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered before the renderer starts rendering a project.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_begin_page"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN_PAGE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:79</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered before a document will be rendered.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_end"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_END<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:73</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered after the renderer has written all documents.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="event_end_page"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_END_PAGE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:85</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered after a document has been rendered, just before it is written to disc.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
     <a name="plugin_classes"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> PLUGIN_CLASSES<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></h3>
@@ -234,11 +437,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:19</li>
+                <li>Defined in typedoc/output/Renderer.ts:90</li>
             
         </ul>
     
 </aside>
+
+    <p>Registry containing the plugins, that should be created by default.</p>
+
 
 
 
@@ -262,39 +468,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:9</li>
+                <li>Defined in typedoc/output/Renderer.ts:46</li>
             
         </ul>
     
 </aside>
 
+    <p>The application this dispatcher is attached to.</p>
 
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="iohost"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> ioHost<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/Renderer.ts:15</li>
-            
-        </ul>
-    
-</aside>
 
 
 
@@ -318,11 +499,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:11</li>
+                <li>Defined in typedoc/output/Renderer.ts:51</li>
             
         </ul>
     
 </aside>
+
+    <p>List of all plugins that are attached to the renderer.</p>
+
 
 
 
@@ -346,11 +530,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:17</li>
+                <li>Defined in typedoc/output/Renderer.ts:61</li>
             
         </ul>
     
 </aside>
+
+    <p>Hash map of all loaded templates indexed by filename.</p>
+
 
 
 
@@ -373,7 +560,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:17</li>
+                <li>Defined in typedoc/output/Renderer.ts:61</li>
             
         </ul>
     
@@ -411,11 +598,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:13</li>
+                <li>Defined in typedoc/output/Renderer.ts:56</li>
             
         </ul>
     
 </aside>
+
+    <p>The theme that is used to render the documentation.</p>
+
 
 
 
@@ -499,11 +689,11 @@
         
     
         
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
     <a name="getdefaulttheme"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getDefaultTheme<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getDefaultTheme<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
 
 <aside class="tsd-sources">
     
@@ -511,11 +701,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:58</li>
+                <li>Defined in typedoc/output/Renderer.ts:295</li>
             
         </ul>
     
 </aside>
+
+    <p>Return the path to the default theme.</p>
+
 
 
 
@@ -528,9 +721,12 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">any</span>
+        <span class="tsd-signature-type">string</span>
     
 </p>
+    
+        <p>The path to the default theme.</p>
+
     
 
 
@@ -554,12 +750,20 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:67</li>
+                <li>Defined in typedoc/output/Renderer.ts:120</li>
             
         </ul>
     
 </aside>
 
+    <p>Return the template with the given filename.</p>
+
+
+
+
+    <p>Tries to find the file in the ´templates´ subdirectory of the current theme.
+If it does not exist, TypeDoc tries to find the template in the default
+theme templates subdirectory.</p>
 
 
 
@@ -572,6 +776,9 @@
             <li>
                 <h5>fileName: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The filename of the template that should be loaded.</p>
+
+
 
 
 
@@ -588,6 +795,58 @@
         <a href="../interfaces/typedoc.output.ihandlebartemplate.html" class="tsd-signature-type">IHandlebarTemplate</a>
     
 </p>
+    
+        <p>The compiled template or NULL if the file could not be found.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="getthemedirectory"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getThemeDirectory<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:284</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Return the path containing the themes shipped with TypeDoc.</p>
+
+
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+        <p>The path to the theme directory.</p>
+
     
 
 
@@ -754,11 +1013,11 @@
         
     
         
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="render"></a>
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="prepareoutputdirectory"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> render<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, outputDirectory<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> prepareOutputDirectory<span class="tsd-signature-symbols">(</span>directory<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -766,11 +1025,15 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:87</li>
+                <li>Defined in typedoc/output/Renderer.ts:247</li>
             
         </ul>
     
 </aside>
+
+    <p>Prepare the output directory. If the directory does not exist, it will be
+created. If the directory exists, it will be emptied.</p>
+
 
 
 
@@ -782,17 +1045,11 @@
     <ul>
         
             <li>
-                <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
+                <h5>directory: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The path to the directory that should be prepared.</p>
 
 
-
-
-            </li>
-        
-            <li>
-                <h5>outputDirectory: <span class="tsd-signature-type">string</span></h5>
-                
 
 
 
@@ -806,9 +1063,12 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">any</span>
+        <span class="tsd-signature-type">boolean</span>
     
 </p>
+    
+        <p>TRUE if the directory could be prepared, otherwise FALSE.</p>
+
     
 
 
@@ -821,10 +1081,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="rendertarget"></a>
+    <a name="preparetheme"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> renderTarget<span class="tsd-signature-symbols">(</span>target<span class="tsd-signature-symbols">: </span><a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> prepareTheme<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -832,11 +1092,67 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:130</li>
+                <li>Defined in typedoc/output/Renderer.ts:213</li>
             
         </ul>
     
 </aside>
+
+    <p>Ensure that a theme has been setup.</p>
+
+
+
+
+    <p>If a the user has set a theme we try to find and load it. If no theme has
+been specified we load the default theme.</p>
+
+
+
+
+
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+        <p>TRUE if a theme has been setup, otherwise FALSE.</p>
+
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="render"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> render<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, outputDirectory<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/Renderer.ts:153</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Render the given project reflection to the specified output directory.</p>
+
 
 
 
@@ -848,8 +1164,23 @@
     <ul>
         
             <li>
-                <h5>target: <a href="typedoc.models.rendertarget.html" class="tsd-signature-type">RenderTarget</a></h5>
+                <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
                 
+    <p>The project that should be rendered.</p>
+
+
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>outputDirectory: <span class="tsd-signature-type">string</span></h5>
+                
+    <p>The path of the directory the documentation should be rendered to.</p>
+
+
 
 
 
@@ -869,11 +1200,11 @@
         
     
         
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="settheme"></a>
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="renderdocument"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> setTheme<span class="tsd-signature-symbols">(</span>dirname<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> renderDocument<span class="tsd-signature-symbols">(</span>page<span class="tsd-signature-symbols">: </span><a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -881,11 +1212,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/Renderer.ts:42</li>
+                <li>Defined in typedoc/output/Renderer.ts:180</li>
             
         </ul>
     
 </aside>
+
+    <p>Render a single page.</p>
+
 
 
 
@@ -897,8 +1231,11 @@
     <ul>
         
             <li>
-                <h5>dirname: <span class="tsd-signature-type">string</span></h5>
+                <h5>page: <a href="typedoc.output.outputpageevent.html" class="tsd-signature-type">OutputPageEvent</a></h5>
                 
+    <p>An event describing the current page.</p>
+
+
 
 
 
@@ -908,6 +1245,17 @@
     </ul>
 
 
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">boolean</span>
+    
+</p>
+    
+        <p>TRUE if the page has been saved to disc, otherwise FALSE.</p>
+
+    
 
 
         
@@ -972,6 +1320,14 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
             </ul>
         
     
@@ -1004,6 +1360,13 @@
             
         
             
+                <li class=" tsd-kind-interface tsd-parent-kind-container">
+                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplateMapping</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">AssetsPlugin</a>
                     
@@ -1020,6 +1383,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.basetheme.html" class="tsd-kind-icon">BaseTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
                     
                 </li>
             
@@ -1047,6 +1417,20 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">OutputEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">OutputPageEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.partialsplugin.html" class="tsd-kind-icon">PartialsPlugin</a>
                     
                 </li>
@@ -1068,6 +1452,34 @@
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#event_begin" class="tsd-kind-icon">EVENT_BEGIN</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#event_begin_page" class="tsd-kind-icon">EVENT_BEGIN_PAGE</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#event_end" class="tsd-kind-icon">EVENT_END</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#event_end_page" class="tsd-kind-icon">EVENT_END_PAGE</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
                     <a href="typedoc.output.renderer.html#plugin_classes" class="tsd-kind-icon">PLUGIN_CLASSES</a>
                     
                 </li>
@@ -1076,13 +1488,6 @@
             
                 <li class=" tsd-kind-property tsd-parent-kind-class">
                     <a href="typedoc.output.renderer.html#application" class="tsd-kind-icon">application</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.output.renderer.html#iohost" class="tsd-kind-icon">ioHost</a>
                     
                 </li>
             
@@ -1116,7 +1521,7 @@
             
         
             
-                <li class=" tsd-kind-method tsd-parent-kind-class">
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
                     <a href="typedoc.output.renderer.html#getdefaulttheme" class="tsd-kind-icon">getDefaultTheme</a>
                     
                 </li>
@@ -1125,6 +1530,13 @@
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.output.renderer.html#gettemplate" class="tsd-kind-icon">getTemplate</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.output.renderer.html#getthemedirectory" class="tsd-kind-icon">getThemeDirectory</a>
                     
                 </li>
             
@@ -1144,6 +1556,20 @@
             
         
             
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.output.renderer.html#prepareoutputdirectory" class="tsd-kind-icon">prepareOutputDirectory</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.output.renderer.html#preparetheme" class="tsd-kind-icon">prepareTheme</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.output.renderer.html#render" class="tsd-kind-icon">render</a>
                     
@@ -1152,14 +1578,7 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.output.renderer.html#rendertarget" class="tsd-kind-icon">renderTarget</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.output.renderer.html#settheme" class="tsd-kind-icon">setTheme</a>
+                    <a href="typedoc.output.renderer.html#renderdocument" class="tsd-kind-icon">renderDocument</a>
                     
                 </li>
             
