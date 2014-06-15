@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -94,7 +108,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="experimental"></a>
+    <a name="experimental" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> experimental<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -122,7 +136,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="flag"></a>
+    <a name="flag" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> flag<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -150,7 +164,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="name"></a>
+    <a name="name" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> name<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -178,7 +192,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="set"></a>
+    <a name="set" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> set<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">(s: string) =&gt; void</span></h3>
 
@@ -206,7 +220,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="short"></a>
+    <a name="short" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> short<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -234,7 +248,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="type"></a>
+    <a name="type" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> type<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -262,7 +276,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="usage"></a>
+    <a name="usage" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagoptional">optional</span> <span class="tsd-flag ts-flagpublic">public</span> usage<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">{ locCode: string; args: string[]; }</span></h3>
 
@@ -288,7 +302,7 @@
         
             
                 <section class="tsd-member tsd-kind-property tsd-parent-kind-property">
-    <a name="usage.args"></a>
+    <a name="usage.usage.args" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> usage.args<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;string&gt;</span></h3>
 
@@ -316,7 +330,7 @@
         
             
                 <section class="tsd-member tsd-kind-property tsd-parent-kind-property">
-    <a name="usage.loccode"></a>
+    <a name="usage.usage.loccode" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> usage.locCode<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -569,6 +583,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

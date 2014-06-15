@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -112,6 +126,8 @@ kind of a reflection is stored in its ´kind´ member.</p>
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#anchor" class="tsd-kind-icon">anchor</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#children" class="tsd-kind-icon">children</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#comment" class="tsd-kind-icon">comment</a></li>
@@ -173,7 +189,7 @@ kind of a reflection is stored in its ´kind´ member.</p>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#findreflectionbyname" class="tsd-kind-icon">findReflectionByName</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.models.declarationreflection.html#flagstostring" class="tsd-kind-icon">flagsToString</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.models.declarationreflection.html#static-flagstostring" class="tsd-kind-icon">flagsToString</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#getalias" class="tsd-kind-icon">getAlias</a></li>
                 
@@ -200,7 +216,44 @@ kind of a reflection is stored in its ´kind´ member.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="children"></a>
+    <a name="anchor" class="anchor"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> anchor<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.models.basereflection.html">BaseReflection</a>.<a href="typedoc.models.basereflection.html#anchor">anchor</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:48</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The name of the anchor of this child.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a name="children" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> children<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -237,7 +290,7 @@ kind of a reflection is stored in its ´kind´ member.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="comment"></a>
+    <a name="comment" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> comment<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a></h3>
 
@@ -274,7 +327,7 @@ kind of a reflection is stored in its ´kind´ member.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="cssclasses"></a>
+    <a name="cssclasses" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> cssClasses<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -306,7 +359,7 @@ reflection in the generated markup.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="defaultvalue"></a>
+    <a name="defaultvalue" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> defaultValue<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -340,7 +393,7 @@ reflection in the generated markup.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="definition"></a>
+    <a name="definition" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> definition<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -375,7 +428,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="extendedby"></a>
+    <a name="extendedby" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> extendedBy<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -406,7 +459,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="extendedtypes"></a>
+    <a name="extendedtypes" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> extendedTypes<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -437,7 +490,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="flags"></a>
+    <a name="flags" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> flags<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a></h3>
 
@@ -468,7 +521,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="flagsarray"></a>
+    <a name="flagsarray" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> flagsArray<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
 
@@ -499,7 +552,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="groups"></a>
+    <a name="groups" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> groups<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -536,7 +589,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="hasowndocument"></a>
+    <a name="hasowndocument" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasOwnDocument<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -552,7 +605,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:50</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:55</li>
             
         </ul>
     
@@ -576,7 +629,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="inheritedfrom"></a>
+    <a name="inheritedfrom" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> inheritedFrom<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
 
@@ -610,7 +663,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="isexported"></a>
+    <a name="isexported" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isExported<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -641,7 +694,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="isoptional"></a>
+    <a name="isoptional" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isOptional<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -675,7 +728,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="isprivate"></a>
+    <a name="isprivate" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isPrivate<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -706,7 +759,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="isstatic"></a>
+    <a name="isstatic" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isStatic<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -737,7 +790,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="kind"></a>
+    <a name="kind" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kind<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h3>
 
@@ -768,7 +821,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="kindstring"></a>
+    <a name="kindstring" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kindString<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -799,7 +852,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="name"></a>
+    <a name="name" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -836,7 +889,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="overwrites"></a>
+    <a name="overwrites" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> overwrites<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
 
@@ -870,7 +923,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="parent"></a>
+    <a name="parent" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> parent<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a></h3>
 
@@ -907,7 +960,7 @@ in templates, when no other presentation of this declaration is available.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="signatures"></a>
+    <a name="signatures" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> signatures<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -942,7 +995,7 @@ signature reflections.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="sources"></a>
+    <a name="sources" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> sources<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.models.ideclarationsource.html" class="tsd-signature-type">IDeclarationSource</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -973,7 +1026,7 @@ signature reflections.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="type"></a>
+    <a name="type" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> type<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
 
@@ -1008,7 +1061,7 @@ If the reflection represents a signature, this is the return type.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="typehierarchy"></a>
+    <a name="typehierarchy" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> typeHierarchy<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a></h3>
 
@@ -1040,7 +1093,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="url"></a>
+    <a name="url" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> url<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -1084,7 +1137,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="findreflectionbyname"></a>
+    <a name="findreflectionbyname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> findReflectionByName<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
@@ -1101,7 +1154,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:145</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:150</li>
             
         </ul>
     
@@ -1162,7 +1215,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:150</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:155</li>
             
         </ul>
     
@@ -1217,7 +1270,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="flagstostring"></a>
+    <a name="static-flagstostring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> flagsToString<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, enumeration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, separator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;, &#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1307,7 +1360,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getalias"></a>
+    <a name="getalias" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getAlias<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1324,7 +1377,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:132</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:137</li>
             
         </ul>
     
@@ -1359,7 +1412,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getchildbyname"></a>
+    <a name="getchildbyname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getChildByName<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
@@ -1376,7 +1429,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:81</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:86</li>
             
         </ul>
     
@@ -1437,7 +1490,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:86</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:91</li>
             
         </ul>
     
@@ -1492,7 +1545,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getchildrenbykind"></a>
+    <a name="getchildrenbykind" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getChildrenByKind<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -1509,7 +1562,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:118</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:123</li>
             
         </ul>
     
@@ -1564,7 +1617,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getfullname"></a>
+    <a name="getfullname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getFullName<span class="tsd-signature-symbols">(</span>separator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;.&#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1581,7 +1634,7 @@ rendered in templates.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:69</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:74</li>
             
         </ul>
     
@@ -1639,7 +1692,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="kindof"></a>
+    <a name="kindof" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kindOf<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
@@ -1754,7 +1807,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="toreflectionstring"></a>
+    <a name="toreflectionstring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> toReflectionString<span class="tsd-signature-symbols">(</span>indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1823,7 +1876,7 @@ rendered in templates.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="tostring"></a>
+    <a name="tostring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> toString<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -2035,6 +2088,13 @@ rendered in templates.</p>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.models.declarationreflection.html#anchor" class="tsd-kind-icon">anchor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.models.declarationreflection.html#children" class="tsd-kind-icon">children</a>
                     
                 </li>
@@ -2224,7 +2284,7 @@ rendered in templates.</p>
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.models.declarationreflection.html#flagstostring" class="tsd-kind-icon">flagsToString</a>
+                    <a href="typedoc.models.declarationreflection.html#static-flagstostring" class="tsd-kind-icon">flagsToString</a>
                     
                 </li>
             
@@ -2364,6 +2424,7 @@ rendered in templates.</p>
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

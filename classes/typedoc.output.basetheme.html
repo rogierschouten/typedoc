@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -58,6 +72,50 @@
         <div class="col-8">
             
     
+    <p>Base class of all themes.</p>
+
+
+
+
+    <p>A theme defines the logical and graphical output of a documentation. Themes are
+directories containing a <code>theme.js</code> file defining a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass and a
+series of subdirectories containing templates and assets. You can select a theme
+through the <code>--theme &lt;path/to/theme&gt;</code> commandline argument.</p>
+<p>The theme class controls which files will be created through the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a>
+function. It returns an array of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining the target files, models
+and templates to use. Additionally themes can subscribe to the events emitted by
+<a href="typedoc.output.renderer.html">Renderer</a> to control and manipulate the output process.</p>
+<p>The default file structure of a theme looks like this:</p>
+<ul>
+<li><p><code>/assets/</code><br>
+Contains static assets like stylesheets, images or javascript files used by the theme.
+The <a href="typedoc.output.assetsplugin.html">AssetsPlugin</a> will deep copy this directory to the output directory.</p>
+</li>
+<li><p><code>/layouts/</code><br>
+Contains layout templates that the <a href="typedoc.output.layoutplugin.html">LayoutPlugin</a> wraps around the output of the
+page template. Currently only one <code>default.hbs</code> layout is supported. Layout templates
+receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as their handlebars context. Place the
+<code>{{{contents}}}</code> variable to render the actual body of the document within this template.</p>
+</li>
+<li><p><code>/partials/</code><br>
+Contains partial templates that can be used by other templates using handlebars partial
+syntax <code>{{&gt; partial-name}}</code>. The <a href="typedoc.output.partialsplugin.html">PartialsPlugin</a> loads all files in this directory
+and combines them with the partials of the default theme.</p>
+</li>
+<li><p><code>/templates/</code><br>
+Contains the main templates of the theme. The theme maps models to these templates through
+the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a> function. If the <a href="typedoc.output.renderer.html#gettemplate">Renderer.getTemplate</a> function cannot find a
+given template within this directory, it will try to find it in the default theme
+<code>/templates/</code> directory. Templates receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as
+their handlebars context. You can access the target model through the <code>{{model}}</code> variable.</p>
+</li>
+<li><p><code>/theme.js</code><br>
+A javascript file that returns the definition of a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass. This file will
+be executed within the context of TypeDoc, one may directly access all classes and functions
+of TypeDoc. If this file is not present, an instance of <a href="typedoc.output.defaulttheme.html">DefaultTheme</a> will be used to render
+this theme.</p>
+</li>
+</ul>
 
 
 
@@ -129,8 +187,6 @@
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#geturls" class="tsd-kind-icon">getUrls</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#initialize" class="tsd-kind-icon">initialize</a></li>
-                
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">isOutputDirectory</a></li>
                 
             </ul>
@@ -144,7 +200,7 @@
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>renderer<span class="tsd-signature-symbols">: </span><a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a>, basePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.output.basetheme.html" class="tsd-signature-type">BaseTheme</a></h3>
@@ -155,11 +211,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:9</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:64</li>
             
         </ul>
     
 </aside>
+
+    <p>Create a new BaseTheme instance.</p>
+
 
 
 
@@ -173,6 +232,9 @@
             <li>
                 <h5>renderer: <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h5>
                 
+    <p>The renderer this theme is attached to.</p>
+
+
 
 
 
@@ -182,6 +244,9 @@
             <li>
                 <h5>basePath: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The base path of this theme.</p>
+
+
 
 
 
@@ -217,7 +282,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="basepath"></a>
+    <a name="basepath" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> basePath<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -227,11 +292,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:6</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:55</li>
             
         </ul>
     
 </aside>
+
+    <p>The base path of this theme.</p>
+
 
 
 
@@ -245,7 +313,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="renderer"></a>
+    <a name="renderer" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> renderer<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h3>
 
@@ -255,11 +323,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:4</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:50</li>
             
         </ul>
     
 </aside>
+
+    <p>The renderer this theme is attached to.</p>
+
 
 
 
@@ -280,7 +351,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getnavigation"></a>
+    <a name="getnavigation" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getNavigation<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.navigationitem.html" class="tsd-signature-type">NavigationItem</a></h3>
@@ -291,12 +362,22 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:32</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:120</li>
             
         </ul>
     
 </aside>
 
+    <p>Create a navigation structure for the given project.</p>
+
+
+
+
+    <p>A navigation is a tree structure consisting of <a href="typedoc.models.navigationitem.html">NavigationItem</a> nodes. This
+function should return the root node of the desired navigation tree.</p>
+<p>The <a href="typedoc.output.navigationplugin.html">NavigationPlugin</a> will call this hook before a project will be rendered.
+The plugin will update the state of the navigation tree and pass it to the
+templates.</p>
 
 
 
@@ -309,6 +390,9 @@
             <li>
                 <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
                 
+    <p>The project whose navigation should be generated.</p>
+
+
 
 
 
@@ -326,6 +410,9 @@
     
 </p>
     
+        <p>The root navigation item.</p>
+
+    
 
 
         
@@ -337,7 +424,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="geturls"></a>
+    <a name="geturls" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getUrls<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -348,12 +435,19 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:27</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:102</li>
             
         </ul>
     
 </aside>
 
+    <p>Map the models of the given project to the desired output files.</p>
+
+
+
+
+    <p>Every theme must have an own implementation of this function, the default
+implementation always returns an empty array.</p>
 
 
 
@@ -366,6 +460,9 @@
             <li>
                 <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
                 
+    <p>The project whose urls should be generated.</p>
+
+
 
 
 
@@ -383,6 +480,10 @@
     
 </p>
     
+        <p>A list of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining which models
+                should be rendered to which files.</p>
+
+    
 
 
         
@@ -394,10 +495,10 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="initialize"></a>
+    <a name="isoutputdirectory" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> initialize<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isOutputDirectory<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -405,50 +506,34 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/BaseTheme.ts:17</li>
+                <li>Defined in typedoc/output/BaseTheme.ts:87</li>
             
         </ul>
     
 </aside>
 
+    <p>Test whether the given path contains a documentation generated by this theme.</p>
 
 
 
 
+    <p>TypeDoc empties the output directory before rendering a project. This function
+is used to ensure that only previously generated documentations are deleted.
+When this function returns FALSE, the documentation will not be created and an
+error message will be displayed.</p>
+<p>Every theme must have an own implementation of this function, the default
+implementation always returns FALSE.</p>
 
 
 
 
-
+    <dl class="tsd-comment-tags">
         
-    
-
-    
-</section>
+            <dt>see</dt>
+            <dd><p><a href="typedoc.output.renderer.html#prepareoutputdirectory">Renderer.prepareOutputDirectory</a></p>
+</dd>
         
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="isoutputdirectory"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isOutputDirectory<span class="tsd-signature-symbols">(</span>dirname<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:22</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
+    </dl>
 
 
 
@@ -456,8 +541,11 @@
     <ul>
         
             <li>
-                <h5>dirname: <span class="tsd-signature-type">string</span></h5>
+                <h5>path: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The path of the directory that should be tested.</p>
+
+
 
 
 
@@ -474,6 +562,10 @@
         <span class="tsd-signature-type">boolean</span>
     
 </p>
+    
+        <p>TRUE if the given path seems to be a previous output directory,
+             otherwise FALSE.</p>
+
     
 
 
@@ -518,6 +610,8 @@
     
         
             <ul>
+                
+                    
                 
                     
                 
@@ -643,13 +737,6 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#initialize" class="tsd-kind-icon">initialize</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">isOutputDirectory</a>
                     
                 </li>
@@ -664,6 +751,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">JavascriptIndexPlugin</a>
                     
                 </li>
             
@@ -734,6 +828,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

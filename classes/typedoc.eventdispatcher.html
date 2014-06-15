@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -53,6 +67,14 @@
         <div class="col-8">
             
     
+    <p>Base class of all objects dispatching events.</p>
+
+
+
+
+    <p>Events are dispatched by calling <a href="typedoc.eventdispatcher.html#dispatch">EventDispatcher.dispatch</a>. Events must have a name and
+they can carry additional arguments that are passed to all handlers. The first argument can
+be an instance of <a href="typedoc.event.html">Event</a> providing additional functionality.</p>
 
 
 
@@ -138,9 +160,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-    <a name="listeners"></a>
+    <a name="listeners" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> listeners<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.ilistenerregistry.html" class="tsd-signature-type">IListenerRegistry</a></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> listeners<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{ [event: string]: TypeDoc.IListener[]; }</span></h3>
 
 <aside class="tsd-sources">
     
@@ -148,7 +170,37 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:34</li>
+                <li>Defined in typedoc/EventDispatcher.ts:57</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>List of all registered handlers grouped by event name.</p>
+
+
+
+
+
+
+    
+
+    
+        
+            
+                <section class="tsd-member tsd-kind-index-signature tsd-parent-kind-property">
+    <a name="listeners.listeners." class="anchor"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/EventDispatcher.ts:57</li>
             
         </ul>
     
@@ -158,8 +210,18 @@
 
 
 
+
+
+
+
+
+        
     
 
+    
+</section>
+            
+        
     
 </section>
         
@@ -173,7 +235,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="dispatch"></a>
+    <a name="dispatch" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatch<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span></h3>
@@ -184,11 +246,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:37</li>
+                <li>Defined in typedoc/EventDispatcher.ts:66</li>
             
         </ul>
     
 </aside>
+
+    <p>Dispatch an event with the given event name.</p>
+
 
 
 
@@ -202,6 +267,9 @@
             <li>
                 <h5>event: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The name of the event to dispatch.</p>
+
+
 
 
 
@@ -211,6 +279,9 @@
             <li>
                 <h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>Additional arguments to pass to the handlers.</p>
+
+
 
 
 
@@ -231,7 +302,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="off"></a>
+    <a name="off" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> off<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, handler<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></h3>
@@ -242,11 +313,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:73</li>
+                <li>Defined in typedoc/EventDispatcher.ts:118</li>
             
         </ul>
     
 </aside>
+
+    <p>Remove an event handler.</p>
+
 
 
 
@@ -260,6 +334,9 @@
             <li>
                 <h5>event?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>The name of the event whose handlers should be removed.</p>
+
+
 
 
 
@@ -269,6 +346,9 @@
             <li>
                 <h5>handler?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>The callback that should be removed.</p>
+
+
 
 
 
@@ -278,6 +358,9 @@
             <li>
                 <h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>The scope of the callback that should be removed.</p>
+
+
 
 
 
@@ -298,7 +381,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="on"></a>
+    <a name="on" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0<span class="tsd-signature-symbols">)</span></h3>
@@ -309,11 +392,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:58</li>
+                <li>Defined in typedoc/EventDispatcher.ts:96</li>
             
         </ul>
     
 </aside>
+
+    <p>Register an event handler for the given event name.</p>
+
 
 
 
@@ -327,6 +413,9 @@
             <li>
                 <h5>event: <span class="tsd-signature-type">string</span></h5>
                 
+    <p>The name of the event the handler should be registered to.</p>
+
+
 
 
 
@@ -336,6 +425,9 @@
             <li>
                 <h5>handler: <span class="tsd-signature-type">Function</span></h5>
                 
+    <p>The callback that should be invoked.</p>
+
+
 
 
 
@@ -345,6 +437,9 @@
             <li>
                 <h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>The scope the callback should be executed in.</p>
+
+
 
 
 
@@ -354,6 +449,10 @@
             <li>
                 <h5>priority?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
                 
+    <p>A numeric value describing the priority of the handler. Handlers
+                 with higher priority will be executed earlier.</p>
+
+
 
 
 
@@ -391,8 +490,6 @@
     
         
             <ul>
-                
-                    
                 
                     
                 
@@ -469,13 +566,6 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
-                    
-                </li>
-            
-        
-            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.application.html" class="tsd-kind-icon">Application</a>
                     
@@ -547,6 +637,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

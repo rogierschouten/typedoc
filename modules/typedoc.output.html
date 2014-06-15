@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -88,6 +102,8 @@
                 
                     <li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a></li>
                 
+                    <li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">JavascriptIndexPlugin</a></li>
+                
                     <li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.output.layoutplugin.html" class="tsd-kind-icon">LayoutPlugin</a></li>
                 
                     <li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.output.markedplugin.html" class="tsd-kind-icon">MarkedPlugin</a></li>
@@ -126,7 +142,7 @@
     
         
             <section class="tsd-member tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
-    <a name="highlighttypescript"></a>
+    <a name="highlighttypescript" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">highlightTypeScript<span class="tsd-signature-symbols">(</span>hljs<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">{ aliases: string[]; keywords: { keyword: string; literal: string; built_in: string; }; contains: any[]; }</span></h3>
@@ -247,6 +263,8 @@
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -309,6 +327,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="../classes/typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="../classes/typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">JavascriptIndexPlugin</a>
                     
                 </li>
             
@@ -379,6 +404,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -126,7 +140,7 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.typehandler.html#buildtypehierarchy" class="tsd-kind-icon">buildTypeHierarchy</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.typehandler.html#static-buildtypehierarchy" class="tsd-kind-icon">buildTypeHierarchy</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.typehandler.html#onresolvereflection" class="tsd-kind-icon">onResolveReflection</a></li>
                 
@@ -145,7 +159,7 @@
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.typehandler.html" class="tsd-signature-type">TypeHandler</a></h3>
@@ -215,7 +229,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="dispatcher"></a>
+    <a name="dispatcher" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
 
@@ -259,7 +273,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="buildtypehierarchy"></a>
+    <a name="static-buildtypehierarchy" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> buildTypeHierarchy<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a></h3>
@@ -333,7 +347,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="onresolvereflection"></a>
+    <a name="onresolvereflection" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> onResolveReflection<span class="tsd-signature-symbols">(</span>resolution<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a><span class="tsd-signature-symbols">)</span></h3>
@@ -382,7 +396,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="resolvetype"></a>
+    <a name="resolvetype" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveType<span class="tsd-signature-symbols">(</span>type<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a>, compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></h3>
@@ -448,7 +462,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="resolvetypes"></a>
+    <a name="resolvetypes" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolveTypes<span class="tsd-signature-symbols">(</span>types<span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span>, compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -787,7 +801,7 @@
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.typehandler.html#buildtypehierarchy" class="tsd-kind-icon">buildTypeHierarchy</a>
+                    <a href="typedoc.factories.typehandler.html#static-buildtypehierarchy" class="tsd-kind-icon">buildTypeHierarchy</a>
                     
                 </li>
             
@@ -836,6 +850,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

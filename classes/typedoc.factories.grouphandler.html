@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -120,11 +134,11 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#plurals" class="tsd-kind-icon">PLURALS</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-plurals" class="tsd-kind-icon">PLURALS</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#singulars" class="tsd-kind-icon">SINGULARS</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-singulars" class="tsd-kind-icon">SINGULARS</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#weights" class="tsd-kind-icon">WEIGHTS</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-weights" class="tsd-kind-icon">WEIGHTS</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.grouphandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
                 
@@ -135,17 +149,17 @@
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindplural" class="tsd-kind-icon">getKindPlural</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-getkindplural" class="tsd-kind-icon">getKindPlural</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindsingular" class="tsd-kind-icon">getKindSingular</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-getkindsingular" class="tsd-kind-icon">getKindSingular</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="typedoc.factories.grouphandler.html#getkindstring" class="tsd-kind-icon">getKindString</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-getkindstring" class="tsd-kind-icon">getKindString</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.grouphandler.html#onleaveresolve" class="tsd-kind-icon">onLeaveResolve</a></li>
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#sortcallback" class="tsd-kind-icon">sortCallback</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.grouphandler.html#static-sortcallback" class="tsd-kind-icon">sortCallback</a></li>
                 
             </ul>
         </section>
@@ -158,7 +172,7 @@
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.grouphandler.html" class="tsd-signature-type">GroupHandler</a></h3>
@@ -234,7 +248,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="plurals"></a>
+    <a name="static-plurals" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> PLURALS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{}</span></h3>
 
@@ -265,7 +279,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="singulars"></a>
+    <a name="static-singulars" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> SINGULARS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{}</span></h3>
 
@@ -296,7 +310,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="weights"></a>
+    <a name="static-weights" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> WEIGHTS<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -327,7 +341,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="dispatcher"></a>
+    <a name="dispatcher" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
 
@@ -371,7 +385,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="getkindplural"></a>
+    <a name="static-getkindplural" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getKindPlural<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -437,7 +451,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="getkindsingular"></a>
+    <a name="static-getkindsingular" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getKindSingular<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -503,7 +517,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-    <a name="getkindstring"></a>
+    <a name="static-getkindstring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> <span class="tsd-flag ts-flagstatic">static</span> getKindString<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -569,7 +583,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="getreflectiongroups"></a>
+    <a name="static-getreflectiongroups" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getReflectionGroups<span class="tsd-signature-symbols">(</span>reflections<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -638,7 +652,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onleaveresolve"></a>
+    <a name="onleaveresolve" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onLeaveResolve<span class="tsd-signature-symbols">(</span>resolution<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolveprojectevent.html" class="tsd-signature-type">ResolveProjectEvent</a><span class="tsd-signature-symbols">)</span></h3>
@@ -691,7 +705,7 @@ leaves the resolving phase.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="sortcallback"></a>
+    <a name="static-sortcallback" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> sortCallback<span class="tsd-signature-symbols">(</span>a<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>, b<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></h3>
@@ -965,21 +979,21 @@ leaves the resolving phase.</p>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#plurals" class="tsd-kind-icon">PLURALS</a>
+                    <a href="typedoc.factories.grouphandler.html#static-plurals" class="tsd-kind-icon">PLURALS</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#singulars" class="tsd-kind-icon">SINGULARS</a>
+                    <a href="typedoc.factories.grouphandler.html#static-singulars" class="tsd-kind-icon">SINGULARS</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#weights" class="tsd-kind-icon">WEIGHTS</a>
+                    <a href="typedoc.factories.grouphandler.html#static-weights" class="tsd-kind-icon">WEIGHTS</a>
                     
                 </li>
             
@@ -993,28 +1007,28 @@ leaves the resolving phase.</p>
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#getkindplural" class="tsd-kind-icon">getKindPlural</a>
+                    <a href="typedoc.factories.grouphandler.html#static-getkindplural" class="tsd-kind-icon">getKindPlural</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#getkindsingular" class="tsd-kind-icon">getKindSingular</a>
+                    <a href="typedoc.factories.grouphandler.html#static-getkindsingular" class="tsd-kind-icon">getKindSingular</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#getkindstring" class="tsd-kind-icon">getKindString</a>
+                    <a href="typedoc.factories.grouphandler.html#static-getkindstring" class="tsd-kind-icon">getKindString</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a>
+                    <a href="typedoc.factories.grouphandler.html#static-getreflectiongroups" class="tsd-kind-icon">getReflectionGroups</a>
                     
                 </li>
             
@@ -1028,7 +1042,7 @@ leaves the resolving phase.</p>
         
             
                 <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.grouphandler.html#sortcallback" class="tsd-kind-icon">sortCallback</a>
+                    <a href="typedoc.factories.grouphandler.html#static-sortcallback" class="tsd-kind-icon">sortCallback</a>
                     
                 </li>
             
@@ -1126,6 +1140,7 @@ leaves the resolving phase.</p>
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -128,9 +142,9 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.reflectionhandler.html#relevant_flags" class="tsd-kind-icon">RELEVANT_FLAGS</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.reflectionhandler.html#static-relevant_flags" class="tsd-kind-icon">RELEVANT_FLAGS</a></li>
                 
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.reflectionhandler.html#relevant_parameter_flags" class="tsd-kind-icon">RELEVANT_PARAMETER_FLAGS</a></li>
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.reflectionhandler.html#static-relevant_parameter_flags" class="tsd-kind-icon">RELEVANT_PARAMETER_FLAGS</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.reflectionhandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
                 
@@ -158,7 +172,7 @@
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.reflectionhandler.html" class="tsd-signature-type">ReflectionHandler</a></h3>
@@ -228,7 +242,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="relevant_flags"></a>
+    <a name="static-relevant_flags" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> RELEVANT_FLAGS<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -259,7 +273,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="relevant_parameter_flags"></a>
+    <a name="static-relevant_parameter_flags" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> RELEVANT_PARAMETER_FLAGS<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -290,7 +304,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="dispatcher"></a>
+    <a name="dispatcher" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatcher<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
 
@@ -334,7 +348,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="oncreatereflection"></a>
+    <a name="oncreatereflection" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onCreateReflection<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></h3>
@@ -383,7 +397,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onmergereflection"></a>
+    <a name="onmergereflection" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onMergeReflection<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></h3>
@@ -432,7 +446,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="onresolvereflection"></a>
+    <a name="onresolvereflection" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> onResolveReflection<span class="tsd-signature-symbols">(</span>res<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a><span class="tsd-signature-symbols">)</span></h3>
@@ -708,14 +722,14 @@
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.reflectionhandler.html#relevant_flags" class="tsd-kind-icon">RELEVANT_FLAGS</a>
+                    <a href="typedoc.factories.reflectionhandler.html#static-relevant_flags" class="tsd-kind-icon">RELEVANT_FLAGS</a>
                     
                 </li>
             
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.reflectionhandler.html#relevant_parameter_flags" class="tsd-kind-icon">RELEVANT_PARAMETER_FLAGS</a>
+                    <a href="typedoc.factories.reflectionhandler.html#static-relevant_parameter_flags" class="tsd-kind-icon">RELEVANT_PARAMETER_FLAGS</a>
                     
                 </li>
             
@@ -813,6 +827,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

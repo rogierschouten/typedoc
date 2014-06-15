@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -98,7 +112,7 @@ to use their own implementation.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="settings"></a>
+    <a name="settings" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> settings<span class="tsd-signature-symbols">:</span> <a href="../classes/typedoc.settings.html" class="tsd-signature-type">Settings</a></h3>
 
@@ -136,7 +150,7 @@ to use their own implementation.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-interface">
-    <a name="log"></a>
+    <a name="log" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> log<span class="tsd-signature-symbols">(</span>message<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, level<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbols">)</span></h3>
@@ -235,8 +249,6 @@ to use their own implementation.</p>
                 
                     
                 
-                    
-                
             </ul>
         
     
@@ -318,13 +330,6 @@ to use their own implementation.</p>
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
-                    
-                </li>
-            
-        
-            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="../classes/typedoc.application.html" class="tsd-kind-icon">Application</a>
                     
@@ -362,6 +367,7 @@ to use their own implementation.</p>
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

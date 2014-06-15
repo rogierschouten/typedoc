@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -86,7 +100,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="handler"></a>
+    <a name="handler" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> handler<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Function</span></h3>
 
@@ -96,7 +110,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:3</li>
+                <li>Defined in typedoc/EventDispatcher.ts:3</li>
             
         </ul>
     
@@ -114,7 +128,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="priority"></a>
+    <a name="priority" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> priority<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">number</span></h3>
 
@@ -124,7 +138,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:5</li>
+                <li>Defined in typedoc/EventDispatcher.ts:5</li>
             
         </ul>
     
@@ -142,7 +156,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="scope"></a>
+    <a name="scope" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> scope<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
 
@@ -152,7 +166,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:4</li>
+                <li>Defined in typedoc/EventDispatcher.ts:4</li>
             
         </ul>
     
@@ -187,8 +201,6 @@
     
         
             <ul>
-                
-                    
                 
                     
                 
@@ -292,13 +304,6 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
-                    
-                </li>
-            
-        
-            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="../classes/typedoc.application.html" class="tsd-kind-icon">Application</a>
                     
@@ -336,6 +341,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

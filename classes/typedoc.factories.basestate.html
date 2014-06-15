@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -64,7 +78,7 @@
 
 
     <p>States store the current declaration and its matching reflection while
-being processed by the dispatcher. <a href="typedoc.factories.basehandler.html">BaseHandler</a> instances can alter the state and
+being processed by the <a href="typedoc.factories.dispatcher.html">Dispatcher</a>. <a href="typedoc.factories.basehandler.html">BaseHandler</a> instances can alter the state and
 stop it from being further processed.</p>
 <p>For each child declaration the dispatcher will create a child <a href="typedoc.factories.declarationstate.html">DeclarationState</a>
 state. The root state is always an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>.</p>
@@ -177,6 +191,8 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#getname" class="tsd-kind-icon">getName</a></li>
                 
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.basestate.html#static-getname" class="tsd-kind-icon">getName</a></li>
+                
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.basestate.html#hasflag" class="tsd-kind-icon">hasFlag</a></li>
@@ -198,7 +214,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>parentState<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a>, declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span>, reflection<span class="tsd-signature-symbols">?: </span><a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a></h3>
@@ -283,7 +299,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="declaration"></a>
+    <a name="declaration" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> declaration<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.PullDecl</span></h3>
 
@@ -314,7 +330,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="isdefaultprevented"></a>
+    <a name="isdefaultprevented" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isDefaultPrevented<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -330,11 +346,14 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:18</li>
+                <li>Defined in typedoc/EventDispatcher.ts:25</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#preventdefault">Event.preventDefault</a> been called?</p>
+
 
 
 
@@ -348,7 +367,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="ispropagationstopped"></a>
+    <a name="ispropagationstopped" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isPropagationStopped<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -364,11 +383,14 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:16</li>
+                <li>Defined in typedoc/EventDispatcher.ts:20</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#stoppropagation">Event.stopPropagation</a> been called?</p>
+
 
 
 
@@ -382,7 +404,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="originaldeclaration"></a>
+    <a name="originaldeclaration" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> originalDeclaration<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.PullDecl</span></h3>
 
@@ -413,7 +435,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="parentstate"></a>
+    <a name="parentstate" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> parentState<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.basestate.html" class="tsd-signature-type">BaseState</a></h3>
 
@@ -444,7 +466,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="reflection"></a>
+    <a name="reflection" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> reflection<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a></h3>
 
@@ -482,7 +504,7 @@ state. The root state is always an instance of <a href="typedoc.factories.docume
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="createchildstate"></a>
+    <a name="createchildstate" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createChildState<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h3>
@@ -551,7 +573,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getdocumentstate"></a>
+    <a name="getdocumentstate" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getDocumentState<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.documentstate.html" class="tsd-signature-type">DocumentState</a></h3>
@@ -600,7 +622,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getname"></a>
+    <a name="getname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getName<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -642,8 +664,65 @@ populated with it.</p>
         
     
         
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a name="static-getname" class="anchor"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> getName<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/events/BaseState.ts:146</li>
+            
+        </ul>
+    
+</aside>
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>declaration: <span class="tsd-signature-type">TypeScript.PullDecl</span></h5>
+                
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns</h4>
+    <p>
+    
+        <span class="tsd-signature-type">string</span>
+    
+</p>
+    
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getsnapshot"></a>
+    <a name="getsnapshot" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getSnapshot<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h3>
@@ -706,7 +785,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="hasflag"></a>
+    <a name="hasflag" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasFlag<span class="tsd-signature-symbols">(</span>flag<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
@@ -769,7 +848,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="kindof"></a>
+    <a name="kindof" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kindOf<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
@@ -884,7 +963,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="preventdefault"></a>
+    <a name="preventdefault" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> preventDefault<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -901,11 +980,14 @@ populated with it.</p>
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:26</li>
+                <li>Defined in typedoc/EventDispatcher.ts:39</li>
             
         </ul>
     
 </aside>
+
+    <p>Prevent the default action associated with this event from being executed.</p>
+
 
 
 
@@ -925,7 +1007,7 @@ populated with it.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="stoppropagation"></a>
+    <a name="stoppropagation" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> stopPropagation<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -942,11 +1024,14 @@ populated with it.</p>
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:21</li>
+                <li>Defined in typedoc/EventDispatcher.ts:31</li>
             
         </ul>
     
 </aside>
+
+    <p>Stop the propagation of this event. Remaining event handlers will not be executed.</p>
+
 
 
 
@@ -1175,6 +1260,13 @@ populated with it.</p>
             
         
             
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.basestate.html#static-getname" class="tsd-kind-icon">getName</a>
+                    
+                </li>
+            
+        
+            
                 <li class=" tsd-kind-method tsd-parent-kind-class">
                     <a href="typedoc.factories.basestate.html#getsnapshot" class="tsd-kind-icon">getSnapshot</a>
                     
@@ -1351,6 +1443,7 @@ populated with it.</p>
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

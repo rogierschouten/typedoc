@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -58,6 +72,12 @@
         <div class="col-8">
             
     
+    <p>Defines a mapping of a <a href="../enums/typedoc.models.kind.html">Models.Kind</a> to a template file.</p>
+
+
+
+
+    <p>Used by <a href="../classes/typedoc.output.defaulttheme.html">DefaultTheme</a> to map reflections to output files.</p>
 
 
 
@@ -74,11 +94,11 @@
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#directory" class="tsd-kind-icon">directory</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#isleaf" class="tsd-kind-icon">isLeaf</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#kind" class="tsd-kind-icon">kind</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#prefix" class="tsd-kind-icon">prefix</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.output.itemplatemapping.html#template" class="tsd-kind-icon">template</a></li>
                 
@@ -93,7 +113,38 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="isleaf"></a>
+    <a name="directory" class="anchor"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> directory<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/output/DefaultTheme.ts:23</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The name of the directory the output files should be written to.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
+    <a name="isleaf" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isLeaf<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -103,11 +154,15 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/DefaultTheme.ts:5</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:18</li>
             
         </ul>
     
 </aside>
+
+    <p>Can this mapping have children or should all further reflections be rendered
+to the defined output page?</p>
+
 
 
 
@@ -121,9 +176,9 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="kind"></a>
+    <a name="kind" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kind<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> kind<span class="tsd-signature-symbols">:</span> <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -131,11 +186,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/DefaultTheme.ts:4</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:12</li>
             
         </ul>
     
 </aside>
+
+    <p><a href="../undefined">DeclarationReflection.kind</a> this rule applies to.</p>
+
 
 
 
@@ -149,35 +207,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="prefix"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> prefix<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/DefaultTheme.ts:6</li>
-            
-        </ul>
-    
-</aside>
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-    <a name="template"></a>
+    <a name="template" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> template<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -187,11 +217,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/output/DefaultTheme.ts:7</li>
+                <li>Defined in typedoc/output/DefaultTheme.ts:28</li>
             
         </ul>
     
 </aside>
+
+    <p>The name of the template that should be used to render the reflection.</p>
+
 
 
 
@@ -266,6 +299,8 @@
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -306,6 +341,13 @@
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
+                    <a href="typedoc.output.itemplatemapping.html#directory" class="tsd-kind-icon">directory</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
                     <a href="typedoc.output.itemplatemapping.html#isleaf" class="tsd-kind-icon">isLeaf</a>
                     
                 </li>
@@ -314,13 +356,6 @@
             
                 <li class=" tsd-kind-property tsd-parent-kind-interface">
                     <a href="typedoc.output.itemplatemapping.html#kind" class="tsd-kind-icon">kind</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-interface">
-                    <a href="typedoc.output.itemplatemapping.html#prefix" class="tsd-kind-icon">prefix</a>
                     
                 </li>
             
@@ -362,6 +397,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="../classes/typedoc.output.defaulttheme.html" class="tsd-kind-icon">DefaultTheme</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="../classes/typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">JavascriptIndexPlugin</a>
                     
                 </li>
             
@@ -432,6 +474,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

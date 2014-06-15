@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -121,6 +135,8 @@ and source files of the processed project through this reflection.</p>
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.projectreflection.html#anchor" class="tsd-kind-icon">anchor</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.projectreflection.html#children" class="tsd-kind-icon">children</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.projectreflection.html#comment" class="tsd-kind-icon">comment</a></li>
@@ -179,7 +195,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
@@ -249,7 +265,44 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="children"></a>
+    <a name="anchor" class="anchor"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> anchor<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+        <p>Inherited from 
+    
+        <a href="typedoc.models.basereflection.html">BaseReflection</a>.<a href="typedoc.models.basereflection.html#anchor">anchor</a>
+    
+</p>
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:48</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>The name of the anchor of this child.</p>
+
+
+
+
+
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a name="children" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> children<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -286,7 +339,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="comment"></a>
+    <a name="comment" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> comment<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a></h3>
 
@@ -323,7 +376,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="directory"></a>
+    <a name="directory" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> directory<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.sourcedirectory.html" class="tsd-signature-type">SourceDirectory</a></h3>
 
@@ -354,7 +407,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="files"></a>
+    <a name="files" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> files<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.sourcefile.html" class="tsd-signature-type">SourceFile</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -385,7 +438,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="groups"></a>
+    <a name="groups" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> groups<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -422,7 +475,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="hasowndocument"></a>
+    <a name="hasowndocument" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> hasOwnDocument<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -438,7 +491,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:50</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:55</li>
             
         </ul>
     
@@ -462,7 +515,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
-    <a name="name"></a>
+    <a name="name" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -502,7 +555,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="packageinfo"></a>
+    <a name="packageinfo" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> packageInfo<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></h3>
 
@@ -533,7 +586,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="parent"></a>
+    <a name="parent" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> parent<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a></h3>
 
@@ -570,7 +623,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="readme"></a>
+    <a name="readme" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> readme<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -601,7 +654,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="reflections"></a>
+    <a name="reflections" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> reflections<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
 
@@ -632,7 +685,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="url"></a>
+    <a name="url" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> url<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
 
@@ -676,7 +729,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="findreflectionbyname"></a>
+    <a name="findreflectionbyname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> findReflectionByName<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
@@ -809,7 +862,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getalias"></a>
+    <a name="getalias" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getAlias<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -826,7 +879,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:132</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:137</li>
             
         </ul>
     
@@ -861,7 +914,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getchildbyname"></a>
+    <a name="getchildbyname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getChildByName<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
@@ -878,7 +931,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:81</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:86</li>
             
         </ul>
     
@@ -939,7 +992,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:86</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:91</li>
             
         </ul>
     
@@ -994,7 +1047,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getchildrenbykind"></a>
+    <a name="getchildrenbykind" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getChildrenByKind<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -1011,7 +1064,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:118</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:123</li>
             
         </ul>
     
@@ -1066,7 +1119,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="getfullname"></a>
+    <a name="getfullname" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getFullName<span class="tsd-signature-symbols">(</span>separator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;.&#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1083,7 +1136,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:69</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:74</li>
             
         </ul>
     
@@ -1141,7 +1194,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getreflectionsbykind"></a>
+    <a name="getreflectionsbykind" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getReflectionsByKind<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></h3>
@@ -1207,7 +1260,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="toreflectionstring"></a>
+    <a name="toreflectionstring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> toReflectionString<span class="tsd-signature-symbols">(</span>indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1224,7 +1277,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:182</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:187</li>
             
         </ul>
     
@@ -1276,7 +1329,7 @@ and source files of the processed project through this reflection.</p>
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="tostring"></a>
+    <a name="tostring" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> toString<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -1293,7 +1346,7 @@ and source files of the processed project through this reflection.</p>
     
         <ul>
             
-                <li>Defined in typedoc/models/reflections/BaseReflection.ts:172</li>
+                <li>Defined in typedoc/models/reflections/BaseReflection.ts:177</li>
             
         </ul>
     
@@ -1523,6 +1576,13 @@ and source files of the processed project through this reflection.</p>
         
             
                 <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+                    <a href="typedoc.models.projectreflection.html#anchor" class="tsd-kind-icon">anchor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
                     <a href="typedoc.models.projectreflection.html#children" class="tsd-kind-icon">children</a>
                     
                 </li>
@@ -1719,6 +1779,7 @@ and source files of the processed project through this reflection.</p>
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

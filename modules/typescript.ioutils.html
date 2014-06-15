@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -99,7 +113,7 @@
     
         
             <section class="tsd-member tsd-kind-function tsd-parent-kind-container">
-    <a name="combine"></a>
+    <a name="combine" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">combine<span class="tsd-signature-symbols">(</span>prefix<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, suffix<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
@@ -165,7 +179,7 @@
     
         
             <section class="tsd-member tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
-    <a name="createdirectorystructure"></a>
+    <a name="createdirectorystructure" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">createDirectoryStructure<span class="tsd-signature-symbols">(</span>ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a>, dirName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></h3>
@@ -223,7 +237,7 @@
     
         
             <section class="tsd-member tsd-kind-function tsd-parent-kind-container">
-    <a name="throwioerror"></a>
+    <a name="throwioerror" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">throwIOError<span class="tsd-signature-symbols">(</span>message<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, error<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbols">)</span></h3>
@@ -281,7 +295,7 @@
     
         
             <section class="tsd-member tsd-kind-function tsd-parent-kind-container">
-    <a name="writefileandfolderstructure"></a>
+    <a name="writefileandfolderstructure" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">writeFileAndFolderStructure<span class="tsd-signature-symbols">(</span>ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, contents<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, writeByteOrderMark<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></h3>
@@ -469,6 +483,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

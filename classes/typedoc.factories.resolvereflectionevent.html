@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -58,6 +72,13 @@
         <div class="col-8">
             
     
+    <p>Base class of all events.</p>
+
+
+
+
+    <p>Events are emitted by <a href="typedoc.eventdispatcher.html">EventDispatcher</a> and are passed to all
+handlers registered for the associated event name.</p>
 
 
 
@@ -148,7 +169,7 @@
     
         
             <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-    <a name="constructor"></a>
+    <a name="constructor" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>compiler<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a>, project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>, reflection<span class="tsd-signature-symbols">?: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a></h3>
@@ -236,7 +257,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="compiler"></a>
+    <a name="compiler" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compiler<span class="tsd-signature-symbols">:</span> <a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a></h3>
 
@@ -270,7 +291,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="isdefaultprevented"></a>
+    <a name="isdefaultprevented" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isDefaultPrevented<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -286,11 +307,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:18</li>
+                <li>Defined in typedoc/EventDispatcher.ts:25</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#preventdefault">Event.preventDefault</a> been called?</p>
+
 
 
 
@@ -304,7 +328,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="ispropagationstopped"></a>
+    <a name="ispropagationstopped" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isPropagationStopped<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -320,11 +344,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:16</li>
+                <li>Defined in typedoc/EventDispatcher.ts:20</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#stoppropagation">Event.stopPropagation</a> been called?</p>
+
 
 
 
@@ -338,7 +365,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-    <a name="project"></a>
+    <a name="project" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> project<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
 
@@ -372,7 +399,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="reflection"></a>
+    <a name="reflection" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> reflection<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h3>
 
@@ -407,7 +434,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="createreflectionevent"></a>
+    <a name="createreflectionevent" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createReflectionEvent<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.resolvereflectionevent.html" class="tsd-signature-type">ResolveReflectionEvent</a></h3>
@@ -470,7 +497,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="preventdefault"></a>
+    <a name="preventdefault" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> preventDefault<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -487,11 +514,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:26</li>
+                <li>Defined in typedoc/EventDispatcher.ts:39</li>
             
         </ul>
     
 </aside>
+
+    <p>Prevent the default action associated with this event from being executed.</p>
+
 
 
 
@@ -511,7 +541,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="stoppropagation"></a>
+    <a name="stoppropagation" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> stopPropagation<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -528,11 +558,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:21</li>
+                <li>Defined in typedoc/EventDispatcher.ts:31</li>
             
         </ul>
     
 </aside>
+
+    <p>Stop the propagation of this event. Remaining event handlers will not be executed.</p>
+
 
 
 
@@ -895,6 +928,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

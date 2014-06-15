@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="../index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="../index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -53,6 +67,13 @@
         <div class="col-8">
             
     
+    <p>Base class of all events.</p>
+
+
+
+
+    <p>Events are emitted by <a href="typedoc.eventdispatcher.html">EventDispatcher</a> and are passed to all
+handlers registered for the associated event name.</p>
 
 
 
@@ -162,7 +183,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="isdefaultprevented"></a>
+    <a name="isdefaultprevented" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isDefaultPrevented<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -172,11 +193,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:18</li>
+                <li>Defined in typedoc/EventDispatcher.ts:25</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#preventdefault">Event.preventDefault</a> been called?</p>
+
 
 
 
@@ -190,7 +214,7 @@
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="ispropagationstopped"></a>
+    <a name="ispropagationstopped" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> isPropagationStopped<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></h3>
 
@@ -200,11 +224,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:16</li>
+                <li>Defined in typedoc/EventDispatcher.ts:20</li>
             
         </ul>
     
 </aside>
+
+    <p>Has <a href="typedoc.event.html#stoppropagation">Event.stopPropagation</a> been called?</p>
+
 
 
 
@@ -225,7 +252,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="preventdefault"></a>
+    <a name="preventdefault" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> preventDefault<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -236,11 +263,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:26</li>
+                <li>Defined in typedoc/EventDispatcher.ts:39</li>
             
         </ul>
     
 </aside>
+
+    <p>Prevent the default action associated with this event from being executed.</p>
+
 
 
 
@@ -260,7 +290,7 @@
     
         
             <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="stoppropagation"></a>
+    <a name="stoppropagation" class="anchor"></a>
     
         
             <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> stopPropagation<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
@@ -271,11 +301,14 @@
     
         <ul>
             
-                <li>Defined in typedoc/utils/EventDispatcher.ts:21</li>
+                <li>Defined in typedoc/EventDispatcher.ts:31</li>
             
         </ul>
     
 </aside>
+
+    <p>Stop the propagation of this event. Remaining event handlers will not be executed.</p>
+
 
 
 
@@ -312,8 +345,6 @@
     
         
             <ul>
-                
-                    
                 
                     
                 
@@ -390,13 +421,6 @@
             
         
             
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.ilistenerregistry.html" class="tsd-kind-icon">IListenerRegistry</a>
-                    
-                </li>
-            
-        
-            
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.application.html" class="tsd-kind-icon">Application</a>
                     
@@ -468,6 +492,7 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>

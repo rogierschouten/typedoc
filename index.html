@@ -14,18 +14,32 @@
 <header>
     <div class="tsd-page-toolbar">
         <div class="container">
-            <div id="tsd-filter">
-                <input type="checkbox" id="tsd-filter-inherited" checked />
-                <label for="tsd-filter-inherited">Inherited</label>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+                    <div class="field">
+                        <label for="tsd-search-field">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-                <input type="checkbox" id="tsd-filter-private" checked />
-                <label for="tsd-filter-private">Private</label>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
 
-                <input type="checkbox" id="tsd-filter-only-exported" />
-                <label for="tsd-filter-only-exported">Only exported</label>
+                    <a href="index.html" class="title">TypeDoc Documentation</a>
+                </div>
+
+                <div class="table-cell" id="tsd-filter">
+                    <input type="checkbox" id="tsd-filter-inherited" checked />
+                    <label for="tsd-filter-inherited">Inherited</label>
+
+                    <input type="checkbox" id="tsd-filter-private" checked />
+                    <label for="tsd-filter-private">Private</label>
+
+                    <input type="checkbox" id="tsd-filter-only-exported" />
+                    <label for="tsd-filter-only-exported">Only exported</label>
+                </div>
             </div>
-
-            <a href="index.html">TypeDoc Documentation</a>
         </div>
     </div>
     <div class="tsd-page-title">
@@ -77,7 +91,7 @@ generator. So in order to create a documentation for an entire project you simpl
 <p><code>--target &lt;ES3 or ES5&gt;</code></p>
 <p>Specify ECMAScript target version: &quot;ES3&quot; (default), or &quot;ES5&quot;</p>
 <p><code>--exclude &lt;pattern&gt;</code></p>
-<p>Exclude files by the given pattern, when a path is provided as source</p>
+<p>Exclude files by the given pattern when a path is provided as source</p>
 <h3 id="gulp">Gulp</h3>
 <p>There is a plugin available to run TypeDoc with Gulp created by Rogier Schouten. You can find it on NPM:
 <a href="https://www.npmjs.org/package/gulp-typedoc/">https://www.npmjs.org/package/gulp-typedoc/</a></p>
@@ -88,7 +102,7 @@ generator. So in order to create a documentation for an entire project you simpl
 <p>TypeDoc runs the TypeScript compiler and extracts type information from the generated compiler symbols.
 Therefore you don&#39;t have to include additional metadata within your comments, TypeScript specific elements
 like classes, enumerations or property types and access modifiers will be automatically detected.</p>
-<p>All comments can contains markdown. TypeDoc uses the Marked (<a href="https://github.com/chjj/marked">https://github.com/chjj/marked</a>) markdown parser
+<p>All comments parsed as markdown. TypeDoc uses the Marked (<a href="https://github.com/chjj/marked">https://github.com/chjj/marked</a>) markdown parser
 and HighlightJS (<a href="https://github.com/isagalaev/highlight.js">https://github.com/isagalaev/highlight.js</a>) to highlight code blocks within markdown sections.
 Additionally you can link to other classes, members or functions using double angle brackets.</p>
 <h3 id="javadoc-tags">JavaDoc tags</h3>
@@ -115,8 +129,8 @@ overwrite them if you wish to.</p>
 
 <span class="hljs-comment">/**
  * Comment for method ´doSomething´.
- * @param with  Comment for parameter ´with´.
- * @returns     Comment for return value.
+ * @param target  Comment for parameter ´target´.
+ * @returns       Comment for return value.
  */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(target:any, arg:any)</span><span class="hljs-type">:number</span> {</span>
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
@@ -174,6 +188,7 @@ overwrite them if you wish to.</p>
 </div>
 
 <script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 
 </body>
 </html>
