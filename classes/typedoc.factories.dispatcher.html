@@ -36,6 +36,9 @@
                     <input type="checkbox" id="tsd-filter-private" checked />
                     <label for="tsd-filter-private">Private</label>
 
+                    <input type="checkbox" id="tsd-filter-externals" />
+                    <label for="tsd-filter-externals">Externals</label>
+
                     <input type="checkbox" id="tsd-filter-only-exported" />
                     <label for="tsd-filter-only-exported">Only exported</label>
                 </div>
@@ -85,6 +88,11 @@ dispatcher is in. Handlers can alter the state or stop it from being further pro
 <p>For each document (a single *.ts file) the dispatcher will generate the following event flow.
 Declarations are processed according to their hierarchy.</p>
 <ul>
+<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin">Dispatcher.EVENT_BEGIN</a><br>
+Triggered when the dispatcher starts processing a project. The listener receives
+an instance of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>. By calling <a href="typedoc.factories.dispatcherevent.html#preventdefault">DispatcherEvent.preventDefault</a> the
+project file will not be processed.</p>
+</li>
 <li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_document">Dispatcher.EVENT_BEGIN_DOCUMENT</a><br>
 Triggered when the dispatcher starts processing a TypeScript document. The listener receives
 an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>. By calling <a href="typedoc.factories.documentstate.html#preventdefault">DocumentState.preventDefault</a> the entire
@@ -129,16 +137,16 @@ receives an instance of <a href="typedoc.factories.documentstate.html">DocumentS
 <ul>
 <li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_resolve">Dispatcher.EVENT_BEGIN_RESOLVE</a><br>
 Triggered when the dispatcher enters the resolving phase. The listener receives an instance
-of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.</p>
+of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
 <ul>
 <li><a href="typedoc.factories.dispatcher.html#static-event_resolve">Dispatcher.EVENT_RESOLVE</a><br>
 Triggered when the dispatcher resolves a reflection. The listener receives an instance
-of <a href="typedoc.factories.resolvereflectionevent.html">ResolveReflectionEvent</a>.</li>
+of <a href="typedoc.factories.reflectionevent.html">ReflectionEvent</a>.</li>
 </ul>
 </li>
 <li><p><a href="typedoc.factories.dispatcher.html#static-event_end_resolve">Dispatcher.EVENT_END_RESOLVE</a><br>
 Triggered when the dispatcher leaves the resolving phase. The listener receives an instance
-of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.</p>
+of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
 </li>
 </ul>
 
@@ -197,6 +205,8 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
             <h3>Properties</h3>
             <ul class="tsd-member-index">
                 
+                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_BEGIN</a></li>
+                
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_declaration" class="tsd-kind-icon">EVENT_BEGIN_DECLARATION</a></li>
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_document" class="tsd-kind-icon">EVENT_BEGIN_DOCUMENT</a></li>
@@ -230,7 +240,9 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
             <h3>Methods</h3>
             <ul class="tsd-member-index">
                 
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a></li>
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">createProject</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
                 
@@ -245,6 +257,8 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
                     <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a></li>
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">processState</a></li>
+                
+                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a></li>
                 
             </ul>
         </section>
@@ -268,7 +282,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:172</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:184</li>
             
         </ul>
     
@@ -327,6 +341,44 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a name="static-event_begin" class="anchor"></a>
+    
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:109</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Triggered once per project before the dispatcher invokes the compiler.</p>
+
+
+
+
+
+
+    <dl class="tsd-comment-tags">
+        
+            <dt>event</dt>
+            <dd></dd>
+        
+    </dl>
+
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
     <a name="static-event_begin_declaration" class="anchor"></a>
     
         <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> EVENT_BEGIN_DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
@@ -337,7 +389,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:128</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:139</li>
             
         </ul>
     
@@ -375,7 +427,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:104</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:115</li>
             
         </ul>
     
@@ -413,7 +465,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:146</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:157</li>
             
         </ul>
     
@@ -451,7 +503,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:116</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:127</li>
             
         </ul>
     
@@ -489,7 +541,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:134</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:145</li>
             
         </ul>
     
@@ -527,7 +579,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:140</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:151</li>
             
         </ul>
     
@@ -565,7 +617,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:110</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:121</li>
             
         </ul>
     
@@ -603,7 +655,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:158</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:169</li>
             
         </ul>
     
@@ -641,7 +693,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:122</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:133</li>
             
         </ul>
     
@@ -679,7 +731,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:152</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:163</li>
             
         </ul>
     
@@ -717,7 +769,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:164</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:175</li>
             
         </ul>
     
@@ -748,7 +800,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:93</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:98</li>
             
         </ul>
     
@@ -779,7 +831,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:98</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:103</li>
             
         </ul>
     
@@ -806,11 +858,11 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     <h2>Methods</h2>
     
         
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
     <a name="compile" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compile<span class="tsd-signature-symbols">(</span>inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> compile<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -818,7 +870,62 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:189</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:219</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Run the compiler.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
+                
+    <p>The event containing the project and compiler.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+    <a name="createproject" class="anchor"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> createProject<span class="tsd-signature-symbols">(</span>inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:201</li>
             
         </ul>
     
@@ -957,7 +1064,7 @@ of <a href="typedoc.factories.resolveprojectevent.html">ResolveProjectEvent</a>.
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:251</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:294</li>
             
         </ul>
     
@@ -1020,7 +1127,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     <a name="static-explaindeclaration" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> explainDeclaration<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.PullDecl</span>, indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> <span class="tsd-flag ts-flagstatic">static</span> explainDeclaration<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -1028,7 +1135,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:289</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:331</li>
             
         </ul>
     
@@ -1047,7 +1154,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     <ul>
         
             <li>
-                <h5>declaration: <span class="tsd-signature-type">TypeScript.PullDecl</span></h5>
+                <h5>declaration: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
                 
     <p>The declaration that should be printed.</p>
 
@@ -1095,7 +1202,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:315</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:357</li>
             
         </ul>
     
@@ -1344,7 +1451,7 @@ will hold an array of created reflections for the final resolving phase.</p>
     
         <ul>
             
-                <li>Defined in typedoc/factories/Dispatcher.ts:225</li>
+                <li>Defined in typedoc/factories/Dispatcher.ts:268</li>
             
         </ul>
     
@@ -1366,6 +1473,61 @@ will hold an array of created reflections for the final resolving phase.</p>
                 <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
                 
     <p>The state that should be processed.</p>
+
+
+
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+
+        
+    
+
+    
+</section>
+        
+    
+        
+            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+    <a name="resolve" class="anchor"></a>
+    
+        
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolve<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></h3>
+
+<aside class="tsd-sources">
+    
+    
+    
+        <ul>
+            
+                <li>Defined in typedoc/factories/Dispatcher.ts:250</li>
+            
+        </ul>
+    
+</aside>
+
+    <p>Resolve all created reflections.</p>
+
+
+
+
+
+
+
+
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
+                
+    <p>The event containing the project and compiler.</p>
 
 
 
@@ -1457,6 +1619,8 @@ will hold an array of created reflections for the final resolving phase.</p>
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -1477,8 +1641,278 @@ will hold an array of created reflections for the final resolving phase.</p>
     
 </li>
                     
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.asthelpers.html">TypeScript.ASTHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.bitmatrix.html">TypeScript.BitMatrix</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.bitvector.html">TypeScript.BitVector</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.collections.html">TypeScript.Collections</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.compilerdiagnostics.html">TypeScript.CompilerDiagnostics</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.declarationcreator.html">TypeScript.DeclarationCreator</a>
+    
+</li>
+                    
                         <li class=" tsd-kind-container tsd-parent-kind-container">
     <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.indentation.html">TypeScript.Indentation</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.integerutilities.html">TypeScript.IntegerUtilities</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.linemap1.html">TypeScript.LineMap1</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.parser.html">TypeScript.Parser</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.pullhelpers.html">TypeScript.PullHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.pullinstantiationhelpers.html">TypeScript.PullInstantiationHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.scriptsnapshot.html">TypeScript.ScriptSnapshot</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.simpletext.html">TypeScript.SimpleText</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.syntax.html">TypeScript.Syntax</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.syntaxfacts.html">TypeScript.SyntaxFacts</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.textfactory.html">TypeScript.TextFactory</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.textutilities.html">TypeScript.TextUtilities</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/assert.html">assert</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/child_process.html">child_process</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/cluster.html">cluster</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/crypto.html">crypto</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/dgram.html">dgram</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/dns.html">dns</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/domain.html">domain</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/events.html">events</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/fs.html">fs</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/fs.html">fs</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/handlebars.html">handlebars</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/highlight.html">highlight</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/http.html">http</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/https.html">https</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/marked.html">marked</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/minimatch.html">minimatch</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-dynamic-module tsd-is-external">
+    <a href="../modules/minimatch.minimatch.html">minimatch.minimatch</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/net.html">net</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/os.html">os</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/path.html">path</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-is-external">
+    <a href="../modules/process.html">process</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.mainmodule.html">process.mainModule</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.stderr.html">process.stderr</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.stdout.html">process.stdout</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/punycode.html">punycode</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/querystring.html">querystring</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/readline.html">readline</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/repl.html">repl</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/stream.html">stream</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/string_decoder.html">string_decoder</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/tls.html">tls</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/tty.html">tty</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/url.html">url</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/util.html">util</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/vm.html">vm</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/zlib.html">zlib</a>
     
 </li>
                     
@@ -1557,6 +1991,13 @@ will hold an array of created reflections for the final resolving phase.</p>
             
                 <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
                     <a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+                    <a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_BEGIN</a>
                     
                 </li>
             
@@ -1653,8 +2094,15 @@ will hold an array of created reflections for the final resolving phase.</p>
             
         
             
-                <li class=" tsd-kind-method tsd-parent-kind-class">
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
                     <a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+                    <a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">createProject</a>
                     
                 </li>
             
@@ -1708,9 +2156,23 @@ will hold an array of created reflections for the final resolving phase.</p>
                 </li>
             
         
+            
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+                    <a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a>
+                    
+                </li>
+            
+        
     </ul>
 
 
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dispatcherevent.html" class="tsd-kind-icon">DispatcherEvent</a>
+                    
                 </li>
             
         
@@ -1724,6 +2186,13 @@ will hold an array of created reflections for the final resolving phase.</p>
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">DynamicModuleHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">ExternalHandler</a>
                     
                 </li>
             
@@ -1758,6 +2227,13 @@ will hold an array of created reflections for the final resolving phase.</p>
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionevent.html" class="tsd-kind-icon">ReflectionEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
                     
                 </li>
@@ -1766,20 +2242,6 @@ will hold an array of created reflections for the final resolving phase.</p>
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolveprojectevent.html" class="tsd-kind-icon">ResolveProjectEvent</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-kind-icon">ResolveReflectionEvent</a>
                     
                 </li>
             

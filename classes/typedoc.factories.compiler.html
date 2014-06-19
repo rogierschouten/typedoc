@@ -36,6 +36,9 @@
                     <input type="checkbox" id="tsd-filter-private" checked />
                     <label for="tsd-filter-private">Private</label>
 
+                    <input type="checkbox" id="tsd-filter-externals" />
+                    <label for="tsd-filter-externals">Externals</label>
+
                     <input type="checkbox" id="tsd-filter-only-exported" />
                     <label for="tsd-filter-only-exported">Only exported</label>
                 </div>
@@ -213,7 +216,7 @@
     <a name="constructor" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>settings<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.CompilationSettings</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a></h3>
+            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>settings<span class="tsd-signature-symbols">: </span><a href="typescript.compilationsettings.html" class="tsd-signature-type">CompilationSettings</a>, inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.compiler.html" class="tsd-signature-type">Compiler</a></h3>
 
 <aside class="tsd-sources">
     
@@ -246,7 +249,16 @@
     <ul>
         
             <li>
-                <h5>settings: <span class="tsd-signature-type">TypeScript.CompilationSettings</span></h5>
+                <h5>settings: <a href="typescript.compilationsettings.html" class="tsd-signature-type">CompilationSettings</a></h5>
+                
+
+
+
+
+            </li>
+        
+            <li>
+                <h5>inputFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
                 
 
 
@@ -285,7 +297,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="compilationsettings" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compilationSettings<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.ImmutableCompilationSettings</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compilationSettings<span class="tsd-signature-symbols">:</span> <a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a></h3>
 
 <aside class="tsd-sources">
     
@@ -353,7 +365,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="fileexistscache" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> fileExistsCache<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.IIndexable&lt;boolean&gt;</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> fileExistsCache<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typescript.iindexable.html" class="tsd-signature-type">IIndexable</a></h3>
 
 <aside class="tsd-sources">
     
@@ -387,7 +399,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="filenametosourcefile" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> fileNameToSourceFile<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.StringHashTable&lt;SourceFile&gt;</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> fileNameToSourceFile<span class="tsd-signature-symbols">:</span> <a href="typescript.stringhashtable.html" class="tsd-signature-type">StringHashTable</a></h3>
 
 <aside class="tsd-sources">
     
@@ -588,7 +600,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="logger" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> logger<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.ILogger</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> logger<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typescript.ilogger.html" class="tsd-signature-type">ILogger</a></h3>
 
 <aside class="tsd-sources">
     
@@ -622,7 +634,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="resolvepathcache" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> resolvePathCache<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">TypeScript.IIndexable&lt;string&gt;</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> resolvePathCache<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typescript.iindexable.html" class="tsd-signature-type">IIndexable</a></h3>
 
 <aside class="tsd-sources">
     
@@ -656,7 +668,7 @@
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
     <a name="resolvedfiles" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> resolvedFiles<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;TypeScript.IResolvedFile&gt;</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> resolvedFiles<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typescript.iresolvedfile.html" class="tsd-signature-type">IResolvedFile</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -763,7 +775,7 @@
     <a name="adddiagnostic" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> addDiagnostic<span class="tsd-signature-symbols">(</span>diagnostic<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.Diagnostic</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> addDiagnostic<span class="tsd-signature-symbols">(</span>diagnostic<span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -793,7 +805,7 @@
     <ul>
         
             <li>
-                <h5>diagnostic: <span class="tsd-signature-type">TypeScript.Diagnostic</span></h5>
+                <h5>diagnostic: <a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></h5>
                 
 
 
@@ -859,7 +871,7 @@
     <a name="compile" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compile<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;TypeScript.Document&gt;</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> compile<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -873,7 +885,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/Compiler.ts:139</li>
+                <li>Defined in typedoc/factories/Compiler.ts:140</li>
             
         </ul>
     
@@ -890,7 +902,7 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">Array&lt;TypeScript.Document&gt;</span>
+        <a href="typescript.document.html" class="tsd-signature-type">Document</a><span class="tsd-signature-symbols">[]</span>
     
 </p>
     
@@ -1048,7 +1060,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/Compiler.ts:188</li>
+                <li>Defined in typedoc/factories/Compiler.ts:189</li>
             
         </ul>
     
@@ -1146,7 +1158,7 @@
     <a name="getscriptsnapshot" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getScriptSnapshot<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">TypeScript.IScriptSnapshot</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> getScriptSnapshot<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h3>
 
 <aside class="tsd-sources">
     
@@ -1191,7 +1203,7 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">TypeScript.IScriptSnapshot</span>
+        <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>
     
 </p>
     
@@ -1217,7 +1229,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/Compiler.ts:166</li>
+                <li>Defined in typedoc/factories/Compiler.ts:167</li>
             
         </ul>
     
@@ -1560,7 +1572,7 @@
     <a name="run" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> run<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;TypeScript.Document&gt;</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> run<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -1568,7 +1580,7 @@
     
         <ul>
             
-                <li>Defined in typedoc/factories/Compiler.ts:29</li>
+                <li>Defined in typedoc/factories/Compiler.ts:30</li>
             
         </ul>
     
@@ -1585,7 +1597,7 @@
     <h4>Returns</h4>
     <p>
     
-        <span class="tsd-signature-type">Array&lt;TypeScript.Document&gt;</span>
+        <a href="typescript.document.html" class="tsd-signature-type">Document</a><span class="tsd-signature-symbols">[]</span>
     
 </p>
     
@@ -1738,7 +1750,7 @@
     <a name="trywriteoutputfiles" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> tryWriteOutputFiles<span class="tsd-signature-symbols">(</span>outputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;TypeScript.OutputFile&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> tryWriteOutputFiles<span class="tsd-signature-symbols">(</span>outputFiles<span class="tsd-signature-symbols">: </span><a href="typescript.outputfile.html" class="tsd-signature-type">OutputFile</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
 
 <aside class="tsd-sources">
     
@@ -1768,7 +1780,7 @@
     <ul>
         
             <li>
-                <h5>outputFiles: <span class="tsd-signature-type">Array&lt;TypeScript.OutputFile&gt;</span></h5>
+                <h5>outputFiles: <a href="typescript.outputfile.html" class="tsd-signature-type">OutputFile</a><span class="tsd-signature-symbols">[]</span></h5>
                 
 
 
@@ -1981,6 +1993,8 @@
                 
                     
                 
+                    
+                
             </ul>
         
     
@@ -2001,8 +2015,278 @@
     
 </li>
                     
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.asthelpers.html">TypeScript.ASTHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.bitmatrix.html">TypeScript.BitMatrix</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.bitvector.html">TypeScript.BitVector</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.collections.html">TypeScript.Collections</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.compilerdiagnostics.html">TypeScript.CompilerDiagnostics</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.declarationcreator.html">TypeScript.DeclarationCreator</a>
+    
+</li>
+                    
                         <li class=" tsd-kind-container tsd-parent-kind-container">
     <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.indentation.html">TypeScript.Indentation</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.integerutilities.html">TypeScript.IntegerUtilities</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.linemap1.html">TypeScript.LineMap1</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.parser.html">TypeScript.Parser</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.pullhelpers.html">TypeScript.PullHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.pullinstantiationhelpers.html">TypeScript.PullInstantiationHelpers</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.scriptsnapshot.html">TypeScript.ScriptSnapshot</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.simpletext.html">TypeScript.SimpleText</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.syntax.html">TypeScript.Syntax</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.syntaxfacts.html">TypeScript.SyntaxFacts</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.textfactory.html">TypeScript.TextFactory</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/typescript.textutilities.html">TypeScript.TextUtilities</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/assert.html">assert</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/child_process.html">child_process</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/cluster.html">cluster</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/crypto.html">crypto</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/dgram.html">dgram</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/dns.html">dns</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/domain.html">domain</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/events.html">events</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/fs.html">fs</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/fs.html">fs</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/handlebars.html">handlebars</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/highlight.html">highlight</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/http.html">http</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/https.html">https</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/marked.html">marked</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/minimatch.html">minimatch</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-dynamic-module tsd-is-external">
+    <a href="../modules/minimatch.minimatch.html">minimatch.minimatch</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/net.html">net</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/os.html">os</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/path.html">path</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-is-external">
+    <a href="../modules/process.html">process</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.mainmodule.html">process.mainModule</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.stderr.html">process.stderr</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+    <a href="../modules/process.stdout.html">process.stdout</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/punycode.html">punycode</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/querystring.html">querystring</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/readline.html">readline</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/repl.html">repl</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/stream.html">stream</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/string_decoder.html">string_decoder</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/tls.html">tls</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/tty.html">tty</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/url.html">url</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/util.html">util</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/vm.html">vm</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/zlib.html">zlib</a>
     
 </li>
                     
@@ -2317,6 +2601,13 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.dispatcherevent.html" class="tsd-kind-icon">DispatcherEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.documentstate.html" class="tsd-kind-icon">DocumentState</a>
                     
                 </li>
@@ -2325,6 +2616,13 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">DynamicModuleHandler</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">ExternalHandler</a>
                     
                 </li>
             
@@ -2359,6 +2657,13 @@
         
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
+                    <a href="typedoc.factories.reflectionevent.html" class="tsd-kind-icon">ReflectionEvent</a>
+                    
+                </li>
+            
+        
+            
+                <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">ReflectionHandler</a>
                     
                 </li>
@@ -2367,20 +2672,6 @@
             
                 <li class=" tsd-kind-class tsd-parent-kind-container">
                     <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">ResolveHandler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolveprojectevent.html" class="tsd-kind-icon">ResolveProjectEvent</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolvereflectionevent.html" class="tsd-kind-icon">ResolveReflectionEvent</a>
                     
                 </li>
             
