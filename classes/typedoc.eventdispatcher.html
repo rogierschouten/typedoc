@@ -36,7 +36,7 @@
                     <input type="checkbox" id="tsd-filter-private" checked />
                     <label for="tsd-filter-private">Private</label>
 
-                    <input type="checkbox" id="tsd-filter-externals" />
+                    <input type="checkbox" id="tsd-filter-externals" checked />
                     <label for="tsd-filter-externals">Externals</label>
 
                     <input type="checkbox" id="tsd-filter-only-exported" />
@@ -139,6 +139,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
                 
                     <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.eventdispatcher.html#listeners" class="tsd-kind-icon">listeners</a></li>
                 
+                <li>&nbsp;</li>
             </ul>
         </section>
     
@@ -152,6 +153,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
                 
                     <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.eventdispatcher.html#on" class="tsd-kind-icon">on</a></li>
                 
+                <li>&nbsp;</li>
             </ul>
         </section>
     
@@ -165,7 +167,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
             <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
     <a name="listeners" class="anchor"></a>
     
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> listeners<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">{ [event: string]: TypeDoc.IListener[]; }</span></h3>
+        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> listeners<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Object</span></h3>
 
 <aside class="tsd-sources">
     
@@ -192,10 +194,10 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
         
             
                 <section class="tsd-member tsd-kind-index-signature tsd-parent-kind-property">
-    <a name="listeners.listeners." class="anchor"></a>
+    <a name="listeners.listeners_" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon"><span class="tsd-signature-symbols">(</span>.event.event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.ilistener.html" class="tsd-signature-type">IListener</a><span class="tsd-signature-symbols">[]</span></h3>
 
 <aside class="tsd-sources">
     
@@ -215,7 +217,28 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
 
 
 
+    <h4>Parameters</h4>
+    <ul>
+        
+            <li>
+                <h5>.event.event: <span class="tsd-signature-type">string</span></h5>
+                
 
+
+
+
+            </li>
+        
+    </ul>
+
+
+
+    <h4>Returns 
+    
+        <a href="../interfaces/typedoc.ilistener.html" class="tsd-signature-type">IListener</a><span class="tsd-signature-symbols">[]</span>
+    
+</h4>
+    
 
 
         
@@ -241,7 +264,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
     <a name="dispatch" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> dispatch<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon">dispatch<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -308,7 +331,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
     <a name="off" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> off<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, handler<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon">off<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, handler<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -387,7 +410,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
     <a name="on" class="anchor"></a>
     
         
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagpublic">public</span> on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0<span class="tsd-signature-symbols">)</span></h3>
+            <h3 class="tsd-kind-icon">on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0<span class="tsd-signature-symbols">)</span></h3>
 
 <aside class="tsd-sources">
     
@@ -484,12 +507,167 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
                 <ul>
                     
                         <li class=" ">
-    <a href="../globals.html"><em>Globals</em></a>
+    <a href="../globals.html"><em><wbr>Globals</em></a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_assert_.html">"assert"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_buffer_.html">"buffer"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_child_process_.html">"child_<wbr>process"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_cluster_.html">"cluster"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_crypto_.html">"crypto"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_dgram_.html">"dgram"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_dns_.html">"dns"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_domain_.html">"domain"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_events_.html">"events"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_fs_.html">"fs"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_highlight_js_.html">"highlight.js"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_http_.html">"http"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_https_.html">"https"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_minimatch_.html">"minimatch"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_net_.html">"net"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_os_.html">"os"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_path_.html">"path"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_punycode_.html">"punycode"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_querystring_.html">"querystring"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_readline_.html">"readline"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_repl_.html">"repl"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_stream_.html">"stream"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_tls_.html">"tls"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_tty_.html">"tty"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_url_.html">"url"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_util_.html">"util"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_vm_.html">"vm"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-dynamic-module tsd-is-external">
+    <a href="../modules/_zlib_.html">"zlib"</a>
+    
+</li>
+                    
+                        <li class=" tsd-kind-container tsd-is-external">
+    <a href="../modules/nodejs.html">NodeJS</a>
     
 </li>
                     
                         <li class="current tsd-kind-container">
-    <a href="../modules/typedoc.html">TypeDoc</a>
+    <a href="../modules/typedoc.html">Type<wbr>Doc</a>
     
         
             <ul>
@@ -514,297 +692,117 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.factories.html">TypeDoc.Factories</a>
+    <a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.models.html">TypeDoc.Models</a>
+    <a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">TypeDoc.Output</a>
+    <a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
     
 </li>
                     
                         <li class=" tsd-kind-container">
-    <a href="../modules/typescript.html">TypeScript</a>
+    <a href="../modules/typescript.html">Type<wbr>Script</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.asthelpers.html">TypeScript.ASTHelpers</a>
+    <a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitmatrix.html">TypeScript.BitMatrix</a>
+    <a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitvector.html">TypeScript.BitVector</a>
+    <a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.collections.html">TypeScript.Collections</a>
+    <a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.compilerdiagnostics.html">TypeScript.CompilerDiagnostics</a>
+    <a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.declarationcreator.html">TypeScript.DeclarationCreator</a>
+    <a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typescript.ioutils.html">TypeScript.IOUtils</a>
+    <a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.indentation.html">TypeScript.Indentation</a>
+    <a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.integerutilities.html">TypeScript.IntegerUtilities</a>
+    <a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.linemap1.html">TypeScript.LineMap1</a>
+    <a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.parser.html">TypeScript.Parser</a>
+    <a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullhelpers.html">TypeScript.PullHelpers</a>
+    <a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullinstantiationhelpers.html">TypeScript.PullInstantiationHelpers</a>
+    <a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.scriptsnapshot.html">TypeScript.ScriptSnapshot</a>
+    <a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.simpletext.html">TypeScript.SimpleText</a>
+    <a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntax.html">TypeScript.Syntax</a>
+    <a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntaxfacts.html">TypeScript.SyntaxFacts</a>
+    <a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textfactory.html">TypeScript.TextFactory</a>
+    <a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
     
 </li>
                     
                         <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textutilities.html">TypeScript.TextUtilities</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/assert.html">assert</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/child_process.html">child_process</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/cluster.html">cluster</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/crypto.html">crypto</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/dgram.html">dgram</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/dns.html">dns</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/domain.html">domain</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/events.html">events</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/fs.html">fs</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/fs.html">fs</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/handlebars.html">handlebars</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/highlight.html">highlight</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/http.html">http</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/https.html">https</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/marked.html">marked</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/minimatch.html">minimatch</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-dynamic-module tsd-is-external">
-    <a href="../modules/minimatch.minimatch.html">minimatch.minimatch</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/net.html">net</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/os.html">os</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/path.html">path</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-is-external">
-    <a href="../modules/process.html">process</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/process.mainmodule.html">process.mainModule</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/process.stderr.html">process.stderr</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/process.stdout.html">process.stdout</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/punycode.html">punycode</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/querystring.html">querystring</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/readline.html">readline</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/repl.html">repl</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/stream.html">stream</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/string_decoder.html">string_decoder</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/tls.html">tls</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/tty.html">tty</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/url.html">url</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/util.html">util</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/vm.html">vm</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/zlib.html">zlib</a>
+    <a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
     
 </li>
                     
@@ -819,7 +817,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
         
             
                 <li class=" tsd-kind-enum tsd-parent-kind-container">
-                    <a href="../enums/typedoc.loglevel.html" class="tsd-kind-icon">LogLevel</a>
+                    <a href="../enums/typedoc.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
                     
                 </li>
             
@@ -854,7 +852,7 @@ be an instance of <a href="typedoc.event.html">Event</a> providing additional fu
         
             
                 <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.eventdispatcher.html" class="tsd-kind-icon">EventDispatcher</a>
+                    <a href="typedoc.eventdispatcher.html" class="tsd-kind-icon">Event<wbr>Dispatcher</a>
                     
 
     <ul>
